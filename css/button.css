@@ -1,0 +1,59 @@
+.btn-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 10px;
+    min-width: 100px;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    filter: drop-shadow(4px 7px 4px rgba(0, 0, 0, 0.25));
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin: 20px 0;
+}
+
+.btn-custom:hover {
+    transform: scale(0.98);
+}
+
+.btn-custom:active {
+    background-color: #C0C0C0;
+    transform: scale(0.98);
+}
+
+.btn-custom-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-custom-icon::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    background-color: #FFFFFF;
+}
+
+.btn-space-bw {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .btn-space-bw {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

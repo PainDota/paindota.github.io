@@ -1,0 +1,31 @@
+.coaching-section__guarantee-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.coaching-section__guarantee-section {
+    text-align: center;
+}
+
+.coaching-section__guarantee-images {
+    display: inline-block;
+    position: relative;
+}
+
+.coaching-section__guarantee-description {
+    margin-top: 20px;
+}
+
+.coaching-section__guarantee-description span {
+    color: var(--primary-accent-color);
+    font-size: 16px;
+}
+
+.vertical-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    line-height: normal;
+}

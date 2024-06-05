@@ -1,0 +1,25 @@
+/*faq section*/
+#faq-section {
+    background-color: var(--primary-bg-color);
+    padding: var(--section-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#faq-accordion {
+    padding: 10px;
+    background-color: white;
+}
+
+#faq-accordion .accordion-item {
+    margin: 20px;
+    border: none; 
+    border-bottom: 1px solid #CBCBCB; 
+    
+}
+
+#faq-accordion .accordion-button:not(.collapsed) {
+    background-color: #C5C9CF;
+    font-weight: 500;
+}

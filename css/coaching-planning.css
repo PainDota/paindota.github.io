@@ -1,0 +1,92 @@
+#coaching-section,
+#training-section {
+    background-color: var(--secondary-bg-color);
+}
+
+#coaching-packages-section,
+#training-plans-section {
+    background-color: var(--primary-bg-color);
+}
+
+#coaching-section,
+#training-section,
+#coaching-packages-section,
+#training-plans-section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+#coaching-section a,
+#training-section a,
+#coaching-packages-section a,
+#training-plans-section a {
+    color: var(--primary-accent-color);
+    font-size: 0.9rem;
+}
+
+.coaching-section__description {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* guarantee */
+
+.coaching-section__row {
+    position: relative;
+}
+
+#coaching-section ul,
+#training-section ul {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+ul li img {
+    margin-right: 10px;
+}
+
+ul li span {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+#coaching-section ul li span,
+#training-section ul li span {
+    color: black;
+}
+
+#coaching-packages-section ul li:before,
+#training-plans-section ul li:before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    margin-right: 10px;
+}
+
+.procedure li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.procedure li::before {
+    content: "\2192";
+    /*right arrow */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: black;
+    font-size: 14px;
+
+}

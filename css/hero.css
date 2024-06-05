@@ -1,0 +1,122 @@
+#hero-section {
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    background: url('../images/bgs/wr.jpg') no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+}
+
+.custom-container {
+    width: 90%;
+    padding: 3rem 0rem;
+    max-width: 1700px;
+}
+
+#hero-section.coaching {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url('../images/bgs/am.jpg');
+    background-size: cover;
+    min-height: 500px;
+}
+
+#hero-section.training {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: url('../images/bgs/kotl.jpg');
+    background-size: cover;
+    min-height: 500px;
+}
+
+@media (max-width: 992px) {
+    #hero-section.coaching,
+    #hero-section.planning {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #hero-section.coaching,
+    #hero-section.planning {
+        min-height: 200px;
+    }
+}
+
+.hero-section__text-section {
+    margin: auto;
+}
+
+.hero-section__text-section h2 {
+    color: var(--primary-accent-color);
+    font-size: 1rem;
+}
+
+.hero-section__text-section h1 {
+    text-align: left;
+    font-size: 3.5rem;
+}
+
+.hero-section__text-section p {
+    font-size: 1rem;
+}
+
+.hero-section__buttons {
+    display: flex;
+    justify-content: left;
+    gap: 3rem;
+}
+
+@media (min-width: 1200px) {
+    .hero-section__text-section h2 {
+        color: var(--primary-accent-color);
+        font-size: 1.4rem;
+    }
+
+    .hero-section__text-section h1 {
+        text-align: left;
+        font-size: 4.5rem;
+    }
+
+    .hero-section__text-section p {
+        font-size: 1.4rem;
+    }
+
+    .hero-section__buttons .btn-custom {
+        padding: 8px 15px;
+        font-size: 1.25rem;
+        min-width: 120px;
+    }
+
+    .hero-section__buttons .btn-custom-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 992px) {
+
+    .hero-section__text-section h2 {
+        font-size: 0.8rem;
+    }
+
+    .hero-section__text-section h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-section__text-section p {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .hero-section__text-section h1 {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;1,500&family=Open+Sans:wght@400&family=Roboto:wght@400;500&family=Sometype+Mono:wght@400;500&family=Space+Grotesk:wght@300;500;700&display=swap');
+
+.sometype-mono-regular {
+  font-family: "Sometype Mono", monospace;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+.open-sans-body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
+}
+
+/* Montserrat for body text */
+.montserrat-body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+/* Montserrat for primary headings */
+.montserrat-medium {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Space Grotesk for subtitles */
+.space-grotesk-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Space Grotesk for secondary headings */
+.space-grotesk-secondary-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Space Grotesk for bold notices */
+.space-grotesk-notice {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+/* Inter font for body text with regular weight */
+.inter-body-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+/* Inter font for body text with medium weight */
+.inter-body-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-medium-italic {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-variation-settings: "slnt" 0;
+}
+
+/* Inter font for headings with bold weight */
+.inter-heading-bold {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+/* Inter font for subtitles with medium weight */
+.inter-subtitle-medium {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}

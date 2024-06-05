@@ -1,0 +1,48 @@
+#video-section {
+    background: linear-gradient(90.26deg, #031330 0.19%, #333F54 76.81%);
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.video-section__yt-embed {
+    margin-bottom: 20px;
+}
+
+.video-section__text-section {
+    margin: auto;
+}
+
+.video-section__text-section h2 {
+    color: var(--primary-accent-color);
+    font-size: 1.5rem;
+}
+
+.video-section__text-section p {
+    font-size: 1rem;
+}
+
+.video-section__buttons {
+    max-width: 700px;
+}
+
+@media (max-width: 1200px) {
+    .video-section__text-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .video-section__text-section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .video-section__text-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .video-section__text-section p {
+        font-size: 0.9rem;
+    }
+}
+

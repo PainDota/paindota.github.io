@@ -1,0 +1,100 @@
+/* Global Styles */
+.custom-col {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coaching-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: white;
+    border-radius: 0px 0px 25px 25px;
+    color: var(--primary-bg-color);
+    padding: 1.4rem;
+}
+
+.tag {
+    border: 3px white solid;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+
+.coaching-card ul {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.coaching-card__price {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.coaching-card__button-container {
+    text-align: center;
+}
+
+.coaching-card__button-container .btn-custom {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Specific Styles */
+.immortal-card {
+    text-align: center;
+}
+
+.immortal-card .coaching-card__price,
+.immortal-card ul li:before {
+    color: var(--primary-accent-color);
+}
+
+.immortal-tag {
+    background-color: var(--primary-accent-color);
+}
+
+.coaching-card--pro .coaching-card__price,
+.coaching-card--pro ul li:before {
+    color: #FF9900;
+}
+
+.pro-tag {
+    background-color: #FF9900;
+}
+
+.coaching-card--basic .coaching-card__price,
+.coaching-card--basic ul li:before {
+    color: #031330;
+}
+
+.basic-tag {
+    background-color: #031330;
+}
+
+/* Specific Button Styles for Each Coaching Card */
+.coaching-card--basic .btn-custom {
+    border: 1px solid #031330;
+    background-color: #031330;
+    color: white;
+}
+
+.immortal-card .btn-custom {
+    border: 1px solid var(--primary-accent-color);
+    background-color: var(--primary-accent-color);
+    color: white;
+    max-width: 30%;
+}
+
+.coaching-card--pro .btn-custom {
+    border: 1px solid #FF9900;
+    background-color: #FF9900;
+    color: white;
+}

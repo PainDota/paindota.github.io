@@ -1,0 +1,29 @@
+:root {
+    --primary-bg-color: #031330;
+    --secondary-bg-color: #020C1D;
+    --primary-accent-color: #E9133F;
+    --section-padding: 30px;
+}   
+
+/* Bootstrap Overrides */
+[data-bs-theme=dark] {    
+    --bs-tertiary-bg-rgb: 2, 12, 29;
+}
+
+.navbar-toggler {
+    --bs-border-width: 0;
+}
+
+.btn {
+    --bs-btn-border-radius: 3px;
+    font-weight: bold;
+}
+
+.accordion {
+    --bs-accordion-border-radius: 3px;
+}
+
+/* Footer */
+#footer {
+    background-color: var(--secondary-bg-color);
+}

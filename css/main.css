@@ -1,0 +1,207 @@
+body {
+    background-color: var(--primary-bg-color);
+    color: white;
+}
+
+/* * {
+    box-shadow: 0 0 0 1px red;
+} */
+
+h1 {
+    text-align: center;
+}
+
+.logo {
+    width: 31px;
+}
+
+.container {
+    padding: 3rem 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem;
+    }
+}
+
+.ribbon-contain {
+    position: relative;
+    width: 100%;
+}
+
+.ribbon {
+    background-image: url('../images/badges/limited badge.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 13%;
+    top: -0.5%;
+    width: 100px;
+    height: 150px;
+}
+
+@media (max-width: 1080px) {
+    .ribbon {
+        width: 90px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 800px) {
+    .ribbon {
+        width: 70px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 580px) {
+    .ribbon-contain {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ribbon {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* buyer protection */
+#buyer-protection {
+    position: relative;
+    padding-bottom: 2rem;
+    background: var(--primary-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #000000;
+}
+
+#buyer-protection p {
+    width: 85%;
+}
+
+.protection-content {
+    background: #C5C9CF;
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.protection-content img {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+span {
+    color: var(--primary-accent-color);
+}
+
+/* container Settings */
+
+#coaching-section .container,
+#training-section .container,
+#coaching-packages-section .container,
+#training-plans-section .container,
+#faq-section .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 6rem;
+}
+
+@media (max-width: 1000px) {
+
+    #coaching-section .container,
+    #training-section .container,
+    #coaching-packages-section .container,
+    #training-plans-section .container,
+    #testimonial-section .container,
+    #faq-section .container,
+    #info-section .container {
+        padding: 1rem;
+    }
+
+}
+
+/* Mobile text Sizes */
+@media (max-width: 800px) {
+
+    #coaching-section h1,
+    #training-section h1,
+    #coaching-packages-section h1,
+    #training-plans-section h1,
+    #testimonial-section h1,
+    #faq-section h1,
+    #info-section h1,
+    #footer h1 {
+        font-size: 1.4rem;
+    }
+
+    #coaching-section h2,
+    #training-section h2,
+    #coaching-packages-section h2,
+    #training-plans-section h2,
+    #testimonial-section h2,
+    #faq-section h2,
+    #info-section h2,
+    #footer h2 {
+        font-size: 1.2rem;
+    }
+
+    #coaching-section h3,
+    #training-section h3,
+    #coaching-packages-section h3,
+    #training-plans-section h3,
+    #testimonial-section h3,
+    #faq-section h3,
+    #info-section h3,
+    #footer h3 {
+        font-size: 1.2rem;
+    }
+
+    #coaching-section p,
+    #training-section p,
+    #coaching-packages-section p,
+    #training-plans-section p,
+    #testimonial-section p,
+    #buyer-protection p,
+    #info-section p,
+    #faq-section p {
+        font-size: 0.85rem;
+    }
+
+    #coaching-section li,
+    #training-section li,
+    #coaching-packages-section li,
+    #training-plans-section li,
+    #testimonial-section li,
+    #info-section li,
+    #faq-section li {
+        font-size: 0.8rem;
+    }
+
+    .coaching-card__price {
+        font-size: 1.5rem;
+    }
+
+    #faq-accordion .accordion-item {
+        font-size: 0.85rem;
+    }
+
+    #faq-accordion .accordion-button {
+        font-size: 0.85rem;
+    }
+}
