@@ -16,9 +16,11 @@ function populateTrainingEntry() {
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${entryPlan.buttonLabel}</button>
-            </div>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${entryPlan.buttonLabel}</button>
+                </div>
+            </a>
         </div>
     `;
 }
@@ -40,9 +42,11 @@ function populateTrainingBasic() {
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${basicPlan.buttonLabel}</button>
-            </div>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${basicPlan.buttonLabel}</button>
+                </div>
+            </a>
         </div>
     `;
 }
@@ -64,9 +68,11 @@ function populateTrainingPro() {
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
             <div class="coaching-card__button-container">
                 <button class="btn-custom">${proPlan.buttonLabel}</button>
             </div>
+            </a>
         </div>
     `;
 }

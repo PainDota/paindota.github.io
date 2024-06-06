@@ -8,12 +8,18 @@
 .coaching-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     height: 100%;
     background: white;
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 24px;
     color: var(--primary-bg-color);
     padding: 1.4rem;
+}
+
+#coaching-packages-section .coaching-card,
+#training-plans-section .coaching-card {
+    justify-content: space-between;
+    border-radius: 0px 0px 25px 25px;
 }
 
 .tag {
@@ -97,4 +103,8 @@
     border: 1px solid #FF9900;
     background-color: #FF9900;
     color: white;
+}
+
+#services-heading {
+    text-align: center;
 }

@@ -31,6 +31,8 @@
     <script src="js/navbar.js"></script>
 
     <script src="js/data.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/video.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/testimonial.js"></script>
     <script src="js/coaching-packages.js"></script>
@@ -85,13 +87,8 @@
                     <div class="hero-section__text-section">
                         <h2 class="roboto-medium">DOTA 2 COACH & CONTENT CREATOR</h2>
                         <h1 class="montserrat-medium p-0">Elevating Your Game, One Play at a Time</h1>
-                        <p class="open-sans-body py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.</p>
-                        <div class="hero-section__buttons">
+                            <p class="open-sans-body py-4">Pain is a 9k MMR Player who has a deep passion for Dota 2 and helping others get better at the game. He is famous for his educational content on Youtube and streams on Twitch. He understands how dota can severely impact the mental state of any player and wishes to help players overcome this and enjoy the game as it is supposed to be. </p>
+                        <div class="hero-section__buttons btn-space-bw">
                             <a href="https://discord.gg/tGK9dve2cD" target="_blank" class="text-decoration-none">
                                 <button class="btn-custom roboto-regular">
                                     <div class="btn-custom-icon">
@@ -118,33 +115,33 @@
     <!-- Stats Section -->
     <section id="stats-section">
         <div class="container">
-            <div class="row py-2">
-                <div class="col-md-3 col-sm-6 col-xxs-6 py-4">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xxs-6 p-3 p-md-0">
                     <!-- Each stat occupies 3 columns on medium and large screens, and 6 columns on small screens -->
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa fa-tag" aria-hidden="true"></i></div>
-                        <div class="stats-section__stat-value roboto-bold">8.5k</div>
+                        <div class="stats-section__stat-value roboto-bold" id="mmr"></div>
                         <div class="stats-section__stat-label roboto-medium">MMR</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xxs-6 py-4 ">
+                <div class="col-md-3 col-sm-6 col-xxs-6 p-3 p-md-0">
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                        <div class="stats-section__stat-value roboto-bold">300+</div>
+                        <div class="stats-section__stat-value roboto-bold" id="students"></div>
                         <div class="stats-section__stat-label roboto-medium">Students</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 py-4">
+                <div class="col-md-3 col-sm-6 col-xs-6 p-3 p-md-0">
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div class="stats-section__stat-value roboto-bold">2000</div>
+                        <div class="stats-section__stat-value roboto-bold" id="coaching-hrs"></div>
                         <div class="stats-section__stat-label roboto-medium">Coaching Hours</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 py-4">
+                <div class="col-md-3 col-sm-6 col-xs-6 p-3 p-md-0">
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa-brands fa-youtube"></i></div>
-                        <div class="stats-section__stat-value roboto-bold">2.5M</div>
+                        <div class="stats-section__stat-value roboto-bold" id="views"></div>
                         <div class="stats-section__stat-label roboto-medium">Views</div>
                     </div>
                 </div>
@@ -156,23 +153,18 @@
     <section id="video-section">
         <div class="container">
             <div class="row video-section__text-section py-5">
-                <div class="col-md-8 col-xs-12 video-section__yt-embed col-lg-8 offset-lg-2">
-                    <iframe width="100%" height="450px"
-                        src="https://www.youtube.com/embed/ojhhEZpsqaY?si=pT6KdDTiaUjIdVFA" title="YouTube video player"
+                <div class="col-md-8 col-xs-12 video-section__yt-embed col-lg-8 offset-lg-2 iframe-container">
+                    <iframe id="youtube-video"
+                        src="" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <h2 class="roboto-medium col-lg-8 offset-lg-2 py-2">Educational Content, Coaching Videos & Analysis on
                     Pro Players</h2>
-                <p class="open-sans-body col-lg-8 offset-lg-2 py-2">Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="open-sans-body col-lg-8 offset-lg-2 py-2">Don't miss out on the Best Dota Guides out there. Subscribe to the Youtube Channel and Follow on Twitch to witness the greatest educational content to exist.</p>
                 <div class="hero-section__buttons video-section__buttons  btn-space-bw col-lg-8 offset-lg-2">
-                    <a href="https://www.youtube.com/c/paindota" class="text-decoration-none">
+                    <a href="https://www.youtube.com/c/paindota" target="_blank" class="text-decoration-none">
                         <button class="btn-custom">
                             <div class="btn-custom-icon">
                                 <img src="images/icons/openmoji_youtube.svg" alt="Reddit Icon">
@@ -180,12 +172,12 @@
                             Subscribe to Youtube
                         </button>
                     </a>
-                    <a href="https://www.reddit.com/r/pain322" class="text-decoration-none">
+                    <a href="https://www.twitch.tv/painndota" target="_blank" class="text-decoration-none">
                         <button class="btn-custom">
                             <div class="btn-custom-icon">
-                                <img src="images/icons/openmoji_reddit.svg" alt="Reddit Icon">
+                                <img src="images/icons/logos_twitch.svg" alt="Twitch Icon">
                             </div>
-                            Follow for Updates and Blogs
+                            Watch Live on Twitch
                         </button>
                     </a>
                 </div>
@@ -212,7 +204,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="coaching-card inter-body-medium">
-                        <h3 class="montserrat-medium">Exclusives</h3>
+                        <h2 class="montserrat-medium" id="services-heading"><span>Exclusives</span></h2>
                         <ul>
                             <li>
                                 <img src="images/icons/exclusives/teenyicons_message-outline.svg" alt="Teach Icon">
@@ -304,7 +296,7 @@
             <div class="row coaching-section__row">
                 <div class="col-md-8 offset-md-2 coaching-section__description">
                     <h1 class="space-grotesk-notice"><span>Training Plans</span></h1>
-                    <p class="montserrat-body">Step into the realm of Dota mastery Dota mastery with PainDota Training
+                    <p class="montserrat-body">Step into the realm of Dota mastery with PainDota Training
                         Plans.
                         Specifically designed for carry players, our personalized approach combines meticulous analysis
                         and
@@ -319,8 +311,8 @@
             <div class="row">
                 <div class="col-md-7 custom-col">
                     <div class="coaching-card inter-body-medium">
-                        <h3 class="montserrat-medium">Exclusives</h3>
-                        <ul class="procedure">
+                        <h2 class="montserrat-medium" id="services-heading"><span>Services</span></h2>
+                        <!-- <ul class="procedure">
                             <li>
                                 <span>Provide Dotabuff profile + weekly availability + and behavior score </span>
                             </li>
@@ -330,12 +322,12 @@
                             <li>
                                 <span>Get a personalized practice plan targeting weaknesses</span>
                             </li>
-                        </ul>
+                        </ul> -->
 
                         <ul>
                             <li>
                                 <img src="images/icons/exclusives/icomoon-free_stats-dots.svg" alt="Teach Icon">
-                                <span>In-Depth Analysis, Targeted Solutions – Elevate Your Game-play with Comprehensive
+                                <span>In-Depth Analysis, Targeted Solutions – Elevate Your Gameplay with Comprehensive
                                     Player Analysis</span>
                             </li>
                             <li>
@@ -408,7 +400,7 @@
         <div class="container">
             <div class="row">
                 <h1 class="space-grotesk-notice"><span>Testimonials</span></h1>
-                <p class="montserrat-body">Game-changing testimonials -- hear what other players have to say about their
+                <p class="montserrat-body">Game-changing testimonials — hear what other players have to say about their
                     Dota 2 transformation!
                 </p>
             </div>

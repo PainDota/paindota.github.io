@@ -15,9 +15,11 @@ function populateCoachingEntry() {
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${entryPackage.buttonLabel}</button>
-            </div>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${entryPackage.buttonLabel}</button>
+                </div>
+            </a>
         </div>
     `;
 }
@@ -39,9 +41,11 @@ function populateCoachingBasic() {
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${basicPackage.buttonLabel}</button>
-            </div>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${basicPackage.buttonLabel}</button>
+                </div>
+            </a>
         </div>
     `;
 }
@@ -63,9 +67,11 @@ function populateCoachingPro() {
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${proPackage.buttonLabel}</button>
-            </div>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${proPackage.buttonLabel}</button>
+                </div>
+            </a>
         </div>
     `;
 }
@@ -90,9 +96,11 @@ function populateCoachingImmortal() {
             <div class="row">
                 ${featureColumns}
             </div>
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${immortalPackage.buttonLabel}</button>
-            </div>
+            <a href="https://discord.gg/2NqYbJjyg7" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${immortalPackage.buttonLabel}</button>
+                </div>
+            </a>
         </div>
     `;
 }

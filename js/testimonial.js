@@ -43,7 +43,7 @@ function createCarouselItem(testimonials) {
                     <img src="${testimonial.img}" alt="${testimonial.title}">
                     <div class="carousel-card__titles">
                         <h4 class="inter-subtitle-medium">${testimonial.title}</h4>
-                        <p class="montserrat-medium">${testimonial.subtitle}</p>
+                        <p class="montserrat-bold mmr">${testimonial.subtitle}</p>
                     </div>
                 </div>
                 <div class="carousel-card__testimonial">

@@ -26,6 +26,14 @@
   font-style: normal;
 }
 
+/* Montserrat for primary headings */
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Medium weight */
+  font-style: normal;
+}
+
+
 /* Space Grotesk for subtitles */
 .space-grotesk-heading {
   font-family: "Space Grotesk", sans-serif;

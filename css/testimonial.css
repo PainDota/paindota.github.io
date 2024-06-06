@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.mmr {
+    color: var(--primary-accent-color);
+}
+
 .carousel-card {
     background-color: white;
     color: var(--primary-bg-color);
