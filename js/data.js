@@ -126,7 +126,7 @@ const accordionData = [
     {
         id: 'collapseSix',
         title: 'How soon can I expect to see improvements in my gameplay?',
-        content: "You should see improvement almost instantely. Most of Pain's students have seen improvement right after the first session."
+        content: "You should see improvement almost instantaneously. Most of Pain's students have seen improvement right after the first session."
     },
     {
         id: 'collapseSeven',
