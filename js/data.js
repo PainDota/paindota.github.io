@@ -101,37 +101,37 @@ const accordionData = [
     {
         id: 'collapseOne',
         title: 'How do I sign up for coaching sessions?',
-        content: 'Click on the Avail Button on your desired package and you will be redirected to discord from where you can directly message Pain to reserve your slot'
+        content: 'Click on the "Avail" button for your desired package, and you will be redirected to Discord, where you can directly message Pain to reserve your slot.'
     },
     {
         id: 'collapseTwo',
         title: 'What is the difference between Training Plans and Coaching Packages?',
-        content: 'Training Plan does not include 1 on 1 coaching. It is a document that is formed after analysis of your most recent 10 games. In this document, you will have your mistakes highlighted that are keeping you stagnant and you will be given practices to overcome these mistakes, which will help you climb MMR. On the other hand, Coaching Packages include 1 on 1 coaching on call, everything is done visually.'
+        content: 'The Training Plan does not include 1-on-1 coaching. It comprises a document formed after analyzing your most recent 10 games. This document highlights your mistakes that hinder your progress, along with suggested practices to overcome them, aiding you in climbing MMR. Conversely, Coaching Packages include 1-on-1 coaching via call, with all instructions provided visually.'
     },
     {
         id: 'collapseThree',
         title: 'Which payment methods are accepted?',
-        content: 'Currently, Wise & Crypto (USDT) are accepted. Wise is very easy to setup and If you have trouble with it, Pain can guide you as well. If none of these work, you can discuss this with Pain on Discord'
+        content: 'Currently, we accept Wise and Crypto (USDT) payments. Setting up Wise is straightforward, and if you encounter any issues, Pain can guide you through the process. If neither option works for you, please discuss alternatives with Pain on Discord.'
     },
     {
         id: 'collapseFour',
         title: 'Can I switch to a different coaching package after signing up?',
-        content: 'It depends on what package you currently have, how many sessions have been used and whether there are slots available for the package you want to upgrade to.'
+        content: 'The availability of upgrading depends on your current package, the number of sessions utilized, and slot availability in the package you wish to upgrade to.'
     },
     {   
         id: 'collapseFive',
         title: 'What happens if I need to reschedule a session?',
-        content: 'Pain does not have an issue with rescheduling. However, it will not be entertained more than once and you will lose a session. This is to ensure that the time of both parties is not wasted.'
+        content: "While Pain doesn't have an issue with rescheduling, it can only be accommodated once. Subsequent rescheduling will result in the loss of a session. This policy is in place to ensure that neither party's time is wasted."
     },
     {
         id: 'collapseSix',
         title: 'How soon can I expect to see improvements in my gameplay?',
-        content: "You should see improvement almost instantaneously. Most of Pain's students have seen improvement right after the first session."
+        content: "You should notice improvement almost instantly. Many of Pain's students have experienced progress right after their first session."
     },
     {
         id: 'collapseSeven',
         title: 'Will I receive personalized feedback on my performance?',
-        content: "Yes. Every player is different and unique. Pain's Coaching Style caters towards everyone"
+        content: "Yes, every player is different, and Pain's coaching style is tailored to accommodate everyone's unique needs and preferences."
     },
     {
         id: 'collapseEight',
@@ -168,12 +168,7 @@ const testimonials = [
         description: 
 "        I've been playing dota since I started playing PC Games, I first calibrated as a herald when i started  playing ranked and battled my way all the way up to Archon over a few years however I got stuck. I took Pain on as a coach after watching one of his videos. You wouldn't think it but its simple shit that he says during coaching sessions like 'hit more creeps' that make you win games. DOTA's not complicated if you follow simple formulas to win is what I am learning during my coaching sessions. So if you want to level up and rank up I'd recommend Pain. I ranked up 4 times in about a month after taking him on as a coach if that gives you an idea of effectiveness. Only take on coaching sessions if you are coachable and willing to fix your bad habits and the MMR will come easily." 
     },
-    {
-        img: "images/badges/ranks/ancient.svg",
-        title: "Shlorky",
-        subtitle: "2300 to 4220 mmr",
-        description: 
-"        I had recently hit a huge plateau after having some confidence shattering losses. I am mainly a position 1 player and my biggest issues in my matches were having no clue how to adapt to a hard lane matchup as well as not knowing how to play from behind. It felt like every time I played a new game I would end up throwing the lane somehow and having zero impact for the next 20-30 minutes.Our first session Pain pointed out a few mistakes I had been making in my matches as well as teaching me some fundamentals that I could abuse to win lanes that would otherwise be very difficult. At the end of our session he gave me a goal to have a good first 15-20 minutes in each pub from here on out.  At first it took some time to adjust to the things I was taught, but after a few games of practicing and memorizing the techniques we talked about I started to gain momentum and I haven't shown signs of stopping! After just ONE session with Pain I have gained over 500 mmr soloqueuing. I feel like right now I am playing the best Dota I have ever played and know that if I ever hit another wall I have a reliable coach to fall back on! I am looking forward to learning more about my favorite game in the near future."},
+
     {
         img: "images/badges/ranks/ancient.svg",
         title: "Key",
@@ -198,6 +193,12 @@ const testimonials = [
             subtitle: "3500 to 5640 mmr",
             description:
 "            I just want to say thank you to Pain as he's one of the reasons why I reached Immortal! We have started since I was Legend IV or something, and we have been slowly making progress together by analyzing my games and seeing what works and what does not. If you are ever looking for a coach that can help you climb the ladder, Pain is your guy! Thanks!"        },
+        {
+            img: "images/badges/ranks/ancient.svg",
+            title: "Shlorky",
+            subtitle: "2300 to 4220 mmr",
+            description: 
+    "        I had recently hit a huge plateau after having some confidence shattering losses. I am mainly a position 1 player and my biggest issues in my matches were having no clue how to adapt to a hard lane matchup as well as not knowing how to play from behind. It felt like every time I played a new game I would end up throwing the lane somehow and having zero impact for the next 20-30 minutes.Our first session Pain pointed out a few mistakes I had been making in my matches as well as teaching me some fundamentals that I could abuse to win lanes that would otherwise be very difficult. At the end of our session he gave me a goal to have a good first 15-20 minutes in each pub from here on out.  At first it took some time to adjust to the things I was taught, but after a few games of practicing and memorizing the techniques we talked about I started to gain momentum and I haven't shown signs of stopping! After just ONE session with Pain I have gained over 500 mmr soloqueuing. I feel like right now I am playing the best Dota I have ever played and know that if I ever hit another wall I have a reliable coach to fall back on! I am looking forward to learning more about my favorite game in the near future."},
         {
             img: "images/badges/ranks/divine.svg",
             title: "Comrade Poppinoff",
