@@ -162,20 +162,20 @@ const testimonials = [
         description: 
         "Pain is great. I was able to get from crusader 3 to legend 3 in a matter of months. It took me around 3-4 month and weekly coaching (aka replay analysis) with Pain. He points out my mistakes in my unsuccessful games and he points out the good things that I improved on. No micromanagement, just straight to the point and no bs. If you listen and apply, you will improve. He told me if you blame your team, then delete dota.  I listened. I deleted XD. But then came back, had another session with my boy Pain and got to legend 3. I maintain my winrate at around 70%, but dota is full of surprises, so I believe its very good. Last thing to say: I have been coached by other people and so far pain has been the best."},
     {
-        img: "images/badges/ranks/Legend.svg",
+        img: "images/badges/ranks/legend.svg",
         title: "DOVAREME",
         subtitle: "1800 to 3000 mmr",
         description: 
 "        I've been playing dota since I started playing PC Games, I first calibrated as a herald when i started  playing ranked and battled my way all the way up to Archon over a few years however I got stuck. I took Pain on as a coach after watching one of his videos. You wouldn't think it but its simple shit that he says during coaching sessions like 'hit more creeps' that make you win games. DOTA's not complicated if you follow simple formulas to win is what I am learning during my coaching sessions. So if you want to level up and rank up I'd recommend Pain. I ranked up 4 times in about a month after taking him on as a coach if that gives you an idea of effectiveness. Only take on coaching sessions if you are coachable and willing to fix your bad habits and the MMR will come easily." 
     },
     {
-        img: "images/badges/ranks/Ancient.svg",
+        img: "images/badges/ranks/ancient.svg",
         title: "Shlorky",
         subtitle: "2300 to 4220 mmr",
         description: 
 "        I had recently hit a huge plateau after having some confidence shattering losses. I am mainly a position 1 player and my biggest issues in my matches were having no clue how to adapt to a hard lane matchup as well as not knowing how to play from behind. It felt like every time I played a new game I would end up throwing the lane somehow and having zero impact for the next 20-30 minutes.Our first session Pain pointed out a few mistakes I had been making in my matches as well as teaching me some fundamentals that I could abuse to win lanes that would otherwise be very difficult. At the end of our session he gave me a goal to have a good first 15-20 minutes in each pub from here on out.  At first it took some time to adjust to the things I was taught, but after a few games of practicing and memorizing the techniques we talked about I started to gain momentum and I haven't shown signs of stopping! After just ONE session with Pain I have gained over 500 mmr soloqueuing. I feel like right now I am playing the best Dota I have ever played and know that if I ever hit another wall I have a reliable coach to fall back on! I am looking forward to learning more about my favorite game in the near future."},
     {
-        img: "images/badges/ranks/Ancient.svg",
+        img: "images/badges/ranks/ancient.svg",
         title: "Key",
         subtitle: "1800 to 4000 mmr",
         description: 
@@ -187,7 +187,7 @@ const testimonials = [
             description:
 "            Only had 2 sessions with @Pain- so far and already gained 700 plus mmr in just half a month. Very insightful coach, makes it very clear how to win games. Would highly recommend 💯"},
       {
-            img: "images/badges/ranks/Divine.svg",
+            img: "images/badges/ranks/divine.svg",
             title: "LUKE",
             subtitle: "3500 to 4620",
             description:
