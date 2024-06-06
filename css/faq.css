@@ -25,7 +25,7 @@
 }
 
 .accordion-body {
-    background-color: #f5f5f5; /* A different shade from headers for the content */
+    background-color: #e6e6e6; /* A different shade from headers for the content */
     padding: 15px;
     border-top: none; /* Removes top border for a seamless look from header to content */
 }
