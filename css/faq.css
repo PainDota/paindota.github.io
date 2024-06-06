@@ -20,6 +20,12 @@
 }
 
 #faq-accordion .accordion-button:not(.collapsed) {
-    background-color: #C5C9CF;
+    background-color: #d3d4d6;
     font-weight: 500;
+}
+
+.accordion-body {
+    background-color: #f5f5f5; /* A different shade from headers for the content */
+    padding: 15px;
+    border-top: none; /* Removes top border for a seamless look from header to content */
 }
