@@ -1,5 +1,5 @@
 //video URL
-const vidURL = "https://www.youtube.com/embed/I7SdMEzi718?si=3q6LZVst78_I_765";
+const vidURL = "https://www.youtube.com/embed/d-gh7z9e0y8?si=wFaiOZEwF_vCw9ms";
 
 // stat Data
 const statsValues = {
