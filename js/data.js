@@ -51,7 +51,7 @@ const proPackage = {
 const immortalPackage = {
     price: '$2500',
     features: [
-        ['Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation', 'Pro Training Plan (Any Role)'],
+        ['Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',],
         ['3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',],
         ['5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee']
     ],
@@ -205,6 +205,12 @@ const testimonials = [
             subtitle: "2400 to 4620 mmr",
             description:
 "            I was hard stuck at legend for about 6 years. Since I've started coaching I climbed from a low of Archon 3 to Divine 1 in about 3 months and I'm easily playing the best dota of my life with no cheap cheese strats or single hero spamming. I had weekly replay sessions with Pain. He's very thoughtful and doesn't mind humouring me when I have a theory that is completely wrong. He'll test it out and convince me one way or another and win me round when most coaches will say 'no that's wrong do x'. He is an absolute beast at laning and doing some 1v1s with him really opened my eyes. I had a 75% lane winrate at Legend before coaching but he completely demolished me and taught me the importance of maintaining basics like Last hitting that everyone wants to ignore but are probably the most important thing. On top of that he's just a chilled guy, I like him and I hope he keeps doing well. His passion for dota is obvious as I see him online all the time watching replays and it's awesome talking to him about the meta and stuff. Hopefully I'll hit immortal one day soon and if I do he'll be a massive reason why. Cheers Pain, you're a good one!" },
+{
+            img: "images/badges/ranks/immortal.svg",
+            title: "mantazer",
+            subtitle: "3800 to 5640 mmr",
+            description:
+"            I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain." },
     
     
     
