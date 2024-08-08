@@ -58,7 +58,7 @@
 .navbar-nav .nav-link:focus,
 .navbar-nav .nav-link:active {
     color: var(--primary-accent-color);
-    font-size: 1.25rem;
+    transform: scale(1.16);
 }
 
 .navbar-toggler,
