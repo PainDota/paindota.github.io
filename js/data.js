@@ -56,7 +56,7 @@ const immortalPackage = {
         ['5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee']
     ],
     buttonLabel: 'Avail Immortal',
-    tag: 'Speciality Coaching Package'
+    tag: 'Unlimited Coaching Till Immortal'
 };
 
 // training plan Data
