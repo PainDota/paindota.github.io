@@ -29,3 +29,12 @@
     height: 100%;
     line-height: normal;
 }
+
+.btn-immortal {
+    background-color: var(--primary-accent-color);
+}
+
+.btn-immortal-2 {
+    background-color: var(--primary-accent-color);
+    color: white;
+}
