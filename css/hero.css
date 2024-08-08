@@ -88,6 +88,7 @@
     .hero-section__buttons .btn-custom {
         padding: 8px 15px;
         font-size: 1.25rem;
+        font-weight:500;
         min-width: 120px;
     }
 
