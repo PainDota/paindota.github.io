@@ -49,7 +49,7 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$2500',
+    price: '$2000',
     features: [
         ['Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',],
         ['3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',],
