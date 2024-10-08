@@ -84,7 +84,7 @@ const basicPlan = {
 };
 
 const proPlan = {
-    price: '$500',
+    price: '$1000',
     features: [
         'Comprehensive Player Analysis',
         'Personalized Practice Plan',
