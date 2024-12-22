@@ -91,22 +91,26 @@ ul li span {
 
 }
 
+.remove-padding {
+    padding: 0;
+}
 .original-price {
     position: relative;
     color: #949494;
     font-size: 0.6em;
     margin-left: 8px;
+    display: block;
+  width: fit-content;
 }
 
 .original-price::after {
     content: "";
     position: absolute;
-    top: 50%; /* Position the line vertically centered */
+    top: 50%; 
     left: 0;
     right: 0;
-    height: 2px; /* Thickness of the line */
+    height: 2px;
     background: red;
-    transform: rotate(5deg); /* Slight tilt to simulate human imperfection */
-    border-radius: 5px; /* Makes the line slightly rounded */
+    border-radius: 5px;
 }
 

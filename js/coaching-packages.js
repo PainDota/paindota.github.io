@@ -4,7 +4,7 @@ function generatePriceHTML(price, discountedPrice) {
         return `
             <div class="coaching-card__price space-grotesk-notice">
                 ${discountedPrice} 
-                <span class="original-price">${price}</span>
+                <div class= "original-price">${price}</div>
             </div>
         `;
     }

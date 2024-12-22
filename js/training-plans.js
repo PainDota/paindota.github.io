@@ -1,16 +1,3 @@
-// Helper function to generate price HTML
-function generatePriceHTML(price, discountedPrice) {
-    if (discountedPrice) {
-        return `
-            <div class="coaching-card__price space-grotesk-notice">
-                ${discountedPrice} 
-                <span class="original-price">${price}</span>
-            </div>
-        `;
-    }
-    return `<div class="coaching-card__price space-grotesk-notice">${price}</div>`;
-}
-
 // Function to populate the entry plan
 function populateTrainingEntry() {
     const entryColumn = document.getElementById('planning-entry');
