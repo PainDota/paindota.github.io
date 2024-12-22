@@ -210,3 +210,21 @@ span {
         font-size: 0.85rem;
     }
 }
+
+.sale-alert {
+    position: fixed;
+    bottom: 50px;  /* Adjust this value to move the alert up or down */
+    left: 0;
+    width: 100%;
+    z-index: 1050;  /* Ensure the alert stays above other content */
+    margin-bottom: 0;  /* Remove default margin */
+    text-align: center;
+}
+
+.sale-alert .alert-heading {
+    font-size: 1.5rem;  /* Make the heading larger */
+}
+
+.sale-alert strong {
+    font-size: 1.2rem;  /* Make the text inside <strong> larger */
+}
