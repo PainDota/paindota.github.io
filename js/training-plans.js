@@ -1,3 +1,15 @@
+// Helper function to generate price HTML
+function generatePriceHTML(price, discountedPrice) {
+    if (discountedPrice) {
+        return `
+            <div class="coaching-card__price space-grotesk-notice">
+                ${discountedPrice} 
+                <span class="original-price">${price}</span>
+            </div>
+        `;
+    }
+    return `<div class="coaching-card__price space-grotesk-notice">${price}</div>`;
+}
 
 // Function to populate the entry plan
 function populateTrainingEntry() {
@@ -11,7 +23,7 @@ function populateTrainingEntry() {
         <div class="coaching-card">
             <div>
                 <h4 class="inter-heading-bold">Entry</h4>
-                <div class="coaching-card__price space-grotesk-notice">${entryPlan.price}</div>
+                ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -37,7 +49,7 @@ function populateTrainingBasic() {
         <div class="coaching-card coaching-card--basic">
             <div>
                 <h4 class="inter-heading-bold">Basic</h4>
-                <div class="coaching-card__price space-grotesk-notice">${basicPlan.price}</div>
+                ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -63,15 +75,15 @@ function populateTrainingPro() {
         <div class="coaching-card coaching-card--pro">
             <div>
                 <h4 class="inter-heading-bold">Pro</h4>
-                <div class="coaching-card__price space-grotesk-notice">${proPlan.price}</div>
+                ${generatePriceHTML(proPlan.price, proPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${proPlan.buttonLabel}</button>
-            </div>
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${proPlan.buttonLabel}</button>
+                </div>
             </a>
         </div>
     `;

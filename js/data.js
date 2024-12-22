@@ -36,6 +36,7 @@ const basicPackage = {
 
 const proPackage = {
     price: '$700',
+    discountedPrice: '$400',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -62,6 +63,7 @@ const immortalPackage = {
 // training plan Data
 const entryPlan = {
     price: '$200',
+    discountedPrice: '$150',
     features: [
         'Comprehensive Player Analysis',
         'Personalized Practice Plan',

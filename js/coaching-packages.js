@@ -1,3 +1,16 @@
+// Helper function to generate price HTML
+function generatePriceHTML(price, discountedPrice) {
+    if (discountedPrice) {
+        return `
+            <div class="coaching-card__price space-grotesk-notice">
+                ${discountedPrice} 
+                <span class="original-price">${price}</span>
+            </div>
+        `;
+    }
+    return `<div class="coaching-card__price space-grotesk-notice">${price}</div>`;
+}
+
 // Function to populate the entry package
 function populateCoachingEntry() {
     const entryColumn = document.getElementById('coaching-entry');
@@ -10,7 +23,7 @@ function populateCoachingEntry() {
         <div class="coaching-card">
             <div>
                 <h4 class="inter-heading-bold">Entry</h4>
-                <div class="coaching-card__price space-grotesk-notice">${entryPackage.price}</div>
+                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -36,7 +49,7 @@ function populateCoachingBasic() {
         <div class="coaching-card coaching-card--basic">
             <div>
                 <h4 class="inter-heading-bold">Basic</h4>
-                <div class="coaching-card__price space-grotesk-notice">${basicPackage.price}</div>
+                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -62,7 +75,7 @@ function populateCoachingPro() {
         <div class="coaching-card coaching-card--pro">
             <div>
                 <h4 class="inter-heading-bold">Pro</h4>
-                <div class="coaching-card__price space-grotesk-notice">${proPackage.price}</div>
+                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -91,7 +104,7 @@ function populateCoachingImmortal() {
         <div class="coaching-card immortal-card">
             <div>
                 <h4 class="inter-heading-bold">Immortal</h4>
-                <div class="coaching-card__price space-grotesk-notice">${immortalPackage.price}</div>
+                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
             </div>
             <div class="row">
                 ${featureColumns}

@@ -90,3 +90,23 @@ ul li span {
     font-size: 14px;
 
 }
+
+.original-price {
+    position: relative;
+    color: #949494;
+    font-size: 0.6em;
+    margin-left: 8px;
+}
+
+.original-price::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Position the line vertically centered */
+    left: 0;
+    right: 0;
+    height: 2px; /* Thickness of the line */
+    background: red;
+    transform: rotate(5deg); /* Slight tilt to simulate human imperfection */
+    border-radius: 5px; /* Makes the line slightly rounded */
+}
+
