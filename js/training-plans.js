@@ -9,7 +9,9 @@ function populateTrainingEntry() {
         <h6 class="tag">${entryPlan.tag}</h6>
         <div class="coaching-card">
             <div>
-                <h4 class="inter-heading-bold">Entry</h4>
+                <h4 class="inter-heading-bold">Entry
+                ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">${entryPlan.priceOff} OFF</span>` : ''}
+                </h4>
                 ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
@@ -35,7 +37,9 @@ function populateTrainingBasic() {
         <h6 class="tag basic-tag">${basicPlan.tag}</h6>
         <div class="coaching-card coaching-card--basic">
             <div>
-                <h4 class="inter-heading-bold">Basic</h4>
+                <h4 class="inter-heading-bold">Basic
+                ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">${basicPlan.priceOff} OFF</span>` : ''}
+                </h4>
                 ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
@@ -61,7 +65,9 @@ function populateTrainingPro() {
         <h6 class="tag pro-tag">${proPlan.tag}</h6>
         <div class="coaching-card coaching-card--pro">
             <div>
-                <h4 class="inter-heading-bold">Pro</h4>
+                <h4 class="inter-heading-bold">Pro
+                ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">${proPlan.priceOff} OFF</span>` : ''}
+                </h4>
                 ${generatePriceHTML(proPlan.price, proPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">

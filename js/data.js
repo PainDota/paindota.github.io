@@ -37,6 +37,7 @@ const basicPackage = {
 const proPackage = {
     price: '$700',
     discountedPrice: '$400',
+    priceOff: '$300',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
