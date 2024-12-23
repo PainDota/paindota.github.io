@@ -114,6 +114,10 @@ span {
     color: var(--primary-accent-color);
 }
 
+#alert-section span {
+    color: inherit;
+}
+
 /* container Settings */
 
 #coaching-section .container,
@@ -209,4 +213,22 @@ span {
     #faq-accordion .accordion-button {
         font-size: 0.85rem;
     }
+}
+
+.sale-alert {
+    position: fixed;
+    bottom: 5%; 
+    left: 0;
+    width: 100%;
+    z-index: 1050;  
+    margin-bottom: 0;  
+    text-align: center;
+}
+
+.sale-alert .alert-heading {
+    font-size: 1.5rem; 
+}
+
+.sale-alert .alert-message {
+    font-size: 1.4rem;  
 }

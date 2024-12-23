@@ -1,4 +1,3 @@
-
 // Function to populate the entry plan
 function populateTrainingEntry() {
     const entryColumn = document.getElementById('planning-entry');
@@ -7,11 +6,13 @@ function populateTrainingEntry() {
     const featuresList = entryPlan.features.map(feature => `<li>${feature}</li>`).join('');
 
     entryColumn.innerHTML = `
-        <h6 class="tag">${entryPlan.tag}</h6>
-        <div class="coaching-card">
+        <h6 class="tag basic-tag">${entryPlan.tag}</h6>
+        <div class="coaching-card coaching-card--basic">
             <div>
-                <h4 class="inter-heading-bold">Entry</h4>
-                <div class="coaching-card__price space-grotesk-notice">${entryPlan.price}</div>
+                <h4 class="inter-heading-bold">Entry
+                ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPlan.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -33,11 +34,13 @@ function populateTrainingBasic() {
     const featuresList = basicPlan.features.map(feature => `<li>${feature}</li>`).join('');
 
     basicColumn.innerHTML = `
-        <h6 class="tag basic-tag">${basicPlan.tag}</h6>
-        <div class="coaching-card coaching-card--basic">
+        <h6 class="tag pro-tag">${basicPlan.tag}</h6>
+        <div class="coaching-card coaching-card--pro">
             <div>
-                <h4 class="inter-heading-bold">Basic</h4>
-                <div class="coaching-card__price space-grotesk-notice">${basicPlan.price}</div>
+                <h4 class="inter-heading-bold">Basic
+                ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPlan.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -59,19 +62,21 @@ function populateTrainingPro() {
     const featuresList = proPlan.features.map(feature => `<li>${feature}</li>`).join('');
 
     proColumn.innerHTML = `
-        <h6 class="tag pro-tag">${proPlan.tag}</h6>
-        <div class="coaching-card coaching-card--pro">
+        <h6 class="tag accent-tag">${proPlan.tag}</h6>
+        <div class="coaching-card coaching-card--accent">
             <div>
-                <h4 class="inter-heading-bold">Pro</h4>
-                <div class="coaching-card__price space-grotesk-notice">${proPlan.price}</div>
+                <h4 class="inter-heading-bold">Pro
+                ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPlan.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(proPlan.price, proPlan.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
             </ul>
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-            <div class="coaching-card__button-container">
-                <button class="btn-custom">${proPlan.buttonLabel}</button>
-            </div>
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${proPlan.buttonLabel}</button>
+                </div>
             </a>
         </div>
     `;

@@ -1,3 +1,16 @@
+// Helper function to generate price HTML
+function generatePriceHTML(price, discountedPrice) {
+    if (discountedPrice) {
+        return `
+            <div class="coaching-card__price space-grotesk-notice">
+                ${discountedPrice} 
+                <div class= "original-price">${price}</div>
+            </div>
+        `;
+    }
+    return `<div class="coaching-card__price space-grotesk-notice">${price}</div>`;
+}
+
 // Function to populate the entry package
 function populateCoachingEntry() {
     const entryColumn = document.getElementById('coaching-entry');
@@ -9,8 +22,10 @@ function populateCoachingEntry() {
         <h6 class="tag">${entryPackage.tag}</h6>
         <div class="coaching-card">
             <div>
-                <h4 class="inter-heading-bold">Entry</h4>
-                <div class="coaching-card__price space-grotesk-notice">${entryPackage.price}</div>
+                <h4 class="inter-heading-bold">Entry
+                ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPackage.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -35,8 +50,10 @@ function populateCoachingBasic() {
         <h6 class="tag basic-tag">${basicPackage.tag}</h6>
         <div class="coaching-card coaching-card--basic">
             <div>
-                <h4 class="inter-heading-bold">Basic</h4>
-                <div class="coaching-card__price space-grotesk-notice">${basicPackage.price}</div>
+                <h4 class="inter-heading-bold">Basic
+                ${basicPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPackage.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -61,8 +78,10 @@ function populateCoachingPro() {
         <h6 class="tag pro-tag">${proPackage.tag}</h6>
         <div class="coaching-card coaching-card--pro">
             <div>
-                <h4 class="inter-heading-bold">Pro</h4>
-                <div class="coaching-card__price space-grotesk-notice">${proPackage.price}</div>
+                <h4 class="inter-heading-bold">Pro 
+                ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPackage.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -90,8 +109,10 @@ function populateCoachingImmortal() {
         <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
         <div class="coaching-card immortal-card">
             <div>
-                <h4 class="inter-heading-bold">Immortal</h4>
-                <div class="coaching-card__price space-grotesk-notice">${immortalPackage.price}</div>
+                <h4 class="inter-heading-bold">Immortal
+                ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
             </div>
             <div class="row">
                 ${featureColumns}

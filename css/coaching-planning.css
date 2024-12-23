@@ -90,3 +90,32 @@ ul li span {
     font-size: 14px;
 
 }
+
+.remove-padding {
+    padding: 0;
+}
+.original-price {
+    position: relative;
+    color: #949494;
+    font-size: 0.6em;
+    margin-left: 8px;
+    display: block;
+  width: fit-content;
+}
+
+.original-price::after {
+    content: "";
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: red;
+    border-radius: 5px;
+}
+
+.badge{
+    background-color: red;
+}
+
+  
