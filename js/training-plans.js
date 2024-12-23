@@ -6,8 +6,8 @@ function populateTrainingEntry() {
     const featuresList = entryPlan.features.map(feature => `<li>${feature}</li>`).join('');
 
     entryColumn.innerHTML = `
-        <h6 class="tag">${entryPlan.tag}</h6>
-        <div class="coaching-card">
+        <h6 class="tag basic-tag">${entryPlan.tag}</h6>
+        <div class="coaching-card coaching-card--basic">
             <div>
                 <h4 class="inter-heading-bold">Entry
                 ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPlan.priceOff}</span>` : ''}
@@ -34,8 +34,8 @@ function populateTrainingBasic() {
     const featuresList = basicPlan.features.map(feature => `<li>${feature}</li>`).join('');
 
     basicColumn.innerHTML = `
-        <h6 class="tag basic-tag">${basicPlan.tag}</h6>
-        <div class="coaching-card coaching-card--basic">
+        <h6 class="tag pro-tag">${basicPlan.tag}</h6>
+        <div class="coaching-card coaching-card--pro">
             <div>
                 <h4 class="inter-heading-bold">Basic
                 ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPlan.priceOff}</span>` : ''}
@@ -62,8 +62,8 @@ function populateTrainingPro() {
     const featuresList = proPlan.features.map(feature => `<li>${feature}</li>`).join('');
 
     proColumn.innerHTML = `
-        <h6 class="tag pro-tag">${proPlan.tag}</h6>
-        <div class="coaching-card coaching-card--pro">
+        <h6 class="tag accent-tag">${proPlan.tag}</h6>
+        <div class="coaching-card coaching-card--accent">
             <div>
                 <h4 class="inter-heading-bold">Pro
                 ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPlan.priceOff}</span>` : ''}

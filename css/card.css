@@ -113,18 +113,18 @@
 
 .coaching-card--accent .coaching-card__price,
 .coaching-card--accent ul li:before {
-    color: var(--primary-accent-color);
+    color: var(--secondary-accent-color);
 }
 
 .accent-tag {
-    background-color: var(--primary-accent-color);
+    background-color: var(--secondary-accent-color);
     color: white;
 }
 
 /* Specific Button Styles for Each Coaching Card */
 .coaching-card--accent .btn-custom {
-    border: 1px solid var(--primary-accent-color);
-    background-color: var(--primary-accent-color);
+    border: 1px solid var(--secondary-accent-color);
+    background-color: var(--secondary-accent-color);
     color: white;
 }
 
