@@ -114,6 +114,10 @@ span {
     color: var(--primary-accent-color);
 }
 
+#alert-section span {
+    color: inherit;
+}
+
 /* container Settings */
 
 #coaching-section .container,
@@ -213,18 +217,18 @@ span {
 
 .sale-alert {
     position: fixed;
-    bottom: 50px;  /* Adjust this value to move the alert up or down */
+    bottom: 5%; 
     left: 0;
     width: 100%;
-    z-index: 1050;  /* Ensure the alert stays above other content */
-    margin-bottom: 0;  /* Remove default margin */
+    z-index: 1050;  
+    margin-bottom: 0;  
     text-align: center;
 }
 
 .sale-alert .alert-heading {
-    font-size: 1.5rem;  /* Make the heading larger */
+    font-size: 1.5rem; 
 }
 
-.sale-alert strong {
-    font-size: 1.2rem;  /* Make the text inside <strong> larger */
+.sale-alert .alert-message {
+    font-size: 1.4rem;  
 }

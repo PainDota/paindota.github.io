@@ -35,6 +35,7 @@
     <script src="js/data.js"></script>
     <script src="js/stats.js"></script>
     <script src="js/video.js"></script>
+    <script src="js/alert.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/testimonial.js"></script>
     <script src="js/coaching-packages.js"></script>
@@ -45,11 +46,15 @@
 </head>
 
 <body>
-    <!-- Fixed Sale Alert -->
-<div class="alert alert-info alert-dismissible fade show sale-alert" role="alert">
-    <strong>Big Sale!</strong> Get up to 50% off on all items! Don't miss out!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+    <!-- Alert Box Section -->
+    <section id="alert-section">
+        <div id="dynamicAlert" class="alert alert-dismissible fade show sale-alert" role="alert"
+            style="display: none;">
+            <strong id="dynamicAlertTitle" class="alert-heading">Default Title</strong>
+            <span id="dynamicAlertMessage" class="alert-message">Default message goes here.</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </section>
 
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
@@ -98,13 +103,17 @@
                     <div class="hero-section__text-section">
                         <h2 class="roboto-medium">DOTA 2 COACH & CONTENT CREATOR</h2>
                         <h1 class="montserrat-medium p-0">Immortal Rank Is Not Far Away</h1>
-                        <p class="open-sans-body py-4"><bold class="fw-bold">I’m a 9K MMR Dota 2 Player and Coach</bold>, and I’ve worked with
+                        <p class="open-sans-body py-4">
+                            <bold class="fw-bold">I’m a 9K MMR Dota 2 Player and Coach</bold>, and I’ve worked with
                             hundreds of players just like you. You’re amazing in so many areas of life, but this game is
                             the bane of your nightmares. You're smart, capable, and willing to improve and you’ve
-                            watched multiple YouTube videos, but you can’t seem to make it work.</p>
+                            watched multiple YouTube videos, but you can’t seem to make it work.
+                        </p>
                         <p class="open-sans-body">Listen, the problem isn’t you. Dota is a very complex game, and
                             little things can get you stuck for a long, long time. I’m here to help you with that, so
-                            sit back, relax, and let me handle the rest. <bold class="fw-bold">Your Journey to Immortal starts here!</bold></p>
+                            sit back, relax, and let me handle the rest. <bold class="fw-bold">Your Journey to Immortal
+                                starts here!</bold>
+                        </p>
                         <div class="hero-section__buttons btn-space-bw">
                             <a href="#coaching-section" class="text-decoration-none">
                                 <button class="btn-custom btn-immortal">
@@ -114,7 +123,8 @@
                                     Reach Immortal
                                 </button>
                             </a>
-                            <a href="https://www.skool.com/dota-academy-3470" target="_blank" class="text-decoration-none">
+                            <a href="https://www.skool.com/dota-academy-3470" target="_blank"
+                                class="text-decoration-none">
                                 <button class="btn-custom roboto-regular">
                                     <div class="btn-custom-icon">
                                         <img src="images/icons/simple-icons_dota2.svg" alt="Discord Icon">

@@ -9,6 +9,27 @@ const statsValues = {
     views: '2.5M'
 };
 
+//alert Data
+const alertConfig = {
+    alert: {
+        title: "Special Offer!",
+        message: "Get 30% off on all items today only!",
+        visible: false,
+        theme: "alert-primary"
+        // Other themes
+        // alert-primary
+        // alert-secondary
+        // alert-success 
+        // alert-danger
+        // alert-warning
+        // alert-info
+        // alert-light
+        // alert-dark
+    }
+};
+
+// for strikethough text: discountedPrice: '$xxxx',
+// for xx OFF badge priceOff: '$xxxx',
 
 // coaching package Data
 const entryPackage = {
@@ -36,8 +57,6 @@ const basicPackage = {
 
 const proPackage = {
     price: '$700',
-    discountedPrice: '$400',
-    priceOff: '$300',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -64,7 +83,6 @@ const immortalPackage = {
 // training plan Data
 const entryPlan = {
     price: '$200',
-    discountedPrice: '$150',
     features: [
         'Comprehensive Player Analysis',
         'Personalized Practice Plan',
