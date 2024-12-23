@@ -10,7 +10,7 @@ function populateTrainingEntry() {
         <div class="coaching-card">
             <div>
                 <h4 class="inter-heading-bold">Entry
-                ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">${entryPlan.priceOff} OFF</span>` : ''}
+                ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPlan.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice)}
             </div>
@@ -38,7 +38,7 @@ function populateTrainingBasic() {
         <div class="coaching-card coaching-card--basic">
             <div>
                 <h4 class="inter-heading-bold">Basic
-                ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">${basicPlan.priceOff} OFF</span>` : ''}
+                ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPlan.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice)}
             </div>
@@ -66,7 +66,7 @@ function populateTrainingPro() {
         <div class="coaching-card coaching-card--pro">
             <div>
                 <h4 class="inter-heading-bold">Pro
-                ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">${proPlan.priceOff} OFF</span>` : ''}
+                ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPlan.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(proPlan.price, proPlan.discountedPrice)}
             </div>

@@ -23,7 +23,7 @@ function populateCoachingEntry() {
         <div class="coaching-card">
             <div>
                 <h4 class="inter-heading-bold">Entry
-                ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">${entryPackage.priceOff} OFF</span>` : ''}
+                ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPackage.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice)}
             </div>
@@ -51,7 +51,7 @@ function populateCoachingBasic() {
         <div class="coaching-card coaching-card--basic">
             <div>
                 <h4 class="inter-heading-bold">Basic
-                ${basicPackage.priceOff ? `<span class="badge bg-danger ms-2">${basicPackage.priceOff} OFF</span>` : ''}
+                ${basicPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPackage.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice)}
             </div>
@@ -79,7 +79,7 @@ function populateCoachingPro() {
         <div class="coaching-card coaching-card--pro">
             <div>
                 <h4 class="inter-heading-bold">Pro 
-                ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">${proPackage.priceOff} OFF</span>` : ''}
+                ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPackage.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(proPackage.price, proPackage.discountedPrice)}
             </div>
@@ -110,7 +110,7 @@ function populateCoachingImmortal() {
         <div class="coaching-card immortal-card">
             <div>
                 <h4 class="inter-heading-bold">Immortal
-                ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">${immortalPackage.priceOff} OFF</span>` : ''}
+                ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
                 </h4>
                 ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
             </div>
