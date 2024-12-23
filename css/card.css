@@ -58,7 +58,9 @@
 .immortal-card {
     text-align: center;
 }
-
+.immortal-card .original-price {
+    margin: 0 auto;
+}
 .immortal-card .coaching-card__price,
 .immortal-card ul li:before {
     color: var(--primary-accent-color);
