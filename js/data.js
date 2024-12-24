@@ -12,13 +12,13 @@ const statsValues = {
 //alert Data
 const alertConfig = {
     alert: {
-        title: "Special Offer!",
-        message: "Get 30% off on all items today only!",
-        visible: false,
+        title: "New Year Sale is Live!" ,
+        message: "FLAT 20% OFF on Coaching Packages! Limited Slots Available",
+        visible: true,
         theme: "alert-primary"
         // Other themes
         // alert-primary
-        // alert-secondary
+        // alert-secondary  
         // alert-success 
         // alert-danger
         // alert-warning
@@ -34,6 +34,8 @@ const alertConfig = {
 // coaching package Data
 const entryPackage = {
     price: '$280',
+    discountedPrice: '$220',
+    priceOff: '$60',
     features: [
         '4x 1 Hour Sessions',
         'Discord Messaging',
@@ -45,6 +47,8 @@ const entryPackage = {
 
 const basicPackage = {
     price: '$420',
+    discountedPrice: '$340',
+    priceOff: '$80',
     features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
@@ -57,6 +61,8 @@ const basicPackage = {
 
 const proPackage = {
     price: '$700',
+    discountedPrice: '$560',
+    priceOff: '$140',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -71,6 +77,8 @@ const proPackage = {
 
 const immortalPackage = {
     price: '$2500',
+    discountedPrice: '$2000',
+    priceOff: '$500',
     features: [
         ['Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',],
         ['3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',],
@@ -83,6 +91,7 @@ const immortalPackage = {
 // training plan Data
 const entryPlan = {
     price: '$200',
+    
     features: [
         'Comprehensive Player Analysis',
         'Personalized Practice Plan',
