@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/testimonial.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/comparison-grid.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -40,6 +41,7 @@
     <script src="js/testimonial.js"></script>
     <script src="js/coaching-packages.js"></script>
     <script src="js/training-plans.js"></script>
+    <script src="js/comparison-grid.js"></script>
 
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="62909a14-786a-45e5-a988-2f7b253adde0"></script>
@@ -323,6 +325,109 @@
 
         </div>
     </Section>
+
+    <section id="comparison-grid">
+        <div class="container">
+            <!-- Description Section -->
+            <div class="row coaching-section__row">
+                <div class="col-md-8 offset-md-2 coaching-section__description">
+                    <h1 class="space-grotesk-notice">Compare <span>Coaching Plans</span></h1>
+                    <p class="montserrat-body">Find one that is right for you.</p>
+                </div>
+            </div>
+    
+            <div class="row d-xl-none mb-3">
+                <div class="col">
+                    <select id="plan-selector" class="form-select">
+                        <option value="coaching-card--entry" selected>Entry</option>
+                        <option value="coaching-card--basic">Basic</option>
+                        <option value="coaching-card--pro">Pro</option>
+                        <option value="coaching-card--immortal">Immortal</option>
+                    </select>
+                </div>
+            </div>                     
+    
+            <!-- Comparison Grid -->
+            <div class="comparison-grid p-5 mt-3 mb-3 inter-body-medium">
+                <!-- Header Row -->
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">
+                        <h4 class="inter-heading-bold"></h4>
+                    </div>
+                    <div class="col p-3 coaching-card--entry">
+                        <h4 class="inter-heading-bold">Entry</h4>
+                        <button class="btn-custom">Avail Entry</button>
+                    </div>
+                    <div class="col p-3 coaching-card--basic">
+                        <h4 class="inter-heading-bold">Basic</h4>
+                        <button class="btn-custom">Avail Basic</button>
+                    </div>
+                    <div class="col p-3 coaching-card--pro">
+                        <h4 class="inter-heading-bold">Pro</h4>
+                        <button class="btn-custom">Avail Pro</button>
+                    </div>
+                    <div class="col p-3 coaching-card--immortal">
+                        <h4 class="inter-heading-bold">Immortal</h4>
+                        <button class="btn-custom">Avail Immortal</button>
+                    </div>
+                </div>
+    
+                <!-- Feature Rows -->
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+                <!-- Repeat rows for other features... -->
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+                <div class="row d-flex justify-content-between text-center">
+                    <div class="col p-3">One-on-One Sessions</div>
+                    <div class="col p-3 coaching-card--entry">No</div>
+                    <div class="col p-3 coaching-card--basic">2 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--pro">4 Sessions/Month</div>
+                    <div class="col p-3 coaching-card--immortal">4 Sessions/Month</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
 
     <!-- buyer-protection section -->
     <section id="buyer-protection">
