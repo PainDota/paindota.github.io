@@ -72,9 +72,9 @@ const proPackage = {
 const immortalPackage = {
     price: '$2500',
     features: [
-        ['Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',],
-        ['3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',],
-        ['5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee']
+        'Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',
+        '3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',
+        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee'
     ],
     buttonLabel: 'Avail Immortal',
     tag: 'Unlimited Coaching Till Immortal'

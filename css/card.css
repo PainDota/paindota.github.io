@@ -55,12 +55,12 @@
 }
 
 /* Specific Styles */
-.immortal-card {
+/* .immortal-card {
     text-align: center;
-}
-.immortal-card .original-price {
+} */
+/* .immortal-card .original-price {
     margin: 0 auto;
-}
+} */
 .immortal-card .coaching-card__price,
 .immortal-card ul li:before {
     color: var(--secondary-accent-color);
@@ -75,7 +75,7 @@
     border: 1px solid var(--secondary-accent-color);
     background-color: var(--secondary-accent-color);
     color: white;
-    max-width: 30%;
+    /* max-width: 30%; */
 }
 
 .coaching-card--pro .coaching-card__price,

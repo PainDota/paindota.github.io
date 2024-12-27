@@ -95,15 +95,12 @@ function populateCoachingPro() {
     `;
 }
 
-// Function to populate the immortal package
+// Function to populate the pro package
 function populateCoachingImmortal() {
     const immortalColumn = document.getElementById('coaching-immortal');
     if (!immortalColumn) return;
 
-    const featureColumns = immortalPackage.features.map(features => {
-        const featuresList = features.map(feature => `<li>${feature}</li>`).join('');
-        return `<div class="col-md-4"><ul class="inter-body-medium">${featuresList}</ul></div>`;
-    }).join('');
+    const featuresList = immortalPackage.features.map(feature => `<li>${feature}</li>`).join('');
 
     immortalColumn.innerHTML = `
         <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
@@ -114,9 +111,9 @@ function populateCoachingImmortal() {
                 </h4>
                 ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
             </div>
-            <div class="row">
-                ${featureColumns}
-            </div>
+            <ul class="inter-body-medium">
+                ${featuresList}
+            </ul>
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${immortalPackage.buttonLabel}</button>
@@ -125,6 +122,36 @@ function populateCoachingImmortal() {
         </div>
     `;
 }
+// Function to populate the immortal package
+// function populateCoachingImmortal() {
+//     const immortalColumn = document.getElementById('coaching-immortal');
+//     if (!immortalColumn) return;
+
+//     const featureColumns = immortalPackage.features.map(features => {
+//         const featuresList = features.map(feature => `<li>${feature}</li>`).join('');
+//         return `<div class="col-md-4"><ul class="inter-body-medium">${featuresList}</ul></div>`;
+//     }).join('');
+
+//     immortalColumn.innerHTML = `
+//         <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
+//         <div class="coaching-card immortal-card">
+//             <div>
+//                 <h4 class="inter-heading-bold">Immortal
+//                 ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
+//                 </h4>
+//                 ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
+//             </div>
+//             <div class="row">
+//                 ${featureColumns}
+//             </div>
+//             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
+//                 <div class="coaching-card__button-container">
+//                     <button class="btn-custom">${immortalPackage.buttonLabel}</button>
+//                 </div>
+//             </a>
+//         </div>
+//     `;
+// }
 
 // Load all packages
 function loadCoachingPackages() {
