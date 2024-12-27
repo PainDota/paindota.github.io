@@ -123,8 +123,8 @@ span {
 #coaching-section .container,
 #training-section .container,
 #coaching-packages-section .container,
-#comparison-grid .container,
 #training-plans-section .container,
+#comparison-grid .container,
 #faq-section .container {
     width: 100%;
     max-width: 1280px;
@@ -132,6 +132,9 @@ span {
     padding: 1rem 6rem;
 }
 
+#comparison-grid .container{
+    max-width: 1500px; 
+}
 @media (max-width: 1000px) {
 
     #coaching-section .container,

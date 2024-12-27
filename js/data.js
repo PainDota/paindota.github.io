@@ -80,6 +80,83 @@ const immortalPackage = {
     tag: 'Unlimited Coaching Till Immortal'
 };
 
+//comparison data
+const comparisonData= {
+    "header": ["Feature", "Entry", "Basic", "Pro", "Immortal"],
+    "rows": [
+      {
+        "feature": "One-on-One Sessions",
+        "Entry": "No",
+        "Basic": "2 Sessions/Month",
+        "Pro": "4 Sessions/Month",
+        "Immortal": "4 Sessions/Month"
+      },
+      {
+        "feature": "Future Session Discount",
+        "Entry": "10% (1)",
+        "Basic": "15% (2)",
+        "Pro": "20% (2)",
+        "Immortal": "30% (3)"
+      },
+      {
+        "feature": "Discord Messaging",
+        "Entry": "✔",
+        "Basic": "✔",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Patch + Meta Explanation",
+        "Entry": "✔",
+        "Basic": "✔",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "VOD Review",
+        "Entry": "✘",
+        "Basic": "✔",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Match-up Guide",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Analysis Tutorial",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Pro Player Analysis Sessions",
+        "Entry": "0",
+        "Basic": "0",
+        "Pro": "0",
+        "Immortal": "5"
+      },
+      {
+        "feature": "Personal Progress Checkup",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Immortal Guarantee",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✔"
+      }
+    ]
+  };
+
 // training plan Data
 const entryPlan = {
     price: '$200',
