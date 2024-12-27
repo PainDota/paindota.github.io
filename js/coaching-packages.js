@@ -103,6 +103,7 @@ function populateCoachingImmortal() {
     const featuresList = immortalPackage.features.map(feature => `<li>${feature}</li>`).join('');
 
     immortalColumn.innerHTML = `
+        <img src="images/icons/heroicons_fire-20-solid.svg" alt="Teach Icon" style="position: absolute; top: -40px; left: -15px; width: 85px; height: auto;">
         <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
         <div class="coaching-card immortal-card">
             <div>
