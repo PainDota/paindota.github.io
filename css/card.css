@@ -1,7 +1,8 @@
 /* Parent container for the columns */
-.row {
+#coaching-packages-section .row,
+#training-plans-section .row{
     display: flex;
-    gap: 30px;  /* Gap between the columns */
+    gap: 15px;  /* Gap between the columns */
     flex-wrap: wrap;  /* Allow columns to wrap if needed */
 }
 

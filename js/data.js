@@ -72,8 +72,8 @@ const proPackage = {
 const immortalPackage = {
     price: '$2500',
     features: [
-        'Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',
-        '3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',
+        'Unlimited 1 Hour Sessions',
+        '3x VOD Reviews', '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee'
     ],
     buttonLabel: 'Avail Immortal',
@@ -84,20 +84,6 @@ const immortalPackage = {
 const comparisonData= {
     "header": ["Feature", "Entry", "Basic", "Pro", "Immortal"],
     "rows": [
-      {
-        "feature": "One-on-One Sessions",
-        "Entry": "No",
-        "Basic": "2 Sessions/Month",
-        "Pro": "4 Sessions/Month",
-        "Immortal": "4 Sessions/Month"
-      },
-      {
-        "feature": "Future Session Discount",
-        "Entry": "10% (1)",
-        "Basic": "15% (2)",
-        "Pro": "20% (2)",
-        "Immortal": "30% (3)"
-      },
       {
         "feature": "Discord Messaging",
         "Entry": "✔",
