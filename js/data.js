@@ -85,6 +85,13 @@ const comparisonData= {
     "header": ["Feature", "Entry", "Basic", "Pro", "Immortal"],
     "rows": [
       {
+        "feature": "# Lessons (1hr Sessions)",
+        "Entry": "4",
+        "Basic": "6",
+        "Pro": "10",
+        "Immortal": "Unlimited till Immortal"
+      },
+      {
         "feature": "Discord Messaging",
         "Entry": "✔",
         "Basic": "✔",
