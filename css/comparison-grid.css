@@ -1,0 +1,75 @@
+.comparison-grid {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.comparison-grid .btn-custom {
+    align-items: left;
+    width: 80%;
+    border-radius: 24px;
+}
+
+.coaching-card--immortal .btn-custom {
+    border: 1px solid var(--secondary-accent-color);
+    background-color: var(--secondary-accent-color);
+    color: white;
+}
+
+#comparison-grid .comparison-grid .row:first-child {
+    border-top: none;
+}
+
+#comparison-grid .comparison-grid .row {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #ccc;
+}
+
+#comparison-grid .comparison-grid .row:last-child {
+    border-bottom: none;
+}
+
+#comparison-grid .comparison-grid .col {
+    border-right: 1px solid #ccc;
+}
+
+#comparison-grid .comparison-grid .col:last-child {
+    border-right: none;
+}
+
+#comparison-grid .comparison-grid .row > .col:first-child {
+    text-align: left;
+}
+
+#comparison-grid .comparison-grid .col:first-child {
+    display: block;
+}
+
+#comparison-grid .comparison-grid .col {
+    display: none;
+}
+
+#comparison-grid .comparison-grid .col.active {
+    display: block;
+}
+
+@media (min-width: 1200px) {
+    #comparison-grid .comparison-grid .col {
+        display: block;
+    }
+
+    #plan-selector {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    #comparison-grid .comparison-grid .col {
+        border-right: none;
+    }
+
+    #comparison-grid .comparison-grid .col:first-child {
+        border-right: 1px solid #ccc;
+    }
+}

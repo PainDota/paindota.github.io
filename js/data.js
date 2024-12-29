@@ -80,13 +80,83 @@ const immortalPackage = {
     discountedPrice: '$2000',
     priceOff: '$500',
     features: [
-        ['Unlimited 1 Hour Sessions', 'Discord Messaging', 'Patch + Meta Explanation',],
-        ['3x VOD Reviews', '1x Match-up Guide', '1x Analysis Tutorial',],
-        ['5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee']
+        'Unlimited 1 Hour Sessions',
+        '3x VOD Reviews', '1x Analysis Tutorial',
+        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee'
     ],
     buttonLabel: 'Avail Immortal',
     tag: 'Unlimited Coaching Till Immortal'
 };
+
+//comparison data
+const comparisonData= {
+    "header": ["Feature", "Entry", "Basic", "Pro", "Immortal"],
+    "rows": [
+      {
+        "feature": "# Lessons (1hr Sessions)",
+        "Entry": "4",
+        "Basic": "6",
+        "Pro": "10",
+        "Immortal": "Unlimited till Immortal"
+      },
+      {
+        "feature": "Discord Messaging",
+        "Entry": "✔",
+        "Basic": "✔",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Patch + Meta Explanation",
+        "Entry": "✔",
+        "Basic": "✔",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "VOD Review",
+        "Entry": "✘",
+        "Basic": "✔",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Match-up Guide",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Analysis Tutorial",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✔",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Pro Player Analysis Sessions",
+        "Entry": "0",
+        "Basic": "0",
+        "Pro": "0",
+        "Immortal": "5"
+      },
+      {
+        "feature": "Personal Progress Checkup",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✔"
+      },
+      {
+        "feature": "Immortal Guarantee",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✔"
+      }
+    ]
+  };
 
 // training plan Data
 const entryPlan = {

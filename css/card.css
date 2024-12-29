@@ -1,8 +1,33 @@
-/* Global Styles */
+/* Parent container for the columns */
+#coaching-packages-section .row,
+#training-plans-section .row{
+    display: flex;
+    gap: 15px;  /* Gap between the columns */
+    flex-wrap: wrap;  /* Allow columns to wrap if needed */
+}
+
+/* Column styling */
 .custom-col {
-    padding-top: 20px;
+    position: relative;
+    margin-top: 20px;
+    padding: 0;  /* No padding to avoid space between the border and children */
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;  /* Include border inside the column */
+    flex: 1 1 22%;  /* Allow each column to take up 22% of the width and wrap when needed */
+}
+
+/* Ensuring columns take up the correct space */
+@media (max-width: 1200px) {
+    .custom-col {
+        flex: 1 1 45%;  /* Two columns per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-col {
+        flex: 1 1 100%;  /* Single column per row on small screens */
+    }
 }
 
 .coaching-card {
@@ -11,7 +36,7 @@
     justify-content: center;
     height: 100%;
     background: white;
-    border-radius: 24px;
+    border-radius: 25px;
     color: black;
     padding: 1.4rem;
 }
@@ -55,12 +80,12 @@
 }
 
 /* Specific Styles */
-.immortal-card {
+/* .immortal-card {
     text-align: center;
-}
-.immortal-card .original-price {
+} */
+/* .immortal-card .original-price {
     margin: 0 auto;
-}
+} */
 .immortal-card .coaching-card__price,
 .immortal-card ul li:before {
     color: var(--secondary-accent-color);
@@ -75,7 +100,7 @@
     border: 1px solid var(--secondary-accent-color);
     background-color: var(--secondary-accent-color);
     color: white;
-    max-width: 30%;
+    /* max-width: 30%; */
 }
 
 .coaching-card--pro .coaching-card__price,
@@ -130,4 +155,20 @@
 
 #services-heading {
     text-align: center;
+}
+
+.card-border
+{
+    padding: 0;
+    margin: 0;
+}
+
+.coaching-card {
+    max-width: 100%;
+}
+
+.popular {
+    border: 10px solid #F67574;
+    background: white;
+    border-radius: 35px;
 }

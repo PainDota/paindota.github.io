@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/testimonial.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/comparison-grid.css">
     <link rel="stylesheet" href="css/faq.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/fonts.css">
@@ -39,7 +40,9 @@
     <script src="js/faq.js"></script>
     <script src="js/testimonial.js"></script>
     <script src="js/coaching-packages.js"></script>
+    <script src="js/comparison-fill.js"></script>
     <script src="js/training-plans.js"></script>
+    <script src="js/comparison-grid.js"></script>
 
     <script defer src="https://cloud.umami.is/script.js"
         data-website-id="62909a14-786a-45e5-a988-2f7b253adde0"></script>
@@ -114,7 +117,7 @@
                                 starts here!</bold>
                         </p>
                         <div class="hero-section__buttons btn-space-bw">
-                            <a href="#coaching-section" class="text-decoration-none">
+                            <a href="#coaching-packages-section" class="text-decoration-none">
                                 <button class="btn-custom btn-immortal">
                                     <div class="btn-custom-icon">
                                         <img src="images/icons/immortal.svg" alt="Teach Icon">
@@ -150,7 +153,7 @@
     <section id="stats-section">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xxs-6 p-3 p-md-0">
+                <div class="col-md-3 col-sm-6">
                     <!-- Each stat occupies 3 columns on medium and large screens, and 6 columns on small screens -->
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa fa-tag" aria-hidden="true"></i></div>
@@ -158,21 +161,21 @@
                         <div class="stats-section__stat-label roboto-medium">MMR</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xxs-6 p-3 p-md-0">
+                <div class="col-md-3 col-sm-6">
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
                         <div class="stats-section__stat-value roboto-bold" id="students"></div>
                         <div class="stats-section__stat-label roboto-medium">Students</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 p-3 p-md-0">
+                <div class="col-md-3 col-sm-6">
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa-solid fa-clock"></i></div>
                         <div class="stats-section__stat-value roboto-bold" id="coaching-hrs"></div>
                         <div class="stats-section__stat-label roboto-medium">Coaching Hours</div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 col-xs-6 p-3 p-md-0">
+                <div class="col-md-3 col-sm-6">
                     <div class="stats-section__stat">
                         <div class="stats-section__stat-icon"><i class="fa-brands fa-youtube"></i></div>
                         <div class="stats-section__stat-value roboto-bold" id="views"></div>
@@ -311,18 +314,51 @@
             </div>
 
             <div class="row">
-                <div class="custom-col col-md-12" id="coaching-immortal"></div>
-            </div>
-
-            <div class="row">
-                <div class="custom-col col-md-4 col-sm-6" id="coaching-entry"></div>
-                <div class="custom-col col-md-4 col-sm-6" id="coaching-basic"></div>
-                <div class="custom-col col-md-4 col-sm-12" id="coaching-pro"></div>
+                <div class="custom-col col-md-6 col-xxl-3 col-sm-6" id="coaching-entry"></div>
+                <div class="custom-col col-md-6 col-xxl-3 col-sm-6" id="coaching-basic"></div>
+                <div class="custom-col col-md-6 col-xxl-3 col-sm-6" id="coaching-pro"></div>
+                <div class="custom-col col-md-6 col-xxl-3 col-sm-6 popular" id="coaching-immortal">
+                </div>
             </div>
 
 
         </div>
     </Section>
+
+    <section id="comparison-grid">
+        <div class="container">
+            <!-- Description Section -->
+            <div class="row coaching-section__row">
+                <div class="col-md-8 offset-md-2 coaching-section__description">
+                    <h1 class="space-grotesk-notice">Compare <span>Coaching Plans</span></h1>
+                    <p class="montserrat-body">Find one that is right for you.</p>
+                </div>
+            </div>
+    
+            <div class="row d-xl-none mb-3">
+                <div class="col">
+                    <select id="plan-selector" class="form-select">
+                        <option value="coaching-card--entry" selected>Entry</option>
+                        <option value="coaching-card--basic">Basic</option>
+                        <option value="coaching-card--pro">Pro</option>
+                        <option value="coaching-card--immortal">Immortal</option>
+                    </select>
+                </div>
+            </div>                     
+    
+            <!-- Comparison Grid -->
+            <div class="comparison-grid p-5 mt-3 mb-3 inter-body-medium">
+                <!-- Header Row (Dynamically generated) -->
+                <div class="row d-flex justify-content-between text-center" id="header-row"></div>
+    
+                <!-- Feature Rows (Dynamically generated) -->
+                <div id="feature-rows"></div>
+            </div>
+        </div> 
+    </section>
+    
+    
+
 
     <!-- buyer-protection section -->
     <section id="buyer-protection">
