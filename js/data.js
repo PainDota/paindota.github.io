@@ -14,7 +14,7 @@ const alertConfig = {
     alert: {
         title: "New Year Sale is Live!" ,
         message: "FLAT 20% OFF on Coaching Packages! Limited Slots Available",
-        visible: true,
+        visible: false,
         theme: "alert-primary"
         // Other themes
         // alert-primary
@@ -34,8 +34,6 @@ const alertConfig = {
 // coaching package Data
 const entryPackage = {
     price: '$280',
-    discountedPrice: '$220',
-    priceOff: '$60',
     features: [
         '4x 1 Hour Sessions',
         'Discord Messaging',
@@ -47,9 +45,7 @@ const entryPackage = {
 
 const basicPackage = {
     price: '$420',
-    discountedPrice: '$340',
-    priceOff: '$80',
-    features: [
+     features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
         'Patch + Meta Explanation',
@@ -61,8 +57,6 @@ const basicPackage = {
 
 const proPackage = {
     price: '$700',
-    discountedPrice: '$560',
-    priceOff: '$140',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -77,8 +71,6 @@ const proPackage = {
 
 const immortalPackage = {
     price: '$2500',
-    discountedPrice: '$2000',
-    priceOff: '$500',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
