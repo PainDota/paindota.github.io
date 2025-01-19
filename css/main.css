@@ -143,7 +143,8 @@ span {
     #training-plans-section .container,
     #testimonial-section .container,
     #faq-section .container,
-    #info-section .container {
+    #info-section .container,
+    #comparison-grid .container {
         padding: 1rem;
     }
 
