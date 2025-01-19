@@ -202,8 +202,8 @@ const accordionData = [
     },
     {
         id: 'collapseThree',
-        title: 'What is the difference between Training Plans and Coaching Packages?',
-        content: 'The Training Plan does not include 1-on-1 coaching. It comprises a document formed after analyzing your most recent 10 games. This document highlights the mistakes that hinder your progress, along with suggested practices to overcome them, aiding you in climbing MMR. Conversely, Coaching Packages include 1-on-1 coaching via call, with all instructions provided visually.'
+        title: 'Do you offer Installment Plans?',
+        content: 'Yes, installment plans are available exclusively for the Immortal Package. Payments can be completed over three months. For more details, please refer to the form provided.'
     },
     {
         id: 'collapseFour',
