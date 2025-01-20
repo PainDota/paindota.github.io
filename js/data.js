@@ -253,18 +253,20 @@ const testimonials = [
             "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to mid game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100"
     },
     {
-        img: "images/badges/ranks/legend.svg",
-        title: "iisereb",
-        subtitle: "1800 to 3540",
+        
+        img: "images/badges/ranks/immortal.svg",
+        title: "mantazer",
+        subtitle: "3800 to 5640 mmr",
         description:
-            "Pain is great. I was able to get from crusader 3 to legend 3 in a matter of months. It took me around 3-4 month and weekly coaching (aka replay analysis) with Pain. He points out my mistakes in my unsuccessful games and he points out the good things that I improved on. No micromanagement, just straight to the point and no bs. If you listen and apply, you will improve. He told me if you blame your team, then delete dota.  I listened. I deleted XD. But then came back, had another session with my boy Pain and got to legend 3. I maintain my winrate at around 70%, but dota is full of surprises, so I believe its very good. Last thing to say: I have been coached by other people and so far pain has been the best."
-    },
+            "I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain."
+    },   
+
     {
         img: "images/badges/ranks/legend.svg",
         title: "DOVAREME",
         subtitle: "1800 to 3000 mmr",
         description:
-            "        I've been playing dota since I started playing PC Games, I first calibrated as a herald when i started  playing ranked and battled my way all the way up to Archon over a few years however I got stuck. I took Pain on as a coach after watching one of his videos. You wouldn't think it but its simple shit that he says during coaching sessions like 'hit more creeps' that make you win games. DOTA's not complicated if you follow simple formulas to win is what I am learning during my coaching sessions. So if you want to level up and rank up I'd recommend Pain. I ranked up 4 times in about a month after taking him on as a coach if that gives you an idea of effectiveness. Only take on coaching sessions if you are coachable and willing to fix your bad habits and the MMR will come easily."
+            "I've been playing dota since I started playing PC Games, I first calibrated as a herald when i started  playing ranked and battled my way all the way up to Archon over a few years however I got stuck. I took Pain on as a coach after watching one of his videos. You wouldn't think it but its simple shit that he says during coaching sessions like 'hit more creeps' that make you win games. DOTA's not complicated if you follow simple formulas to win is what I am learning during my coaching sessions. So if you want to level up and rank up I'd recommend Pain. I ranked up 4 times in about a month after taking him on as a coach if that gives you an idea of effectiveness. Only take on coaching sessions if you are coachable and willing to fix your bad habits and the MMR will come easily."
     },
 
     {
@@ -310,11 +312,11 @@ const testimonials = [
             "            I was hard stuck at legend for about 6 years. Since I've started coaching I climbed from a low of Archon 3 to Divine 1 in about 3 months and I'm easily playing the best dota of my life with no cheap cheese strats or single hero spamming. I had weekly replay sessions with Pain. He's very thoughtful and doesn't mind humouring me when I have a theory that is completely wrong. He'll test it out and convince me one way or another and win me round when most coaches will say 'no that's wrong do x'. He is an absolute beast at laning and doing some 1v1s with him really opened my eyes. I had a 75% lane winrate at Legend before coaching but he completely demolished me and taught me the importance of maintaining basics like Last hitting that everyone wants to ignore but are probably the most important thing. On top of that he's just a chilled guy, I like him and I hope he keeps doing well. His passion for dota is obvious as I see him online all the time watching replays and it's awesome talking to him about the meta and stuff. Hopefully I'll hit immortal one day soon and if I do he'll be a massive reason why. Cheers Pain, you're a good one!"
     },
     {
-        img: "images/badges/ranks/immortal.svg",
-        title: "mantazer",
-        subtitle: "3800 to 5640 mmr",
+        img: "images/badges/ranks/legend.svg",
+        title: "iisereb",
+        subtitle: "1800 to 3540",
         description:
-            "            I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain."
+            "Pain is great. I was able to get from crusader 3 to legend 3 in a matter of months. It took me around 3-4 month and weekly coaching (aka replay analysis) with Pain. He points out my mistakes in my unsuccessful games and he points out the good things that I improved on. No micromanagement, just straight to the point and no bs. If you listen and apply, you will improve. He told me if you blame your team, then delete dota.  I listened. I deleted XD. But then came back, had another session with my boy Pain and got to legend 3. I maintain my winrate at around 70%, but dota is full of surprises, so I believe its very good. Last thing to say: I have been coached by other people and so far pain has been the best."
     },
 
 
