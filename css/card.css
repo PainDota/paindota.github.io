@@ -1,32 +1,39 @@
 /* Parent container for the columns */
 #coaching-packages-section .row,
-#training-plans-section .row{
+#training-plans-section .row {
     display: flex;
-    gap: 15px;  /* Gap between the columns */
-    flex-wrap: wrap;  /* Allow columns to wrap if needed */
+    gap: 15px;
+    /* Gap between the columns */
+    flex-wrap: wrap;
+    /* Allow columns to wrap if needed */
 }
 
 /* Column styling */
 .custom-col {
     position: relative;
     margin-top: 20px;
-    padding: 0;  /* No padding to avoid space between the border and children */
+    padding: 0;
+    /* No padding to avoid space between the border and children */
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;  /* Include border inside the column */
-    flex: 1 1 22%;  /* Allow each column to take up 22% of the width and wrap when needed */
+    box-sizing: border-box;
+    /* Include border inside the column */
+    flex: 1 1 22%;
+    /* Allow each column to take up 22% of the width and wrap when needed */
 }
 
 /* Ensuring columns take up the correct space */
 @media (max-width: 1200px) {
     .custom-col {
-        flex: 1 1 45%;  /* Two columns per row on medium screens */
+        flex: 1 1 45%;
+        /* Two columns per row on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .custom-col {
-        flex: 1 1 100%;  /* Single column per row on small screens */
+        flex: 1 1 100%;
+        /* Single column per row on small screens */
     }
 }
 
@@ -157,8 +164,7 @@
     text-align: center;
 }
 
-.card-border
-{
+.card-border {
     padding: 0;
     margin: 0;
 }
@@ -171,4 +177,17 @@
     border: 10px solid #F67574;
     background: white;
     border-radius: 35px;
+}
+
+.installment-plan-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.installment-plan {
+    color: #F67574;
+    font-size: 1rem;
+    text-align: center;
 }

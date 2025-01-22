@@ -40,7 +40,8 @@ const entryPackage = {
         'Patch + Meta Explanation'
     ],
     buttonLabel: 'Avail Entry',
-    tag: 'Value Pack'
+    tag: 'Value Pack',
+    installmentPlan: false
 };
 
 const basicPackage = {
@@ -52,7 +53,8 @@ const basicPackage = {
         '1x VOD Review'
     ],
     buttonLabel: 'Avail Basic',
-    tag: 'Best For Starting Out'
+    tag: 'Best For Starting Out',
+    installmentPlan: false
 };
 
 const proPackage = {
@@ -66,7 +68,8 @@ const proPackage = {
         '1x Analysis Tutorial'
     ],
     buttonLabel: 'Avail Pro',
-    tag: 'Most Popular'
+    tag: 'Most Popular',
+    installmentPlan: false
 };
 
 const immortalPackage = {
@@ -77,7 +80,8 @@ const immortalPackage = {
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee'
     ],
     buttonLabel: 'Avail Immortal',
-    tag: 'Unlimited Coaching Till Immortal'
+    tag: 'Unlimited Coaching Till Immortal',
+    installmentPlan: true
 };
 
 //comparison data

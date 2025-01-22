@@ -1,14 +1,24 @@
 // Helper function to generate price HTML
-function generatePriceHTML(price, discountedPrice) {
+function generatePriceHTML(price, discountedPrice, installmentPlan) {
+    const installmentText = installmentPlan ? `<div class="installment-plan-container">
+                                                    <img src="images/icons/akar-icons_coin.svg" alt="Teach Icon">
+                                                    <span class="installment-plan">Installment Plan Available</span>
+                                                </div>` : '';
     if (discountedPrice) {
         return `
             <div class="coaching-card__price space-grotesk-notice">
                 ${discountedPrice} 
-                <div class= "original-price">${price}</div>
+                <div class="original-price">${price}</div>
+                ${installmentText}
             </div>
         `;
     }
-    return `<div class="coaching-card__price space-grotesk-notice">${price}</div>`;
+    return `
+        <div class="coaching-card__price space-grotesk-notice">
+            ${price}
+            ${installmentText}
+        </div>
+    `;
 }
 
 // Function to populate the entry package
@@ -25,7 +35,7 @@ function populateCoachingEntry() {
                 <h4 class="inter-heading-bold">Entry
                 ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice)}
+                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice, entryPackage.installmentPlan)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -53,7 +63,7 @@ function populateCoachingBasic() {
                 <h4 class="inter-heading-bold">Basic
                 ${basicPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice)}
+                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice, basicPackage.installmentPlan)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -81,7 +91,7 @@ function populateCoachingPro() {
                 <h4 class="inter-heading-bold">Pro 
                 ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice)}
+                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice, proPackage.installmentPlan)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -95,7 +105,7 @@ function populateCoachingPro() {
     `;
 }
 
-// Function to populate the pro package
+// Function to populate the immortal package
 function populateCoachingImmortal() {
     const immortalColumn = document.getElementById('coaching-immortal');
     if (!immortalColumn) return;
@@ -110,7 +120,7 @@ function populateCoachingImmortal() {
                 <h4 class="inter-heading-bold">Immortal
                 ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
+                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -123,6 +133,7 @@ function populateCoachingImmortal() {
         </div>
     `;
 }
+
 // Function to populate the immortal package
 // function populateCoachingImmortal() {
 //     const immortalColumn = document.getElementById('coaching-immortal');
