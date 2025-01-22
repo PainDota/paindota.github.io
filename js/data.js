@@ -236,8 +236,8 @@ const accordionData = [
     },
     {
         id: 'collapseNine',
-        title: 'Is there a limit to the number of coaching sessions I can book?',
-        content: 'No.'
+        title: 'Is there an expiry date on the Coaching Packages?',
+        content: 'No, there is no expiry date. You can use the sessions from your Coaching Package at your own pace, with no time restrictions. Take as much time as you need to complete your sessions.'
     }
 ];
 
