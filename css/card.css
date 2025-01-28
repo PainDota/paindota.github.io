@@ -18,7 +18,7 @@
     flex-direction: column;
     box-sizing: border-box;
     /* Include border inside the column */
-    flex: 1 1 22%;
+    flex: 0 0 30%;
     /* Allow each column to take up 22% of the width and wrap when needed */
 }
 
@@ -93,6 +93,24 @@
 /* .immortal-card .original-price {
     margin: 0 auto;
 } */
+
+.immortal-plus-card .coaching-card__price,
+.immortal-plus-card ul li:before {
+    color: #4C3A86;
+}
+
+.immortal-plus-tag {
+    background-color: #4C3A86;
+    color: white;
+}
+
+.immortal-plus-card .btn-custom {
+    border: 1px solid #4C3A86;
+    background-color: #4C3A86;
+    color: white;
+    /* max-width: 30%; */
+}
+
 .immortal-card .coaching-card__price,
 .immortal-card ul li:before {
     color: var(--secondary-accent-color);

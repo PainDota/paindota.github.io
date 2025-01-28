@@ -84,6 +84,25 @@ const immortalPackage = {
     installmentPlan: true
 };
 
+const plusPackage = {
+    price: '$2500',
+    features: [
+        'Immortal in 6 Months or Full Refund',
+        'Unlimited 1 Hour Sessions',
+        '3x VOD Reviews', '1x Analysis Tutorial',
+        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup'
+    ],
+    buttonLabel: 'Avail Immortal Plus',
+    tag: 'Newest Package',
+    installmentPlan: true,
+    requirements: [
+        'Minimum MMR: 3000',
+        'At least 30 games per week',
+        'Commit to one main role',
+        "Fully trust and adhere to the coach's guidance"
+    ],
+};
+
 //comparison data
 const comparisonData= {
     "header": ["Feature", "Entry", "Basic", "Pro", "Immortal"],

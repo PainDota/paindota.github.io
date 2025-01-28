@@ -135,6 +135,34 @@ function populateCoachingImmortal() {
 }
 
 // Function to populate the immortal package
+function populateCoachingImmortalPlus() {
+    const immortalColumn = document.getElementById('coaching-immortal-plus');
+    if (!immortalColumn) return;
+
+    const featuresList = immortalPackage.features.map(feature => `<li>${feature}</li>`).join('');
+
+    immortalColumn.innerHTML = `
+        <h6 class="tag immortal-plus-tag">${immortalPackage.tag}</h6>
+        <div class="coaching-card immortal-plus-card">
+            <div>
+                <h4 class="inter-heading-bold">Immortal Plus
+                ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan)}
+            </div>
+            <ul class="inter-body-medium">
+                ${featuresList}
+            </ul>
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${immortalPackage.buttonLabel}</button>
+                </div>
+            </a>
+        </div>
+    `;
+}
+
+// Function to populate the immortal package
 // function populateCoachingImmortal() {
 //     const immortalColumn = document.getElementById('coaching-immortal');
 //     if (!immortalColumn) return;
@@ -171,6 +199,7 @@ function loadCoachingPackages() {
     populateCoachingBasic();
     populateCoachingPro();
     populateCoachingImmortal();
+    populateCoachingImmortalPlus();
 }
 
 document.addEventListener('DOMContentLoaded', loadCoachingPackages);
