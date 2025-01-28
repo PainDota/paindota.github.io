@@ -134,33 +134,50 @@ function populateCoachingImmortal() {
     `;
 }
 
-// Function to populate the immortal package
 function populateCoachingImmortalPlus() {
     const immortalColumn = document.getElementById('coaching-immortal-plus');
     if (!immortalColumn) return;
 
-    const featuresList = immortalPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = plusPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const requirementsList = plusPackage.requirements.map(requirement => `<li>${requirement}</li>`).join('');
 
     immortalColumn.innerHTML = `
-        <h6 class="tag immortal-plus-tag">${immortalPackage.tag}</h6>
+        <h6 class="tag immortal-plus-tag">${plusPackage.tag}</h6>
         <div class="coaching-card immortal-plus-card">
             <div>
-                <h4 class="inter-heading-bold">Immortal Plus
-                ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
+                <h4 class="inter-heading-bold">
+                    Immortal Plus
+                    ${plusPackage.priceOff ? 
+                        `<span class="badge bg-danger ms-2">SAVE ${plusPackage.priceOff}</span>` 
+                        : ''}
                 </h4>
-                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan)}
+                ${generatePriceHTML(plusPackage.price, plusPackage.discountedPrice, plusPackage.installmentPlan)}
             </div>
+
             <ul class="inter-body-medium">
                 ${featuresList}
+                <div class="procedure">
+                <!-- Collapsible button with info icon -->
+                <button class="btn btn-link collapsible" data-bs-toggle="collapse" data-bs-target="#requirements" aria-expanded="false" aria-controls="requirements">
+                    <i class="fas fa-info-circle"></i> Requirements
+                </button>
+                <ul id="requirements" class="collapse">
+                    ${requirementsList}
+                </ul>
+            </div>
             </ul>
+
+            
+
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
-                    <button class="btn-custom">${immortalPackage.buttonLabel}</button>
+                    <button class="btn-custom">${plusPackage.buttonLabel}</button>
                 </div>
             </a>
         </div>
     `;
 }
+
 
 // Function to populate the immortal package
 // function populateCoachingImmortal() {
