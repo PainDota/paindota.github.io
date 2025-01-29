@@ -85,7 +85,7 @@ const immortalPackage = {
 };
 
 const plusPackage = {
-    price: '$2500',
+    price: '$4000',
     features: [
         'Immortal in 6 Months or Full Refund',
         'Unlimited 1 Hour Sessions',
@@ -93,7 +93,7 @@ const plusPackage = {
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup'
     ],
     buttonLabel: 'Avail Immortal Plus',
-    tag: 'Newest Package',
+    tag: 'Guaranteed Immortal in 6 Months',
     installmentPlan: true,
     requirements: [
         'Minimum MMR: 3000',
@@ -105,70 +105,88 @@ const plusPackage = {
 
 //comparison data
 const comparisonData= {
-    "header": ["Feature", "Entry", "Basic", "Pro", "Immortal"],
+    "header": ["Feature", "Entry", "Basic", "Pro", "Immortal","Immortal Plus"],
     "rows": [
       {
         "feature": "# Lessons (1hr Sessions)",
         "Entry": "4",
         "Basic": "6",
         "Pro": "10",
-        "Immortal": "Unlimited till Immortal"
+        "Immortal": "Unlimited till Immortal",
+        "Immortal Plus": "Unlimited till Immortal"
       },
       {
         "feature": "Discord Messaging",
         "Entry": "✔",
         "Basic": "✔",
         "Pro": "✔",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
+
       },
       {
         "feature": "Patch + Meta Explanation",
         "Entry": "✔",
         "Basic": "✔",
         "Pro": "✔",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
       },
       {
         "feature": "VOD Review",
         "Entry": "✘",
         "Basic": "✔",
         "Pro": "✔",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
       },
       {
         "feature": "Match-up Guide",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✔",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
       },
       {
         "feature": "Analysis Tutorial",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✔",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
       },
       {
         "feature": "Pro Player Analysis Sessions",
         "Entry": "0",
         "Basic": "0",
         "Pro": "0",
-        "Immortal": "5"
+        "Immortal": "5",
+        "Immortal Plus":"5"
       },
       {
         "feature": "Personal Progress Checkup",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
       },
       {
         "feature": "Immortal Guarantee",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
-        "Immortal": "✔"
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
+      },
+      {
+        "feature": "Refund",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✘",
+        "Immortal Plus":"✔"
       }
     ]
   };

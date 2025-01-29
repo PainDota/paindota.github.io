@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (planSelector) {
         planSelector.addEventListener('change', (event) => {
             const selectedPlan = event.target.value;
-            const planClasses = ["coaching-card--entry", "coaching-card--basic", "coaching-card--pro", "coaching-card--immortal"];
+            const planClasses = ["coaching-card--entry", "coaching-card--basic", "coaching-card--pro", "coaching-card--immortal", "coaching-card--immortal-plus"];
 
             // Hide all plans
             planClasses.forEach(planClass => {
@@ -44,7 +44,7 @@ function renderHeaderRow() {
     let headerHTML = '<div class="col p-3"></div>'; // Empty cell for feature column
 
     headerData.slice(1).forEach(plan => {
-        headerHTML += `<div class="col p-3 coaching-card--${plan.toLowerCase()}">
+        headerHTML += `<div class="col p-3 coaching-card--${plan.toLowerCase().replace(/\s+/g, '-')}">
                         <h4 class="inter-heading-bold">${plan}</h4>
                         <button class="btn-custom">Avail ${plan}</button>
                       </div>`;
