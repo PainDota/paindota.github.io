@@ -20,19 +20,20 @@
     /* Include border inside the column */
     flex: 0 0 30%;
     /* Allow each column to take up 22% of the width and wrap when needed */
+    max-width: 400px;
 }
 
 /* Ensuring columns take up the correct space */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .custom-col {
-        flex: 1 1 45%;
+        flex: 0 0 45%;
         /* Two columns per row on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .custom-col {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
         /* Single column per row on small screens */
     }
 }
@@ -193,6 +194,12 @@
 
 .popular {
     border: 10px solid #F67574;
+    background: white;
+    border-radius: 35px;
+}
+
+.popular-2 {
+    border: 10px solid #00A6A6;
     background: white;
     border-radius: 35px;
 }
