@@ -13,7 +13,7 @@ const statsValues = {
 const alertConfig = {
     alert: {
         title: "Price Increase Soon!" ,
-        message: "Last slot left after which the prices will be increase",
+        message: "Last slot left after which the prices will be increased",
         visible: true,
         theme: "alert-primary"
         // Other themes
