@@ -97,8 +97,8 @@ const plusPackage = {
     installmentPlan: true,
     requirements: [
         'Minimum MMR: 3000',
-        'At least 30 games per week',
-        'Commit to one main role',
+        'At least 30 Games Per Week',
+        'Commitment to One Main Role',
         "Fully trust and adhere to the coach's guidance"
     ],
 };
