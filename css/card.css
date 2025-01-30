@@ -18,21 +18,22 @@
     flex-direction: column;
     box-sizing: border-box;
     /* Include border inside the column */
-    flex: 1 1 22%;
+    flex: 0 0 30%;
     /* Allow each column to take up 22% of the width and wrap when needed */
+    max-width: 400px;
 }
 
 /* Ensuring columns take up the correct space */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
     .custom-col {
-        flex: 1 1 45%;
+        flex: 0 0 45%;
         /* Two columns per row on medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .custom-col {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
         /* Single column per row on small screens */
     }
 }
@@ -93,6 +94,24 @@
 /* .immortal-card .original-price {
     margin: 0 auto;
 } */
+
+.immortal-plus-card .coaching-card__price,
+.immortal-plus-card ul li:before {
+    color: #4C3A86;
+}
+
+.immortal-plus-tag {
+    background-color: #4C3A86;
+    color: white;
+}
+
+.immortal-plus-card .btn-custom {
+    border: 1px solid #4C3A86;
+    background-color: #4C3A86;
+    color: white;
+    /* max-width: 30%; */
+}
+
 .immortal-card .coaching-card__price,
 .immortal-card ul li:before {
     color: var(--secondary-accent-color);
@@ -175,6 +194,12 @@
 
 .popular {
     border: 10px solid #F67574;
+    background: white;
+    border-radius: 35px;
+}
+
+.popular-2 {
+    border: 10px solid #00A6A6;
     background: white;
     border-radius: 35px;
 }
