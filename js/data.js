@@ -12,9 +12,9 @@ const statsValues = {
 //alert Data
 const alertConfig = {
     alert: {
-        title: "New Year Sale is Live!" ,
-        message: "FLAT 20% OFF on Coaching Packages! Limited Slots Available",
-        visible: false,
+        title: "Price Increase Soon!" ,
+        message: "Last slot left after which the prices will be increase",
+        visible: true,
         theme: "alert-primary"
         // Other themes
         // alert-primary
