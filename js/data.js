@@ -12,8 +12,8 @@ const statsValues = {
 //alert Data
 const alertConfig = {
     alert: {
-        title: "Price Increase Soon!" ,
-        message: "Last slot left after which the prices will be increased",
+        title: "New Immortal Plus Package!" ,
+        message: "Guaranteed Immortal in 6 Months or Full Refund! Check it out today.",
         visible: true,
         theme: "alert-primary"
         // Other themes
@@ -33,7 +33,7 @@ const alertConfig = {
 
 // coaching package Data
 const entryPackage = {
-    price: '$280',
+    price: '$320',
     features: [
         '4x 1 Hour Sessions',
         'Discord Messaging',
@@ -45,7 +45,7 @@ const entryPackage = {
 };
 
 const basicPackage = {
-    price: '$420',
+    price: '$480',
      features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
@@ -58,7 +58,7 @@ const basicPackage = {
 };
 
 const proPackage = {
-    price: '$700',
+    price: '$800',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -73,7 +73,7 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$2500',
+    price: '$3000',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
