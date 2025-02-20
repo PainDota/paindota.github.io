@@ -14,7 +14,7 @@ const alertConfig = {
     alert: {
         title: "New Immortal Plus Package!" ,
         message: "Guaranteed Immortal in 6 Months or Full Refund! Check it out today!",
-        visible: true,
+        visible: false,
         theme: "alert-primary"
         // Other themes
         // alert-primary
