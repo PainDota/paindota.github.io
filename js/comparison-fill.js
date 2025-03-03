@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (planSelector) {
         planSelector.addEventListener('change', (event) => {
             const selectedPlan = event.target.value;
-            const planClasses = ["coaching-card--entry", "coaching-card--basic", "coaching-card--pro", "coaching-card--immortal", "coaching-card--immortal-plus"];
+            const planClasses = ["coaching-card--basic", "coaching-card--pro", "coaching-card--immortal", "coaching-card--immortal-plus"];
 
             // Hide all plans
             planClasses.forEach(planClass => {
