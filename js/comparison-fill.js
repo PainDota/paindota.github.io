@@ -78,7 +78,7 @@ function renderFeatureRows() {
                 cellContent = featureValue;
             }
 
-            featureHTML += `<div class="col p-3 coaching-card--${plan.toLowerCase()}">${cellContent}</div>`;
+            featureHTML += `<div class="col p-3 coaching-card--${plan.toLowerCase().replace(/\s+/g, '-')}">${cellContent}</div>`;
         });
 
         featureHTML += `</div>`;
@@ -86,4 +86,3 @@ function renderFeatureRows() {
 
     featureRows.innerHTML = featureHTML;
 }
-
