@@ -105,7 +105,7 @@ const plusPackage = {
 
 //comparison data
 const comparisonData= {
-    "header": ["Feature", "Entry", "Basic", "Pro", "Immortal","Immortal Plus"],
+    "header": ["Feature", "Basic", "Pro", "Immortal","Immortal Plus"],
     "rows": [
       {
         "feature": "# Lessons (1hr Sessions)",
