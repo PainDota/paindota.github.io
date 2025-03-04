@@ -12,7 +12,7 @@ const statsValues = {
 //alert Data
 const alertConfig = {
     alert: {
-        title: "15% FLAT SALE!",
+        title: "15% FLAT SALE + Upfront Discount!",
         message: "Valid Only For The First Two Slots.",
         visible: true,
         theme: "alert-primary"
