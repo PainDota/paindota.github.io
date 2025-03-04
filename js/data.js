@@ -3,8 +3,8 @@ const vidURL = "https://www.youtube.com/embed/wpXiWehN_E0?si=xa_UggrgFu0skDKQ";
 
 // stat Data
 const statsValues = {
-    mmr: '10K',
-    students: '400+',
+    mmr: '10.5K',
+    students: '500+',
     coachingHrs: '3000+',
     views: '3M+'
 };
@@ -12,9 +12,9 @@ const statsValues = {
 //alert Data
 const alertConfig = {
     alert: {
-        title: "New Immortal Plus Package!" ,
-        message: "Guaranteed Immortal in 6 Months or Full Refund! Check it out today!",
-        visible: false,
+        title: "15% FLAT SALE!",
+        message: "Valid Only For The First Two Slots.",
+        visible: true,
         theme: "alert-primary"
         // Other themes
         // alert-primary
@@ -46,6 +46,8 @@ const entryPackage = {
 
 const basicPackage = {
     price: '$480',
+    discountedPrice: '$410',
+    priceOff: '$70',
      features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
@@ -59,6 +61,8 @@ const basicPackage = {
 
 const proPackage = {
     price: '$800',
+    discountedPrice: '$680',
+    priceOff: '$120',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -74,6 +78,8 @@ const proPackage = {
 
 const immortalPackage = {
     price: '$3000',
+    discountedPrice: '$2050',
+    priceOff: '$950',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
@@ -86,6 +92,8 @@ const immortalPackage = {
 
 const plusPackage = {
     price: '$4000',
+    discountedPrice: '$2900',
+    priceOff: '$1100',
     features: [
         'Immortal in 6 Months or Full Refund',
         'Unlimited 1 Hour Sessions',
