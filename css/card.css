@@ -55,6 +55,12 @@
     border-radius: 0px 0px 25px 25px;
 }
 
+/* Prevent cards from stretching to the same height */
+#coaching-packages-section .custom-col,
+#training-plans-section .custom-col {
+    align-self: flex-start;
+}
+
 .tag {
     border: 3px white solid;
     border-radius: 25px 25px 0 0;
