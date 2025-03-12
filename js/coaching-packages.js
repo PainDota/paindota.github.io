@@ -1,15 +1,16 @@
 // Helper function to generate price HTML
-function generatePriceHTML(price, discountedPrice, installmentPlan) {
-    const installmentText = installmentPlan ? `<div class="installment-plan-container">
-                                                    <img src="images/icons/akar-icons_coin.svg" alt="Teach Icon">
-                                                    <span class="installment-plan">Installment Plan Available</span>
-                                                </div>` : '';
+function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment) {
+    const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
+    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $500 Off on Upfront</span>` : '';
     if (discountedPrice) {
         return `
             <div class="coaching-card__price space-grotesk-notice">
                 ${discountedPrice} 
                 <div class="original-price">${price}</div>
+                <h6>
                 ${installmentText}
+                ${upfrontText}
+                </h6>
             </div>
         `;
     }
@@ -35,7 +36,7 @@ function populateCoachingEntry() {
                 <h4 class="inter-heading-bold">Entry
                 ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice, entryPackage.installmentPlan)}
+                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice, entryPackage.installmentPlan, entryPackage.upfrontPayment)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -91,7 +92,7 @@ function populateCoachingPro() {
                 <h4 class="inter-heading-bold">Pro 
                 ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice, proPackage.installmentPlan)}
+                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice, proPackage.installmentPlan, proPackage.upfrontPayment)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -120,7 +121,7 @@ function populateCoachingImmortal() {
                 <h4 class="inter-heading-bold">Immortal
                 ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan)}
+                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan, immortalPackage.upfrontPayment)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -147,11 +148,11 @@ function populateCoachingImmortalPlus() {
             <div>
                 <h4 class="inter-heading-bold">
                     Immortal Plus
-                    ${plusPackage.priceOff ? 
-                        `<span class="badge bg-danger ms-2">SAVE ${plusPackage.priceOff}</span>` 
-                        : ''}
+                    ${plusPackage.priceOff ?
+            `<span class="badge bg-danger ms-2">SAVE ${plusPackage.priceOff}</span>`
+            : ''}
                 </h4>
-                ${generatePriceHTML(plusPackage.price, plusPackage.discountedPrice, plusPackage.installmentPlan)}
+                ${generatePriceHTML(plusPackage.price, plusPackage.discountedPrice, plusPackage.installmentPlan, plusPackage.upfrontPayment)}
             </div>
 
             <ul class="inter-body-medium">

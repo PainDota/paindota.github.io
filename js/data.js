@@ -56,7 +56,8 @@ const basicPackage = {
     ],
     buttonLabel: 'Avail Basic',
     tag: 'Best For Starting Out',
-    installmentPlan: false
+    installmentPlan: false,
+    upfrontPayment: false
 };
 
 const proPackage = {
@@ -73,7 +74,8 @@ const proPackage = {
     ],
     buttonLabel: 'Avail Pro',
     tag: 'Most Popular',
-    installmentPlan: false
+    installmentPlan: false,
+    upfrontPayment: false
 };
 
 const immortalPackage = {
@@ -87,7 +89,8 @@ const immortalPackage = {
     ],
     buttonLabel: 'Avail Immortal',
     tag: 'Unlimited Coaching Till Immortal',
-    installmentPlan: true
+    installmentPlan: true,
+    upfrontPayment: true
 };
 
 const plusPackage = {
@@ -109,6 +112,7 @@ const plusPackage = {
         'Commitment to One Main Role',
         "Fully trust and adhere to the coach's guidance"
     ],
+    upfrontPayment: true
 };
 
 //comparison data
