@@ -193,6 +193,22 @@ const comparisonData= {
         "Immortal Plus":"✔"
       },
       {
+        "feature": "Installment Plans",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
+      },
+      {
+        "feature": "Upfront Payment Discount -$500",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✔",
+        "Immortal Plus":"✔"
+      },
+      {
         "feature": "Refund",
         "Entry": "✘",
         "Basic": "✘",
