@@ -14,7 +14,7 @@ const alertConfig = {
     alert: {
         title: "15% FLAT SALE + Upfront Discount!",
         message: "Valid Only For The First Two Slots.",
-        visible: true,
+        visible: false,
         theme: "alert-primary"
         // Other themes
         // alert-primary
