@@ -31,6 +31,14 @@
     }
 }
 
+@media (min-width: 1400px) {
+    /* Prevent cards from stretching to the same height */
+#coaching-packages-section .custom-col,
+#training-plans-section .custom-col {
+    align-self: flex-start;
+}
+}
+
 @media (max-width: 768px) {
     .custom-col {
         flex: 0 0 100%;
@@ -53,12 +61,6 @@
 #training-plans-section .coaching-card {
     justify-content: space-between;
     border-radius: 0px 0px 25px 25px;
-}
-
-/* Prevent cards from stretching to the same height */
-#coaching-packages-section .custom-col,
-#training-plans-section .custom-col {
-    align-self: flex-start;
 }
 
 .tag {
@@ -222,3 +224,4 @@
     font-size: 1rem;
     text-align: center;
 }
+

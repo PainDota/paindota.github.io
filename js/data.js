@@ -117,7 +117,8 @@ const plusPackage = {
 
 //comparison data
 const comparisonData= {
-    "header": ["Feature", "Basic", "Pro", "Immortal","Immortal Plus"],
+    //add Immortal Plus to header to make it show
+    "header": ["Feature","Entry", "Basic", "Pro", "Immortal"],
     "rows": [
       {
         "feature": "# Lessons (1hr Sessions)",
@@ -207,15 +208,16 @@ const comparisonData= {
         "Pro": "✘",
         "Immortal": "✔",
         "Immortal Plus":"✔"
-      },
-      {
-        "feature": "Refund",
-        "Entry": "✘",
-        "Basic": "✘",
-        "Pro": "✘",
-        "Immortal": "✘",
-        "Immortal Plus":"✔"
       }
+    //   ,
+    //   {
+    //     "feature": "Refund",
+    //     "Entry": "✘",
+    //     "Basic": "✘",
+    //     "Pro": "✘",
+    //     "Immortal": "✘",
+    //     "Immortal Plus":"✔"
+    //   }
     ]
   };
 

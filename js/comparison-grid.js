@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Default: Show "Entry" column
-    showSelectedPlan("coaching-card--basic");
+    showSelectedPlan("coaching-card--entry");
 
     // Handle dropdown changes
     planSelector.addEventListener("change", function () {
