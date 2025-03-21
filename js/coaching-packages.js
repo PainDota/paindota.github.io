@@ -13,7 +13,8 @@ function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayme
         `;
     }
     return `
-        ${installmentText}  
+        ${installmentText} 
+        ${upfrontText} 
         <div class="coaching-card__price space-grotesk-notice">
             ${price}
         </div>
