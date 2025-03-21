@@ -4,20 +4,18 @@ function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayme
     const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $500 Off on Upfront</span>` : '';
     if (discountedPrice) {
         return `
+        ${installmentText}
+        ${upfrontText}
             <div class="coaching-card__price space-grotesk-notice">
                 ${discountedPrice} 
                 <div class="original-price">${price}</div>
-                <h6>
-                ${installmentText}
-                ${upfrontText}
-                </h6>
             </div>
         `;
     }
     return `
+        ${installmentText}  
         <div class="coaching-card__price space-grotesk-notice">
             ${price}
-            ${installmentText}
         </div>
     `;
 }
