@@ -398,7 +398,14 @@ const testimonials = [
         subtitle: "5000 to 5700",
         description:
         "Yesterday I hit Immortal rank playing Carry after switching roles and taking Pain's coaching sessions. I gained something around 500 MMR, which is significant after playing Offlane for years prior to that. Pain's advice allowed me to notice my own mistakes and taught me how to deal with them. I feel like in a couple hourly sessions with Pain you will gain more knowledge and insights about the game than in any other form of Dota-related content. So if you're serious about improving, this investment is really smart. Looking forward to what's next for me! "   
- },
+     },
+    {
+        img: "images/badges/ranks/immortal.svg",
+        title: "Mantazer",
+        subtitle: "3900 to 6000",
+        description:
+        "I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way.If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain."     
+    },
 
 
 
