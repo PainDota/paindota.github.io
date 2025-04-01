@@ -401,4 +401,11 @@ const testimonials = [
             "Recently, I hit ancient. I started getting coaching when I was low archon, maybe archon 2. Within 5 coaching sessions and 200 games I managed to make it through all of archon and all of legend. He does a really good job at simplifying and honing in on what you need to improve. If you're able to apply his advice in game you will get better. Hopefully I can make it to divine next.  — 3/14/2025 "    
     },
    
- ];
+ 
+
+
+
+
+
+
+];
