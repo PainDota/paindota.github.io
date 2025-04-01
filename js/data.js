@@ -385,6 +385,20 @@ const testimonials = [
         description:
             "Pain is great. I was able to get from crusader 3 to legend 3 in a matter of months. It took me around 3-4 month and weekly coaching (aka replay analysis) with Pain. He points out my mistakes in my unsuccessful games and he points out the good things that I improved on. No micromanagement, just straight to the point and no bs. If you listen and apply, you will improve. He told me if you blame your team, then delete dota.  I listened. I deleted XD. But then came back, had another session with my boy Pain and got to legend 3. I maintain my winrate at around 70%, but dota is full of surprises, so I believe its very good. Last thing to say: I have been coached by other people and so far pain has been the best."
     },
+    {
+        img: "images/badges/ranks/ancient.svg",
+        title: "Pineapple Scuddleduck",
+        subtitle: "2300 to 3900",
+        description:
+            "Recently, I hit ancient. I started getting coaching when I was low archon, maybe archon 2. Within 5 coaching sessions and 200 games I managed to make it through all of archon and all of legend. He does a really good job at simplifying and honing in on what you need to improve. If you're able to apply his advice in game you will get better. Hopefully I can make it to divine next."    
+    },
+    {
+        img: "images/badges/ranks/immortal.svg",
+        title: "MoranGuy",
+        subtitle: "5000 to 5700",
+        description:
+        "Yesterday I hit Immortal rank playing Carry after switching roles and taking Pain's coaching sessions. I gained something around 500 MMR, which is significant after playing Offlane for years prior to that. Pain's advice allowed me to notice my own mistakes and taught me how to deal with them. I feel like in a couple hourly sessions with Pain you will gain more knowledge and insights about the game than in any other form of Dota-related content. So if you're serious about improving, this investment is really smart. Looking forward to what's next for me! "   
+ },
 
 
 
