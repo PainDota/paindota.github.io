@@ -327,7 +327,27 @@ const testimonials = [
         description:
             "I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain."
     },   
-
+    {
+        img: "images/badges/ranks/immortal.svg",
+        title: "MoranGuy",
+        subtitle: "5000 to 5700",
+        description:
+        "Yesterday I hit Immortal rank playing Carry after switching roles and taking Pain's coaching sessions. I gained something around 500 MMR, which is significant after playing Offlane for years prior to that. Pain's advice allowed me to notice my own mistakes and taught me how to deal with them. I feel like in a couple hourly sessions with Pain you will gain more knowledge and insights about the game than in any other form of Dota-related content. So if you're serious about improving, this investment is really smart. Looking forward to what's next for me! "   
+    },
+    {
+        img: "images/badges/ranks/divine.svg",
+        title: "LUKE",
+        subtitle: "3500 to 4620",
+        description:
+            "            Been working with Pain for several months now, climbed over 1000 mmr and finally hit divine today. The way he explains my mistakes is super motivating and I always wanna queue 10+ pubs after a coaching session with him."
+    },
+    {
+        img: "images/badges/ranks/immortal.svg",
+        title: "PROTOSS",
+        subtitle: "3500 to 5640 mmr",
+        description:
+            "            I just want to say thank you to Pain as he's one of the reasons why I reached Immortal! We have started since I was Legend IV or something, and we have been slowly making progress together by analyzing my games and seeing what works and what does not. If you are ever looking for a coach that can help you climb the ladder, Pain is your guy! Thanks!"
+    },
     {
         img: "images/badges/ranks/legend.svg",
         title: "DOVAREME",
@@ -351,20 +371,6 @@ const testimonials = [
             "            Only had 2 sessions with @Pain- so far and already gained 700 plus mmr in just half a month. Very insightful coach, makes it very clear how to win games. Would highly recommend 💯"
     },
     {
-        img: "images/badges/ranks/divine.svg",
-        title: "LUKE",
-        subtitle: "3500 to 4620",
-        description:
-            "            Been working with Pain for several months now, climbed over 1000 mmr and finally hit divine today. The way he explains my mistakes is super motivating and I always wanna queue 10+ pubs after a coaching session with him."
-    },
-    {
-        img: "images/badges/ranks/immortal.svg",
-        title: "PROTOSS",
-        subtitle: "3500 to 5640 mmr",
-        description:
-            "            I just want to say thank you to Pain as he's one of the reasons why I reached Immortal! We have started since I was Legend IV or something, and we have been slowly making progress together by analyzing my games and seeing what works and what does not. If you are ever looking for a coach that can help you climb the ladder, Pain is your guy! Thanks!"
-    },
-    {
         img: "images/badges/ranks/ancient.svg",
         title: "Shlorky",
         subtitle: "2300 to 4220 mmr",
@@ -385,6 +391,15 @@ const testimonials = [
         description:
             "Pain is great. I was able to get from crusader 3 to legend 3 in a matter of months. It took me around 3-4 month and weekly coaching (aka replay analysis) with Pain. He points out my mistakes in my unsuccessful games and he points out the good things that I improved on. No micromanagement, just straight to the point and no bs. If you listen and apply, you will improve. He told me if you blame your team, then delete dota.  I listened. I deleted XD. But then came back, had another session with my boy Pain and got to legend 3. I maintain my winrate at around 70%, but dota is full of surprises, so I believe its very good. Last thing to say: I have been coached by other people and so far pain has been the best."
     },
+    {
+        img: "images/badges/ranks/ancient.svg",
+        title: "Pineapple Scuddleduck",
+        subtitle: "2300 to 3900",
+        description:
+            "Recently, I hit ancient. I started getting coaching when I was low archon, maybe archon 2. Within 5 coaching sessions and 200 games I managed to make it through all of archon and all of legend. He does a really good job at simplifying and honing in on what you need to improve. If you're able to apply his advice in game you will get better. Hopefully I can make it to divine next."    
+    }
+  
+    
 
 
 
