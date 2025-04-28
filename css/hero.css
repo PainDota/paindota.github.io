@@ -5,7 +5,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    min-height: 100vh;
+    min-height: 70vh;
+}
+
+#hero-section .container{
+    scale: 0.8;
+    margin-top: -6rem;
 }
 
 .custom-container {

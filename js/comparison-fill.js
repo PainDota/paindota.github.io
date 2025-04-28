@@ -47,7 +47,7 @@ function renderHeaderRow() {
     headerData.slice(1).forEach(plan => {
         headerHTML += `<div class="col p-3 coaching-card--${plan.toLowerCase().replace(/\s+/g, '-')}">
                         <h4 class="inter-heading-bold">${plan}</h4>
-                        <button class="btn-custom">Avail ${plan}</button>
+                        <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none"><button class="btn-custom">Avail ${plan}</button></a>
                       </div>`;
     });
 
