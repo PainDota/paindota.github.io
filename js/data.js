@@ -46,7 +46,8 @@ const entryPackage = {
 
 const basicPackage = {
     price: '$480',
-
+    discountedPrice: '$408',
+    priceOff: '$72',
     features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
