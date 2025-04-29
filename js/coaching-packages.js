@@ -29,7 +29,7 @@ function populateCoachingEntry() {
     const featuresList = entryPackage.features.map(feature => `<li>${feature}</li>`).join('');
 
     entryColumn.innerHTML = `
-        <h6 class="tag">${entryPackage.tag}</h6>
+        <h6 class="entry-tag">${entryPackage.tag}</h6>
         <div class="coaching-card">
             <div>
                 <h4 class="inter-heading-bold">Entry
@@ -178,40 +178,53 @@ function populateCoachingImmortalPlus() {
     `;
 }
 
+// Function to populate the mini packages
+function populateCoachingMini() {
+    const miniColumn = document.getElementById('coaching-mini-basic');
+    if (!miniColumn) return;
 
-// Function to populate the immortal package
-// function populateCoachingImmortal() {
-//     const immortalColumn = document.getElementById('coaching-immortal');
-//     if (!immortalColumn) return;
+    const basicFeaturesList = miniPackage.basicFeatures.map(feature => `<li>${feature}</li>`).join('');
+    const proFeaturesList = miniPackage.proFeatures.map(feature => `<li>${feature}</li>`).join('');
 
-//     const featureColumns = immortalPackage.features.map(features => {
-//         const featuresList = features.map(feature => `<li>${feature}</li>`).join('');
-//         return `<div class="col-md-4"><ul class="inter-body-medium">${featuresList}</ul></div>`;
-//     }).join('');
-
-//     immortalColumn.innerHTML = `
-//         <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
-//         <div class="coaching-card immortal-card">
-//             <div>
-//                 <h4 class="inter-heading-bold">Immortal
-//                 ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
-//                 </h4>
-//                 ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice)}
-//             </div>
-//             <div class="row">
-//                 ${featureColumns}
-//             </div>
-//             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-//                 <div class="coaching-card__button-container">
-//                     <button class="btn-custom">${immortalPackage.buttonLabel}</button>
-//                 </div>
-//             </a>
-//         </div>
-//     `;
-// }
+    miniColumn.innerHTML = `
+        <h6 class="entry-tag">${miniPackage.tag}</h6>
+        <div class="coaching-card">
+            <div>
+                <h4 class="inter-heading-bold">Basic</h4>
+                <div class="coaching-card__price space-grotesk-notice">
+                    <div class="mb-3">
+                        ${miniPackage.basicPrice}
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <ul class="inter-body-medium">
+                        ${basicFeaturesList}
+                    </ul>
+                </div>
+                <h4 class="inter-heading-bold">Pro</h4>
+                <div class="coaching-card__price space-grotesk-notice">
+                    <div class="mb-3">
+                        ${miniPackage.proPrice}
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <ul class="inter-body-medium">
+                        ${proFeaturesList}
+                    </ul>
+                </div>
+            </div>
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${miniPackage.buttonLabel}</button>
+                </div>
+            </a>
+        </div>
+    `;
+}
 
 // Load all packages
 function loadCoachingPackages() {
+    populateCoachingMini();
     populateCoachingEntry();
     populateCoachingBasic();
     populateCoachingPro();

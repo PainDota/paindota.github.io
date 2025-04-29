@@ -14,18 +14,19 @@
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
     box-sizing: border-box;
-    flex: 0 0 calc(25% - 15px);
+    flex: 0 0 calc(35% - 15px);
     min-width: 280px;
     max-width: 350px;
 }
 
 /* Responsive breakpoints */
-@media (min-width: 1400px) {
+/* @media (min-width: 1400px) {
     .coaching-card {
         display: block;
     }
-}
+} */
 
 @media (max-width: 1400px) {
     .custom-col {
@@ -63,6 +64,7 @@
 }
 
 .coaching-card {
+    flex: 1;
     display: flex;
     flex-direction: column;
     background: white;
@@ -88,6 +90,17 @@
     margin: 0;
 }
 
+.mini-basic-tag,
+.mini-pro-tag,
+.entry-tag {
+    border: 3px white solid;
+    border-radius: 25px 25px 0 0;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--basic-grey-color);
+    color: black;
+    margin: 0;
+}
 
 .coaching-card ul {
     margin-top: 20px;

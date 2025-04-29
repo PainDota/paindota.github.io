@@ -30,8 +30,21 @@ const alertConfig = {
 
 // for strikethough text: discountedPrice: '$xxxx',
 // for xx OFF badge priceOff: '$xxxx',
-
 // coaching package Data
+const miniPackage = {
+    tag: '30 Minute 1 ON 1 Session',
+    basicPrice: '$40',
+    basicFeatures: [
+        '1x 30 Minute Session',
+    ],
+    proPrice: '$140',
+    proFeatures: [
+        '4x 30 Minute Sessions',
+    ],
+    buttonLabel: 'Avail Basic/Pro',
+    installmentPlan: false
+};
+
 const entryPackage = {
     price: '$320',
     features: [
