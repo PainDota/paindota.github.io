@@ -1,3 +1,26 @@
+// Helper function to generate price HTML
+function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment) {
+    const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
+    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $500 Off on Upfront</span>` : '';
+    if (discountedPrice) {
+        return `
+        ${installmentText}
+        ${upfrontText}
+            <div class="coaching-card__price space-grotesk-notice">
+                ${discountedPrice} 
+                <div class="original-price">${price}</div>
+            </div>
+        `;
+    }
+    return `
+        ${installmentText} 
+        ${upfrontText} 
+        <div class="coaching-card__price space-grotesk-notice">
+            ${price}
+        </div>
+    `;
+}
+
 // Function to populate the entry plan
 function populateTrainingEntry() {
     const entryColumn = document.getElementById('planning-entry');
@@ -12,7 +35,7 @@ function populateTrainingEntry() {
                 <h4 class="inter-heading-bold">Entry
                 ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPlan.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice)}
+                ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice, entryPlan.installmentPlan, entryPlan.upfrontPayment)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -40,7 +63,7 @@ function populateTrainingBasic() {
                 <h4 class="inter-heading-bold">Basic
                 ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPlan.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice)}
+                ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice, basicPlan.installmentPlan, basicPlan.upfrontPayment)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -68,7 +91,7 @@ function populateTrainingPro() {
                 <h4 class="inter-heading-bold">Pro
                 ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPlan.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(proPlan.price, proPlan.discountedPrice)}
+                ${generatePriceHTML(proPlan.price, proPlan.discountedPrice, proPlan.installmentPlan, proPlan.upfrontPayment)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}

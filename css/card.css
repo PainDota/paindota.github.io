@@ -3,9 +3,8 @@
 #training-plans-section .row {
     display: flex;
     gap: 15px;
-    /* Gap between the columns */
     flex-wrap: wrap;
-    /* Allow columns to wrap if needed */
+    justify-content: center;
 }
 
 /* Column styling */
@@ -13,48 +12,64 @@
     position: relative;
     margin-top: 20px;
     padding: 0;
-    /* No padding to avoid space between the border and children */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    /* Include border inside the column */
-    flex: 0 0 24%;
-    /* Allow each column to take up 22% of the width and wrap when needed */
-    max-width: 400px;
+    flex: 0 0 calc(25% - 15px);
+    min-width: 280px;
+    max-width: 350px;
 }
 
-/* Ensuring columns take up the correct space */
-@media (max-width: 1400px) {
-    .custom-col {
-        flex: 0 0 45%;
-        /* Two columns per row on medium screens */
+/* Responsive breakpoints */
+@media (min-width: 1400px) {
+    .coaching-card {
+        display: block;
     }
 }
 
-@media (min-width: 1400px) {
-    /* Prevent cards from stretching to the same height */
-#coaching-packages-section .custom-col,
-#training-plans-section .custom-col {
-    align-self: flex-start;
-}
+@media (max-width: 1400px) {
+    .custom-col {
+        flex: 0 0 calc(50% - 15px);
+        min-width: 280px;
+        max-width: 350px;
+    }
+
+    .coaching-card {
+        display: table;
+        height: 100%;
+    }
+
+    .coaching-card > * {
+        display: table-row;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .custom-col {
+        flex: 0 0 calc(50% - 15px);
+        min-width: 250px;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
     .custom-col {
         flex: 0 0 100%;
-        /* Single column per row on small screens */
+        min-width: 250px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .coaching-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
     background: white;
     border-radius: 25px;
     color: black;
     padding: 1.4rem;
+    max-width: 100%;
 }
 
 #coaching-packages-section .coaching-card,
@@ -224,4 +239,5 @@
     font-size: 1rem;
     text-align: center;
 }
+
 

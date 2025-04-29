@@ -66,7 +66,17 @@
     display: block;
 }
 
-@media (min-width: 1450px) {
+#plan-selector {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    #plan-selector {
+        display: block;
+    }
+}
+
+@media (min-width: 1400px) {
     #comparison-grid .comparison-grid .col {
         display: block;
     }
@@ -76,12 +86,16 @@
     }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1400px) {
     #comparison-grid .comparison-grid .col {
         border-right: none;
     }
 
     #comparison-grid .comparison-grid .col:first-child {
         border-right: 1px solid #ccc;
+    }
+
+    #plan-selector {
+        display: block;
     }
 }
