@@ -1,7 +1,7 @@
 // Helper function to generate price HTML
 function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment) {
     const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
-    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $500 Off on Upfront</span>` : '';
+    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $300 Off on Upfront</span>` : '';
     if (discountedPrice) {
         return `
         ${installmentText}
