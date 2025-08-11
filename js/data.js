@@ -208,7 +208,7 @@ const comparisonData= {
         "Immortal Plus":"✔"
       },
       {
-        "feature": "Upfront Payment Discount -$500",
+        "feature": "Upfront Payment Discount -$300",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
