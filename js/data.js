@@ -88,8 +88,9 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$2700',
-    
+    price: '$2000',
+    discountedPrice : '$1700',
+    priceOff : '$300',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
@@ -209,7 +210,7 @@ const comparisonData= {
         "Immortal Plus":"✔"
       },
       {
-        "feature": "Upfront Payment Discount -$500",
+        "feature": "Upfront Payment Discount -$300",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
