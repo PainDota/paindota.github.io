@@ -46,7 +46,7 @@ const miniPackage = {
 };
 
 const entryPackage = {
-    price: '$280',
+    price: '$320',
     features: [
         '4x 1 Hour Sessions',
         'Discord Messaging',
@@ -58,7 +58,7 @@ const entryPackage = {
 };
 
 const basicPackage = {
-    price: '$420',
+    price: '$480',
     features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
@@ -72,7 +72,7 @@ const basicPackage = {
 };
 
 const proPackage = {
-    price: '$650',
+    price: '$750',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
