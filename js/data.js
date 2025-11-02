@@ -41,7 +41,7 @@ const miniPackage = {
     proFeatures: [
         '4x 30 Minute Sessions',
     ],
-    buttonLabel: 'Avail Basic/Pro',
+    buttonLabel: 'Unavailable',
     installmentPlan: false
 };
 
