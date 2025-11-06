@@ -3,10 +3,10 @@ const vidURL = "https://www.youtube.com/embed/wpXiWehN_E0?si=xa_UggrgFu0skDKQ";
 
 // stat Data
 const statsValues = {
-    mmr: '10.5K',
-    students: '500+',
+    mmr: '11K',
+    students: '622',
     coachingHrs: '3000+',
-    views: '3M+'
+    views: '4M+'
 };
 
 //alert Data
