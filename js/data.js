@@ -3,10 +3,10 @@ const vidURL = "https://www.youtube.com/embed/wpXiWehN_E0?si=xa_UggrgFu0skDKQ";
 
 // stat Data
 const statsValues = {
-    mmr: '10.5K',
-    students: '500+',
+    mmr: '11K',
+    students: '621',
     coachingHrs: '3000+',
-    views: '3M+'
+    views: '4M+'
 };
 
 //alert Data
@@ -41,12 +41,12 @@ const miniPackage = {
     proFeatures: [
         '4x 30 Minute Sessions',
     ],
-    buttonLabel: 'Unavailable',
+    buttonLabel: 'Avail Basic/Pro',
     installmentPlan: false
 };
 
 const entryPackage = {
-    price: '$320',
+    price: '$280',
     features: [
         '4x 1 Hour Sessions',
         'Discord Messaging',
@@ -58,7 +58,7 @@ const entryPackage = {
 };
 
 const basicPackage = {
-    price: '$480',
+    price: '$420',
     features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
@@ -72,7 +72,7 @@ const basicPackage = {
 };
 
 const proPackage = {
-    price: '$750',
+    price: '$650',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -88,8 +88,8 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$2500',
-   features: [
+    price: '$2200',
+    features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee'
@@ -100,26 +100,39 @@ const immortalPackage = {
     upfrontPayment: true
 };
 
-const plusPackage = {
-    price: '$4000',
-    
+const tenKPackage = {
+    price: '$5000',
     features: [
-        'Immortal in 6 Months or Full Refund',
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
-        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup'
+        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '10K MMR Guarantee'
     ],
-    buttonLabel: 'Avail Immortal Plus',
-    tag: 'Guaranteed Immortal in 6 Months',
+    buttonLabel: 'Avail Beyond Immortal',
+    tag: 'Unlimited Coaching until 10K',
     installmentPlan: true,
-    requirements: [
-        'Minimum MMR: 3000',
-        'At least 30 Games Per Week',
-        'Commitment to One Main Role',
-        "Fully trust and adhere to the coach's guidance"
-    ],
     upfrontPayment: true
 };
+
+// const plusPackage = {
+//     price: '$5000',
+    
+//     features: [
+//         'Immortal in 6 Months or Full Refund',
+//         'Unlimited 1 Hour Sessions',
+//         '3x VOD Reviews', '1x Analysis Tutorial',
+//         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup'
+//     ],
+//     buttonLabel: 'Avail Immortal Plus',
+//     tag: 'Guaranteed Immortal in 6 Months',
+//     installmentPlan: true,
+//     requirements: [
+//         'Minimum MMR: 3000',
+//         'At least 30 Games Per Week',
+//         'Commitment to One Main Role',
+//         "Fully trust and adhere to the coach's guidance"
+//     ],
+//     upfrontPayment: true
+// };
 
 //comparison data
 const comparisonData= {
@@ -208,7 +221,7 @@ const comparisonData= {
         "Immortal Plus":"✔"
       },
       {
-        "feature": "Upfront Payment Discount -$300",
+        "feature": "Upfront Payment Discount -$500",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
