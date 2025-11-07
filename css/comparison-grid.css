@@ -10,6 +10,18 @@
     border-radius: 24px;
 }
 
+.comparison-grid .coaching-card--beyond-immortal .btn-custom {
+    align-items: left;
+    width: 100%;
+    border-radius: 24px;
+}
+
+.coaching-card--beyond-immortal .btn-custom {
+    border: 1px solid #4C3A86;
+    background-color: #4C3A86;
+    color: white;
+}
+
 .comparison-grid .coaching-card--immortal-plus .btn-custom {
     align-items: left;
     width: 100%;

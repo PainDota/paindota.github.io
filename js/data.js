@@ -88,7 +88,7 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$2200',
+    price: '$2500',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
@@ -137,7 +137,7 @@ const tenKPackage = {
 //comparison data
 const comparisonData= {
     //add Immortal Plus to header to make it show
-    "header": ["Feature","Entry", "Basic", "Pro", "Immortal"],
+    "header": ["Feature","Entry", "Basic", "Pro", "Immortal", "Beyond Immortal"],
     "rows": [
       {
         "feature": "# Lessons (1hr Sessions)",
@@ -145,7 +145,7 @@ const comparisonData= {
         "Basic": "6",
         "Pro": "10",
         "Immortal": "Unlimited till Immortal",
-        "Immortal Plus": "Unlimited till Immortal"
+        "Beyond Immortal": "Unlimited till 10K"
       },
       {
         "feature": "Discord Messaging",
@@ -153,7 +153,7 @@ const comparisonData= {
         "Basic": "✔",
         "Pro": "✔",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
 
       },
       {
@@ -162,7 +162,7 @@ const comparisonData= {
         "Basic": "✔",
         "Pro": "✔",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       },
       {
         "feature": "VOD Review",
@@ -170,7 +170,7 @@ const comparisonData= {
         "Basic": "✔",
         "Pro": "✔",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       },
       {
         "feature": "Match-up Guide",
@@ -178,7 +178,7 @@ const comparisonData= {
         "Basic": "✘",
         "Pro": "✔",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       },
       {
         "feature": "Analysis Tutorial",
@@ -186,7 +186,7 @@ const comparisonData= {
         "Basic": "✘",
         "Pro": "✔",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       },
       {
         "feature": "Pro Player Analysis Sessions",
@@ -194,7 +194,7 @@ const comparisonData= {
         "Basic": "0",
         "Pro": "0",
         "Immortal": "5",
-        "Immortal Plus":"5"
+        "Beyond Immortal":"5"
       },
       {
         "feature": "Personal Progress Checkup",
@@ -202,7 +202,7 @@ const comparisonData= {
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       },
       {
         "feature": "Immortal Guarantee",
@@ -210,7 +210,15 @@ const comparisonData= {
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
+      },
+      {
+        "feature": "10K MMR Guarantee",
+        "Entry": "✘",
+        "Basic": "✘",
+        "Pro": "✘",
+        "Immortal": "✘",
+        "Beyond Immortal":"✔"
       },
       {
         "feature": "Installment Plans",
@@ -218,15 +226,15 @@ const comparisonData= {
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       },
       {
-        "feature": "Upfront Payment Discount -$500",
+        "feature": "Upfront Payment Discount -$300 Applied",
         "Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
-        "Immortal Plus":"✔"
+        "Beyond Immortal":"✔"
       }
     //   ,
     //   {
