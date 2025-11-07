@@ -4,7 +4,7 @@ const vidURL = "https://www.youtube.com/embed/wpXiWehN_E0?si=xa_UggrgFu0skDKQ";
 // stat Data
 const statsValues = {
     mmr: '11K',
-    students: '621',
+    students: '622',
     coachingHrs: '3000+',
     views: '4M+'
 };
