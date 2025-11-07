@@ -134,6 +134,33 @@ function populateCoachingImmortal() {
     `;
 }
 
+function populateCoachingTenK() {
+    const tenKColumn = document.getElementById('coaching-ten-k');
+    if (!tenKColumn) return;
+
+    const featuresList = tenKPackage.features.map(feature => `<li>${feature}</li>`).join('');
+
+    tenKColumn.innerHTML = `
+        <h6 class="tag immortal-plus-tag">${tenKPackage.tag}</h6>
+        <div class="coaching-card immortal-plus-card">
+            <div>
+                <h4 class="inter-heading-bold">Beyond Immortal
+                ${tenKPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${tenKPackage.priceOff}</span>` : ''}
+                </h4>
+                ${generatePriceHTML(tenKPackage.price, tenKPackage.discountedPrice, tenKPackage.installmentPlan, tenKPackage.upfrontPayment)}
+            </div>
+            <ul class="inter-body-medium">
+                ${featuresList}
+            </ul>
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${tenKPackage.buttonLabel}</button>
+                </div>
+            </a>
+        </div>
+    `;
+}
+
 function populateCoachingImmortalPlus() {
     const immortalColumn = document.getElementById('coaching-immortal-plus');
     if (!immortalColumn) return;
@@ -224,12 +251,13 @@ function populateCoachingMini() {
 
 // Load all packages
 function loadCoachingPackages() {
-    populateCoachingMini();
+    // populateCoachingMini();
     populateCoachingEntry();
     populateCoachingBasic();
     populateCoachingPro();
     populateCoachingImmortal();
-    populateCoachingImmortalPlus();
+    populateCoachingTenK();
+    // populateCoachingImmortalPlus();
 }
 
 document.addEventListener('DOMContentLoaded', loadCoachingPackages);
