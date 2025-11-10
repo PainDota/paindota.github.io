@@ -89,6 +89,8 @@ const proPackage = {
 
 const immortalPackage = {
     price: '$2500',
+    discountedPrice: '$2125',
+    priceOff: '$375',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
