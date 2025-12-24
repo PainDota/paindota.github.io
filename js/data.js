@@ -47,6 +47,8 @@ const miniPackage = {
 
 const entryPackage = {
     price: '$320',
+    discountedPrice: "$280",
+    priceOff: '$40',
     features: [
         '4x 1 Hour Sessions',
         'Discord Messaging',
@@ -59,6 +61,8 @@ const entryPackage = {
 
 const basicPackage = {
     price: '$480',
+    discountedPrice: "$420",
+    priceOff: '$60',
     features: [
         '6x 1 Hour Sessions',
         'Discord Messaging',
@@ -73,6 +77,8 @@ const basicPackage = {
 
 const proPackage = {
     price: '$750',
+     discountedPrice: "$600",
+    priceOff: '$150',
     features: [
         '10x 1 Hour Sessions',
         'Discord Messaging',
@@ -89,6 +95,8 @@ const proPackage = {
 
 const immortalPackage = {
     price: '$2500',
+     discountedPrice: "$1950",
+    priceOff: '$550',
    features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
@@ -102,7 +110,8 @@ const immortalPackage = {
 
 const tenKPackage = {
     price: '$5000',
-  
+     discountedPrice: "$4000",
+    priceOff: '$1000',
     features: [
         'Unlimited 1 Hour Sessions',
         '3x VOD Reviews', '1x Analysis Tutorial',
