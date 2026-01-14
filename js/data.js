@@ -65,7 +65,7 @@ const basicPackage = {
         '6x 1 Hour Sessions',
         'Discord Messaging',
         'Patch + Meta Explanation',
-        '1x VOD Review'
+        '1x Recorded Replay Review'
     ],
     buttonLabel: 'Avail Basic',
     tag: 'Best For Starting Out',
@@ -80,7 +80,7 @@ const proPackage = {
         '10x 1 Hour Sessions',
         'Discord Messaging',
         'Patch + Meta Explanation',
-        '1x VOD Review',
+        '1x Recorded Replay Review',
         '1x Match-up Guide',
         '1x Analysis Tutorial'
     ],
@@ -95,7 +95,7 @@ const immortalPackage = {
      
    features: [
         'Unlimited 1 Hour Sessions',
-        '3x VOD Reviews', '1x Analysis Tutorial',
+        '3x Recorded Replay Reviews', '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', 'Immortal Guarantee'
     ],
     buttonLabel: 'Avail Immortal',
@@ -109,7 +109,7 @@ const tenKPackage = {
      
     features: [
         'Unlimited 1 Hour Sessions',
-        '3x VOD Reviews', '1x Analysis Tutorial',
+        '3x Recorded Replay Reviews', '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '10K MMR Guarantee'
     ],
     buttonLabel: 'Avail Beyond Immortal',
