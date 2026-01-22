@@ -1,7 +1,8 @@
 // Helper function to generate price HTML
-function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment) {
+function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment, lastSlot) {
     const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
     const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $300 Off on Upfront Applied</span>` : '';
+    const lastSlotText = lastSlot ? `<span class="badge bg-danger ms-2">Last Slot Left</span>` : '';
     if (discountedPrice) {
         return `
         ${installmentText}
@@ -13,6 +14,7 @@ function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayme
         `;
     }
     return `
+        ${lastSlotText} 
         ${installmentText} 
         ${upfrontText} 
         <div class="coaching-card__price space-grotesk-notice">
@@ -35,7 +37,7 @@ function populateTrainingEntry() {
                 <h4 class="inter-heading-bold">Entry
                 ${entryPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPlan.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice, entryPlan.installmentPlan, entryPlan.upfrontPayment)}
+                ${generatePriceHTML(entryPlan.price, entryPlan.discountedPrice, entryPlan.installmentPlan, entryPlan.upfrontPayment, entryPlan.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -63,7 +65,7 @@ function populateTrainingBasic() {
                 <h4 class="inter-heading-bold">Basic
                 ${basicPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPlan.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice, basicPlan.installmentPlan, basicPlan.upfrontPayment)}
+                ${generatePriceHTML(basicPlan.price, basicPlan.discountedPrice, basicPlan.installmentPlan, basicPlan.upfrontPayment, basicPlan.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -91,7 +93,7 @@ function populateTrainingPro() {
                 <h4 class="inter-heading-bold">Pro
                 ${proPlan.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPlan.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(proPlan.price, proPlan.discountedPrice, proPlan.installmentPlan, proPlan.upfrontPayment)}
+                ${generatePriceHTML(proPlan.price, proPlan.discountedPrice, proPlan.installmentPlan, proPlan.upfrontPayment, proPlan.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}

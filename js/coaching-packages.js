@@ -35,7 +35,7 @@ function populateCoachingEntry() {
                 <h4 class="inter-heading-bold">Entry
                 ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice, entryPackage.installmentPlan, entryPackage.upfrontPayment)}
+                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice, entryPackage.installmentPlan, entryPackage.upfrontPayment, entryPackage.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -63,7 +63,7 @@ function populateCoachingBasic() {
                 <h4 class="inter-heading-bold">Basic
                 ${basicPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice, basicPackage.installmentPlan)}
+                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice, basicPackage.installmentPlan, basicPackage.upfrontPayment, basicPackage.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -91,7 +91,7 @@ function populateCoachingPro() {
                 <h4 class="inter-heading-bold">Pro 
                 ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice, proPackage.installmentPlan, proPackage.upfrontPayment)}
+                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice, proPackage.installmentPlan, proPackage.upfrontPayment, proPackage.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -120,7 +120,7 @@ function populateCoachingImmortal() {
                 <h4 class="inter-heading-bold">Immortal
                 ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan, immortalPackage.upfrontPayment)}
+                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan, immortalPackage.upfrontPayment, immortalPackage.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -147,7 +147,7 @@ function populateCoachingTenK() {
                 <h4 class="inter-heading-bold">Beyond Immortal
                 ${tenKPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${tenKPackage.priceOff}</span>` : ''}
                 </h4>
-                ${generatePriceHTML(tenKPackage.price, tenKPackage.discountedPrice, tenKPackage.installmentPlan, tenKPackage.upfrontPayment)}
+                ${generatePriceHTML(tenKPackage.price, tenKPackage.discountedPrice, tenKPackage.installmentPlan, tenKPackage.upfrontPayment, tenKPackage.lastSlot)}
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -178,7 +178,7 @@ function populateCoachingImmortalPlus() {
             `<span class="badge bg-danger ms-2">SAVE ${plusPackage.priceOff}</span>`
             : ''}
                 </h4>
-                ${generatePriceHTML(plusPackage.price, plusPackage.discountedPrice, plusPackage.installmentPlan, plusPackage.upfrontPayment)}
+                ${generatePriceHTML(plusPackage.price, plusPackage.discountedPrice, plusPackage.installmentPlan, plusPackage.upfrontPayment, plusPackage.lastSlot)}
             </div>
 
             <ul class="inter-body-medium">

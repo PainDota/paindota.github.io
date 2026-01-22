@@ -42,7 +42,9 @@ const miniPackage = {
         '4x 30 Minute Sessions',
     ],
     buttonLabel: 'Avail Basic/Pro',
-    installmentPlan: false
+    installmentPlan: false,
+    upfrontPayment: false,
+    lastSlot: false
 };
 
 const entryPackage = {
@@ -55,7 +57,9 @@ const entryPackage = {
     ],
     buttonLabel: 'Avail Entry',
     tag: 'Value Pack',
-    installmentPlan: false
+    installmentPlan: false,
+    upfrontPayment: false,
+    lastSlot: false
 };
 
 const basicPackage = {
@@ -70,7 +74,8 @@ const basicPackage = {
     buttonLabel: 'Avail Basic',
     tag: 'Best For Starting Out',
     installmentPlan: false,
-    upfrontPayment: false
+    upfrontPayment: false,
+    lastSlot: false
 };
 
 const proPackage = {
@@ -87,7 +92,8 @@ const proPackage = {
     buttonLabel: 'Avail Pro',
     tag: 'Most Popular',
     installmentPlan: false,
-    upfrontPayment: false
+    upfrontPayment: false,
+    lastSlot: false
 };
 
 const immortalPackage = {
@@ -101,7 +107,8 @@ const immortalPackage = {
     buttonLabel: 'Avail Immortal',
     tag: 'Unlimited Coaching Till Immortal',
     installmentPlan: true,
-    upfrontPayment: true
+    upfrontPayment: true,
+    lastSlot: true
 };
 
 const tenKPackage = {
@@ -115,7 +122,8 @@ const tenKPackage = {
     buttonLabel: 'Avail Beyond Immortal',
     tag: 'Unlimited Coaching until 10K',
     installmentPlan: true,
-    upfrontPayment: true
+    upfrontPayment: true,
+    lastSlot: true
 };
 
 // const plusPackage = {
@@ -263,7 +271,7 @@ const entryPlan = {
         'Discord Messaging'
     ],
     buttonLabel: 'Avail Entry',
-    tag: 'Best for Starting Out'
+    tag: 'Best for Starting Out',
 };
 
 const basicPlan = {
