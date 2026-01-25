@@ -98,6 +98,8 @@ const proPackage = {
 
 const immortalPackage = {
     price: '$2500',
+    discountedPrice:'$2000',
+    priceOff: '$500',
      
    features: [
         'Unlimited 1 Hour Sessions',
