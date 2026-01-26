@@ -1,25 +1,33 @@
-// Helper function to generate price HTML
-function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment, lastSlot) {
-    const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
-    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Flat $300 Off on Upfront Applied</span>` : '';
-    const lastSlotText = lastSlot ? `<span class="badge bg-danger ms-2 hero-animate">Last Slot Left</span>` : '';
-    if (discountedPrice) {
-        return `
-        ${installmentText}
-        ${upfrontText}
-            <div class="coaching-card__price space-grotesk-notice">
-                ${discountedPrice} 
-                <div class="original-price">${price}</div>
-            </div>
-        `;
-    }
+
+function generatePriceHTML(
+    price,
+    discountedPrice,
+    installmentPlan,
+    upfrontPayment,
+    lastSlot
+) {
+    const installmentText = installmentPlan
+        ? `<span class="badge bg-warning ms-2">Installments Available</span>`
+        : '';
+
+    const upfrontText = upfrontPayment
+        ? `<span class="badge bg-primary ms-2">Flat $300 Off on Upfront Applied</span>`
+        : '';
+
+    const lastSlotText = lastSlot
+        ? `<span class="badge bg-danger ms-2 hero-animate">Last Slot Available</span>`
+        : '';
+
     return `
-        ${lastSlotText} 
-        ${installmentText} 
-        ${upfrontText} 
-        <div class="coaching-card__price space-grotesk-notice">
-            ${price}
-        </div>
+      ${lastSlotText}
+      ${installmentText}
+      ${upfrontText}
+      <div class="coaching-card__price space-grotesk-notice">
+        ${discountedPrice
+            ? `${discountedPrice}<div class="original-price">${price}</div>`
+            : price
+        }
+      </div>
     `;
 }
 
