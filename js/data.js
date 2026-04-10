@@ -97,8 +97,8 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$2500',
-    discountedPrice: '$2000',
+    price: '$2800',
+    discountedPrice: '$2300',
     priceOff: '$500',
    
      
@@ -115,8 +115,8 @@ const immortalPackage = {
 };
 
 const tenKPackage = {
-    price: '$5000',
-   discountedPrice: '$4500',
+    price: '$5300',
+   discountedPrice: '$4800',
     priceOff: '$500',
     features: [
         'Unlimited 1 Hour Sessions', 
