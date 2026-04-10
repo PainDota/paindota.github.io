@@ -355,11 +355,20 @@ const accordionData = [
 //testimonial data
 const testimonials = [
     {
+        
         img: "images/badges/ranks/immortal.svg",
-        title: "Mouceen",
-        subtitle: "5000 to 5640",
-        description: "I first heard about pain on reddit, and thought to myself that i could try a dota coach, as he wasnt expensive at all compared to other options. I was around 5.1-5.0k before my first coaching session, and ever since Pain has been able to point out mistakes that i wouldnt catch myself rewatching the games. I can feel that I am better as a player knowing concepts i did not think about before, currently 5.3k while still climbing with around 60-70% win rate on carry.Best thing about pain is that he actively answers any of my little questions on discord about dota, which I doubt any of the 'bigger' coaches would do. UPDATE: 5640"
-    },
+        title: "mantazer",
+        subtitle: "3800 to 5640 mmr",
+        description:
+            "I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain."
+    },   
+     {
+        img: "images/badges/ranks/immortal.svg",
+        title: "nightcrawler8110",
+        subtitle: "3850 to 5640 mmr",
+        description:
+            " I started coaching with Pain- when I was Ancient 1 and it took about 4 months after that to reach Immortal. Having this coaching experience really improved my gameplay and changed the way I approach the game. He taught me a solid foundation for playing carry and actually understanding the game, not just copying builds or mindlessly farming. The principles he teaches have been useful in every bracket I played in. I originally found him through his YouTube videos and analysis and had a hunch he was probably the best coach out there. After working with him, that feeling made even more sense. His methods are very effective and actionable, and he’s extremely knowledgable about the game. You always leave sessions with clear things to work on instead of vague advice. Overall, easily the best decision I made for improving at Dota."},
+    
     {
         img: "images/badges/ranks/immortal.svg",
         title: "romel",
@@ -368,13 +377,13 @@ const testimonials = [
             "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to mid game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100"
     },
     {
-        
         img: "images/badges/ranks/immortal.svg",
-        title: "mantazer",
-        subtitle: "3800 to 5640 mmr",
+        title: "PROTOSS",
+        subtitle: "3500 to 5640 mmr",
         description:
-            "I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain."
-    },   
+            "            I just want to say thank you to Pain as he's one of the reasons why I reached Immortal! We have started since I was Legend IV or something, and we have been slowly making progress together by analyzing my games and seeing what works and what does not. If you are ever looking for a coach that can help you climb the ladder, Pain is your guy! Thanks!"
+    },
+    
     {
         img: "images/badges/ranks/immortal.svg",
         title: "MoranGuy",
@@ -383,20 +392,19 @@ const testimonials = [
         "Yesterday I hit Immortal rank playing Carry after switching roles and taking Pain's coaching sessions. I gained something around 500 MMR, which is significant after playing Offlane for years prior to that. Pain's advice allowed me to notice my own mistakes and taught me how to deal with them. I feel like in a couple hourly sessions with Pain you will gain more knowledge and insights about the game than in any other form of Dota-related content. So if you're serious about improving, this investment is really smart. Looking forward to what's next for me! "   
     },
     {
+        img: "images/badges/ranks/immortal.svg",
+        title: "Mouceen",
+        subtitle: "5000 to 5640",
+        description: "I first heard about pain on reddit, and thought to myself that i could try a dota coach, as he wasnt expensive at all compared to other options. I was around 5.1-5.0k before my first coaching session, and ever since Pain has been able to point out mistakes that i wouldnt catch myself rewatching the games. I can feel that I am better as a player knowing concepts i did not think about before, currently 5.3k while still climbing with around 60-70% win rate on carry.Best thing about pain is that he actively answers any of my little questions on discord about dota, which I doubt any of the 'bigger' coaches would do. UPDATE: 5640"
+    },
+    {
         img: "images/badges/ranks/divine.svg",
         title: "LUKE",
         subtitle: "3500 to 4620",
         description:
             "            Been working with Pain for several months now, climbed over 1000 mmr and finally hit divine today. The way he explains my mistakes is super motivating and I always wanna queue 10+ pubs after a coaching session with him."
     },
-    {
-        img: "images/badges/ranks/immortal.svg",
-        title: "PROTOSS",
-        subtitle: "3500 to 5640 mmr",
-        description:
-            "            I just want to say thank you to Pain as he's one of the reasons why I reached Immortal! We have started since I was Legend IV or something, and we have been slowly making progress together by analyzing my games and seeing what works and what does not. If you are ever looking for a coach that can help you climb the ladder, Pain is your guy! Thanks!"
-    },
-    {
+   {
         img: "images/badges/ranks/legend.svg",
         title: "DOVAREME",
         subtitle: "1800 to 3000 mmr",
