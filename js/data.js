@@ -454,13 +454,33 @@ const testimonials = [
         description:
             "Recently, I hit ancient. I started getting coaching when I was low archon, maybe archon 2. Within 5 coaching sessions and 200 games I managed to make it through all of archon and all of legend. He does a really good job at simplifying and honing in on what you need to improve. If you're able to apply his advice in game you will get better. Hopefully I can make it to divine next."    
     }
-  
-    
+]
 
-
-
-
-
-
-
+const newTestimonials = [
+    {
+        "pfp": "1.png",
+        "username": "player123",
+        "roles": ["carry", "support"],
+        "starting_mmr": 2500,
+        "starting_medal": "ancient",
+        "ending_mmr": 3000,
+        "ending_medal": "immortal",
+        "mmr_gained": ending_mmr - starting_mmr,
+        "time_taken": "8hr",
+        "review": "blah blah.",
+        "screenshot": "1.png"
+      },
+      {
+        "pfp": "2.png",
+        "username": "player123",
+        "roles": ["carry", "support"],
+        "starting_mmr": 2500,
+        "starting_medal": "ancient",
+        "ending_mmr": 3000,
+        "ending_medal": "immortal",
+        "mmr_gained": ending_mmr - starting_mmr,
+        "time_taken": "8hr",
+        "review": "blah blah.",
+        "screenshot": "2.png"
+      }
 ]
