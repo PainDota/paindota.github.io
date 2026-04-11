@@ -15,7 +15,7 @@
     font-size: 1rem;
     line-height: 23px;
     transition: background-color 0.3s, box-shadow 0.3s;
-    margin: 20px 0;
+    margin: 8px 0;
 }
 
 .btn-custom:hover {
