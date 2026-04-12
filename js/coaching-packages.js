@@ -143,35 +143,43 @@ function populateCoachingPro() {
 // ===============================
 // IMMORTAL PACKAGE
 // ===============================
+
+function getActivePackage(original, mutated) {
+    return mutated ?? original;
+}
+
 function populateCoachingImmortal() {
     const el = document.getElementById('coaching-immortal');
     if (!el) return;
 
-    const features = immortalPackage.features.map(f => `<li>${f}</li>`).join('');
+    const pkg = getActivePackage(immortalPackage, mutatedImmortalPackage);
+
+    const features = pkg.features.map(f => `<li>${f}</li>`).join('');
 
     el.innerHTML = `
         <img src="images/icons/heroicons_fire-20-solid.svg" style="position:absolute;top:-30px;left:-15px;width:60px;">
-        <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
+        <h6 class="tag immortal-tag">${pkg.tag}</h6>
+
         <div class="coaching-card immortal-card">
             <div>
                 <h4 class="inter-heading-bold">
                     Immortal
-                    ${getDiscountBadge(immortalPackage.discount)}
+                    ${getDiscountBadge(pkg.discount)}
                 </h4>
 
                 ${generatePriceHTML(
-                    immortalPackage.price,
-                    immortalPackage.discount,
-                    immortalPackage.installmentPlan,
-                    immortalPackage.upfrontPayment
+                    pkg.price,
+                    pkg.discount,
+                    pkg.installmentPlan,
+                    pkg.upfrontPayment
                 )}
             </div>
 
             <ul class="inter-body-medium">${features}</ul>
 
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank">
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
-                    <button class="btn-custom">${immortalPackage.buttonLabel}</button>
+                    <button class="btn-custom">${pkg.buttonLabel}</button>
                 </div>
             </a>
         </div>
@@ -185,30 +193,32 @@ function populateCoachingTenK() {
     const el = document.getElementById('coaching-ten-k');
     if (!el) return;
 
-    const features = tenKPackage.features.map(f => `<li>${f}</li>`).join('');
+    const pkg = getActivePackage(tenKPackage, mutatedTenKPackage);
+    
+    const features = pkg.features.map(f => `<li>${f}</li>`).join('');
 
     el.innerHTML = `
-        <h6 class="tag immortal-plus-tag">${tenKPackage.tag}</h6>
+        <h6 class="tag immortal-plus-tag">${pkg.tag}</h6>
         <div class="coaching-card immortal-plus-card">
             <div>
                 <h4 class="inter-heading-bold">
                     Beyond Immortal
-                    ${getDiscountBadge(tenKPackage.discount)}
+                    ${getDiscountBadge(pkg.discount)}
                 </h4>
 
                 ${generatePriceHTML(
-                    tenKPackage.price,
-                    tenKPackage.discount,
-                    tenKPackage.installmentPlan,
-                    tenKPackage.upfrontPayment
+                    pkg.price,
+                    pkg.discount,
+                    pkg.installmentPlan,
+                    pkg.upfrontPayment
                 )}
             </div>
 
             <ul class="inter-body-medium">${features}</ul>
 
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank">
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
-                    <button class="btn-custom">${tenKPackage.buttonLabel}</button>
+                    <button class="btn-custom">${pkg.buttonLabel}</button>
                 </div>
             </a>
         </div>

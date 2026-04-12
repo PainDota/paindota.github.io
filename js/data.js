@@ -28,8 +28,8 @@ const alertConfig = {
     }
 };
 
-// for strikethough text: discountedPrice: '$xxxx',
-// for xx OFF badge priceOff: '$xxxx',
+let currentMMR = null;
+// for discount: discount = 500
 // coaching package Data
 const miniPackage = {
     tag: '30 Minute 1 ON 1 Session',
@@ -112,6 +112,8 @@ const immortalPackage = {
     lastSlot: true
 };
 
+let mutatedImmortalPackage = null;
+
 const tenKPackage = {
     price: '$5300',
     discount:500,
@@ -127,6 +129,8 @@ const tenKPackage = {
     upfrontPayment: true,
     lastSlot: true
 };
+
+let mutatedTenKPackage = null;
 
 // const plusPackage = {
 //     price: '$5000',

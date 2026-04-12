@@ -1,86 +1,210 @@
-const mmrInput = document.getElementById("mmrInput");
+function toNumber(value) {
+    return parseFloat(String(value).replace(/[^0-9.]/g, "")) || 0;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     const mmrInput = document.getElementById("mmrInput");
-
     if (!mmrInput) return;
 
     mmrInput.addEventListener("input", function () {
+        console.log("[MMR INPUT]", this.value);
         handleMMRChange(this.value);
     });
 });
 
-function calculatePrice(mmr, targetMMR) {
-    if (!mmr || mmr >= targetMMR) return 0;
-
-    let price = 0;
-
-    // Part 1: from current MMR → 3000
-    if (mmr < 3000) {
-        const end = Math.min(3000, targetMMR);
-        price += (end - mmr) * 0.75;
-        mmr = end;
-    }
-
-    // Part 2: from 3000 → target
-    if (targetMMR > 3000 && mmr < targetMMR) {
-        price += (targetMMR - mmr) * 1;
-    }
-
-    return Math.round(price);
+function interpolate(x, x1, y1, x2, y2) {
+    const result = y1 + (y2 - y1) * ((x - x1) / (x2 - x1));
+    console.log(`[INTERPOLATE] x=${x}`, { x1, y1, x2, y2, result });
+    return result;
 }
 
-function handleMMRChange(value) {
-    const mmr = parseInt(value.replace(/\D/g, ''));
+function calculateImmortalPrice(mmr, immortalPackage) {
+    console.log("[IMMORTAL] input mmr:", mmr, immortalPackage);
 
-    if (!mmr) return;
+    if (mmr == null || !immortalPackage) return 0;
 
-    const immortalTarget = 5620;
-    const tenKTarget = 10000;
+    mmr = parseInt(mmr, 10);
+    if (isNaN(mmr)) return 0;
 
-    const immortalPrice = calculatePrice(mmr, immortalTarget);
-    const tenKPrice = calculatePrice(mmr, tenKTarget);
+    const basePrice =
+        toNumber(immortalPackage.price) -
+        toNumber(immortalPackage.discount);
 
-    immortalPackage.price = `$${immortalPrice}`;
-    tenKPackage.price = `$${tenKPrice}`;
+    console.log("[IMMORTAL] basePrice:", basePrice);
 
-    populateCoachingImmortal();
-    populateCoachingTenK();
+    const curve = [
+        { mmr: 0, ratio: 1.0 },
+        { mmr: 3000, ratio: 2000 / 2300 },
+        { mmr: 4000, ratio: 1500 / 2300 },
+        { mmr: 4500, ratio: 1000 / 2300 },
+        { mmr: 5000, ratio: 800 / 2300 }
+    ];
 
-    // OPTIONAL: store for button click use
-    window.currentPrices = {
-        immortal: immortalPrice,
-        tenk: tenKPrice
+    if (mmr < 3000) {
+        let price = basePrice + 0.75 * (3000 - mmr);
+        price = Math.max(price, 0);
+
+        console.log("[IMMORTAL] <3000 branch price:", price);
+
+        return Math.ceil(price / 10) * 10;
+    }
+
+    const minPrice = (800 / 2300) * basePrice;
+
+    if (mmr >= 5000) {
+        console.log("[IMMORTAL] >=5000 minPrice:", minPrice);
+        return Math.ceil(minPrice / 10) * 10;
+    }
+
+    let i = 0;
+    while (i < curve.length - 1 && mmr > curve[i + 1].mmr) i++;
+
+    console.log("[IMMORTAL] curve segment index:", i);
+
+    const a = curve[i];
+    const b = curve[i + 1];
+
+    const ratio =
+        a.mmr === b.mmr
+            ? a.ratio
+            : interpolate(mmr, a.mmr, a.ratio, b.mmr, b.ratio);
+
+    console.log("[IMMORTAL] ratio:", ratio);
+
+    let price = basePrice * ratio;
+
+    price = Math.max(price, minPrice);
+
+    const finalPrice = Math.ceil(price / 10) * 10;
+
+    console.log("[IMMORTAL] final price:", finalPrice);
+
+    return finalPrice;
+}
+
+function calculateTenKPrice(mmr, tenKPackage) {
+    console.log("[10K] input mmr:", mmr, tenKPackage);
+
+    if (mmr == null) return 0;
+
+    mmr = parseInt(mmr, 10);
+    if (isNaN(mmr)) return 0;
+
+    const basePrice =
+        toNumber(tenKPackage.price) -
+        toNumber(tenKPackage.discount);
+
+    console.log("[10K] basePrice:", basePrice);
+
+    const curve = [
+        { mmr: 5620, ratio: 1.0 },
+        { mmr: 6000, ratio: 1.0 },
+        { mmr: 7000, ratio: 3000 / 4000 },
+        { mmr: 8000, ratio: 2000 / 4000 },
+        { mmr: 9000, ratio: 1000 / 4000 },
+        { mmr: 10000, ratio: 1000 / 4000 }
+    ];
+
+    if (mmr <= 6000) {
+        console.log("[10K] <=6000 full price");
+        return Math.ceil(basePrice / 10) * 10;
+    }
+
+    const minPrice = 1000;
+
+    if (mmr >= 9000) {
+        console.log("[10K] >=9000 min price");
+        return Math.ceil(minPrice / 10) * 10;
+    }
+
+    let i = 0;
+    while (i < curve.length - 1 && mmr > curve[i + 1].mmr) i++;
+
+    console.log("[10K] curve segment index:", i);
+
+    const a = curve[i];
+    const b = curve[i + 1];
+
+    const ratio =
+        a.mmr === b.mmr
+            ? a.ratio
+            : interpolate(mmr, a.mmr, a.ratio, b.mmr, b.ratio);
+
+    console.log("[10K] ratio:", ratio);
+
+    let price = basePrice * ratio;
+
+    price = Math.max(price, minPrice);
+
+    const finalPrice = Math.ceil(price / 10) * 10;
+
+    console.log("[10K] final price:", finalPrice);
+
+    return finalPrice;
+}
+
+function getCurrentPrices(mmr) {
+    if (mmr == null || isNaN(mmr)) {
+        return {
+            immortal: null,
+            tenK: null,
+            mode: "idle"
+        };
+    }
+
+    if (mmr < 5620) {
+        return {
+            immortal: calculateImmortalPrice(mmr, immortalPackage),
+            tenK: 0,
+            mode: "immortal"
+        };
+    }
+
+    return {
+        immortal: 0,
+        tenK: calculateTenKPrice(mmr, tenKPackage),
+        mode: "tenk"
     };
 }
 
-const immortalFormBase =
-  "https://docs.google.com/forms/d/e/1FAIpQLSd5FBovMV2JSvDNEII7j1rMH2Z4pN8OT4HbQAzdpRT6BO78_g/viewform";
+function handleMMRChange(value) {
+    const mmr = parseInt(value, 10);
 
-const tenKFormBase =
-  "https://docs.google.com/forms/d/e/1FAIpQLSePPS_DAD5CJIrfKxLAQBRO86UrmACzB9vtonxmGBYt5wBlBw/viewform";
+    console.log("[HANDLE MMR]", { raw: value, parsed: mmr });
 
-  function redirectToForm(type, price) {
-    let baseURL = "";
-    let param = "";
+    if (value.trim() === "" || isNaN(mmr)) {
+        console.log("[RESET MODE]");
 
-    if (type === "immortal") {
-        baseURL = immortalFormBase;
-        param = "entry.1913976198";
-    } else {
-        baseURL = tenKFormBase;
-        param = "entry.2052071461";
+        mutatedImmortalPackage = null;
+        mutatedTenKPackage = null;
+
+        renderPackages();
+        return;
     }
 
-    const url = `${baseURL}?usp=pp_url&${param}=${encodeURIComponent(price)}`;
+    const { immortal, tenK, mode } = getCurrentPrices(mmr);
 
-    window.location.href = url;
+    console.log("[MODE]", mode);
+    console.log("[PRICES]", { immortal, tenK });
+
+    if (mmr < 5620) {
+        mutatedImmortalPackage = {
+            ...immortalPackage,
+            price: `$${immortal}`
+        };
+        mutatedTenKPackage = null;
+    } else {
+        mutatedTenKPackage = {
+            ...tenKPackage,
+            price: `$${tenK}`
+        };
+        mutatedImmortalPackage = null;
+    }
+
+    renderPackages();
 }
 
-document.getElementById("immortalBtn").addEventListener("click", function () {
-    redirectToForm("immortal", window.currentPrices.immortal);
-});
-
-document.getElementById("tenkBtn").addEventListener("click", function () {
-    redirectToForm("tenk", window.currentPrices.tenk);
-});
+function renderPackages() {
+    populateCoachingImmortal();
+    populateCoachingTenK();
+}
