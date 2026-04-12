@@ -194,7 +194,7 @@ ul li span {
     border: 1px white solid;
     border-radius: 5px; 
     background-color: var(--primary-bg-color);
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .top-ad {
@@ -226,8 +226,8 @@ ul li span {
       font-size: 0.72rem;
       line-height: 1.2;
     }
-  
-    .btn-close {
-      transform: scale(0.8);
-    }
+  }
+
+  .top-ad {
+    display: flex !important;
   }
