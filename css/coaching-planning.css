@@ -167,8 +167,14 @@ ul li span {
     transform-origin: center;
   }
 
+  .hero-animate-2 {
+    animation: pulse 3s ease-in-out infinite;
+    display: inline-block; /* or block depending on element */
+    transform-origin: center;
+  }
+
   .input-mmr {
-    width: 100%;
+    width: 102%;
     margin: 0 auto;     /* centers horizontally */
 }
 
@@ -178,11 +184,50 @@ ul li span {
 
 .input-group-prepend p{
     margin: 5px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
 }
 
 .input-group-prepend {
     font-size: 1rem;
     border: 1px white solid;
     border-radius: 5px; 
+    background-color: var(--primary-bg-color);
+    font-weight: 700;
 }
-    
+
+.top-ad {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  /* compact height */
+  .top-ad {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  
+  /* prevent content overlap */
+  body {
+    padding-top: 38px;
+  }
+  
+  /* mobile optimization */
+  @media (max-width: 576px) {
+    body {
+      padding-top: 46px;
+    }
+  
+    .top-ad .small {
+      font-size: 0.72rem;
+      line-height: 1.2;
+    }
+  
+    .btn-close {
+      transform: scale(0.8);
+    }
+  }

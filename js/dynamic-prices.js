@@ -17,21 +17,20 @@ function calculateImmortalPrice(mmr, immortalPackage) {
     if (isNaN(mmr)) return 0;
 
     const basePrice =
-        toNumber(immortalPackage.price) -
-        toNumber(immortalPackage.discount);
+        toNumber(immortalPackage.price);
 
     console.log("[IMMORTAL] basePrice:", basePrice);
 
     const curve = [
         { mmr: 0, ratio: 1.0 },
-        { mmr: 3000, ratio: 2000 / 2300 },
-        { mmr: 4000, ratio: 1500 / 2300 },
-        { mmr: 4500, ratio: 1000 / 2300 },
-        { mmr: 5000, ratio: 800 / 2300 }
+        { mmr: 3000, ratio: 2800 / basePrice },
+        { mmr: 4000, ratio: 2300 / basePrice },
+        { mmr: 4500, ratio: 1800 / basePrice },
+        { mmr: 5000, ratio: 1600 / basePrice },
     ];
 
     if (mmr < 3000) {
-        let price = basePrice + 0.75 * (3000 - mmr);
+        let price = basePrice + 0.5 * (3000 - mmr);
         price = Math.max(price, 0);
 
         console.log("[IMMORTAL] <3000 branch price:", price);
@@ -39,7 +38,7 @@ function calculateImmortalPrice(mmr, immortalPackage) {
         return Math.ceil(price / 10) * 10;
     }
 
-    const minPrice = (800 / 2300) * basePrice;
+    const minPrice = (1300 / 2800) * basePrice;
 
     if (mmr >= 5000) {
         console.log("[IMMORTAL] >=5000 minPrice:", minPrice);
@@ -80,27 +79,25 @@ function calculateTenKPrice(mmr, tenKPackage) {
     mmr = parseInt(mmr, 10);
     if (isNaN(mmr)) return 0;
 
-    const basePrice =
-        toNumber(tenKPackage.price) -
-        toNumber(tenKPackage.discount);
+    const basePrice = toNumber(tenKPackage.price);
 
     console.log("[10K] basePrice:", basePrice);
 
     const curve = [
         { mmr: 5620, ratio: 1.0 },
-        { mmr: 6000, ratio: 1.0 },
-        { mmr: 7000, ratio: 3000 / 4000 },
-        { mmr: 8000, ratio: 2000 / 4000 },
-        { mmr: 9000, ratio: 1000 / 4000 },
-        { mmr: 10000, ratio: 1000 / 4000 }
+        { mmr: 6000, ratio: 4900 / basePrice },
+        { mmr: 7000, ratio: 3800 / basePrice },
+        { mmr: 8000, ratio: 2800 / basePrice },
+        { mmr: 9000, ratio: 1800 / basePrice },
+        { mmr: 10000, ratio: 1800 / basePrice },
     ];
 
-    if (mmr <= 6000) {
-        console.log("[10K] <=6000 full price");
-        return Math.ceil(basePrice / 10) * 10;
-    }
+    // if (mmr <= 6000) {
+    //     console.log("[10K] <=6000 full price");
+    //     return Math.ceil(basePrice / 10) * 10;
+    // }
 
-    const minPrice = 1000;
+    const minPrice = 1800;
 
     if (mmr >= 9000) {
         console.log("[10K] >=9000 min price");
