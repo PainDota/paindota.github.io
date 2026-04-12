@@ -31,22 +31,56 @@ function calculatePrice(mmr, targetMMR) {
 }
 
 function handleMMRChange(value) {
-    const mmr = parseInt(value.replace(/\D/g, '')); // only numbers
+    const mmr = parseInt(value.replace(/\D/g, ''));
 
     if (!mmr) return;
 
-    // Targets
     const immortalTarget = 5620;
     const tenKTarget = 10000;
 
     const immortalPrice = calculatePrice(mmr, immortalTarget);
     const tenKPrice = calculatePrice(mmr, tenKTarget);
 
-    // Update package prices
     immortalPackage.price = `$${immortalPrice}`;
     tenKPackage.price = `$${tenKPrice}`;
 
-    // Re-render ONLY affected cards
     populateCoachingImmortal();
     populateCoachingTenK();
+
+    // OPTIONAL: store for button click use
+    window.currentPrices = {
+        immortal: immortalPrice,
+        tenk: tenKPrice
+    };
 }
+
+const immortalFormBase =
+  "https://docs.google.com/forms/d/e/1FAIpQLSd5FBovMV2JSvDNEII7j1rMH2Z4pN8OT4HbQAzdpRT6BO78_g/viewform";
+
+const tenKFormBase =
+  "https://docs.google.com/forms/d/e/1FAIpQLSePPS_DAD5CJIrfKxLAQBRO86UrmACzB9vtonxmGBYt5wBlBw/viewform";
+
+  function redirectToForm(type, price) {
+    let baseURL = "";
+    let param = "";
+
+    if (type === "immortal") {
+        baseURL = immortalFormBase;
+        param = "entry.1913976198";
+    } else {
+        baseURL = tenKFormBase;
+        param = "entry.2052071461";
+    }
+
+    const url = `${baseURL}?usp=pp_url&${param}=${encodeURIComponent(price)}`;
+
+    window.location.href = url;
+}
+
+document.getElementById("immortalBtn").addEventListener("click", function () {
+    redirectToForm("immortal", window.currentPrices.immortal);
+});
+
+document.getElementById("tenkBtn").addEventListener("click", function () {
+    redirectToForm("tenk", window.currentPrices.tenk);
+});

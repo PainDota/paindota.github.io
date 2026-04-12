@@ -1,45 +1,62 @@
-// Helper function to generate price HTML
-function generatePriceHTML(price, discountedPrice, installmentPlan, upfrontPayment) {
+// ===============================
+// HELPER: PRICE HTML (FIXED DISCOUNT)
+// ===============================
+function generatePriceHTML(price, discount = 0, installmentPlan, upfrontPayment) {
     const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
     const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Additional $300 Off on Upfront Payment</span>` : '';
-    if (discountedPrice) {
-        return `
+
+    const numericPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
+    const finalPrice = discount > 0 ? numericPrice - discount : numericPrice;
+
+    const formattedFinal = `$${finalPrice.toFixed(0)}`;
+
+    return `
         ${installmentText}
         ${upfrontText}
-            <div class="coaching-card__price space-grotesk-notice">
-                ${discountedPrice} 
-                <div class="original-price">${price}</div>
-            </div>
-        `;
-    }
-    return `
-        ${installmentText} 
-        ${upfrontText} 
         <div class="coaching-card__price space-grotesk-notice">
-            ${price}
+            ${discount > 0 ? formattedFinal : price}
+            ${discount > 0 ? `<div class="original-price">${price}</div>` : ''}
         </div>
     `;
 }
 
-// Function to populate the entry package
+// ===============================
+// HELPER: DISCOUNT BADGE
+// ===============================
+function getDiscountBadge(discount) {
+    return discount > 0
+        ? `<span class="badge bg-danger ms-2">SAVE $${discount}</span>`
+        : '';
+}
+
+// ===============================
+// ENTRY PACKAGE
+// ===============================
 function populateCoachingEntry() {
-    const entryColumn = document.getElementById('coaching-entry');
-    if (!entryColumn) return;
+    const el = document.getElementById('coaching-entry');
+    if (!el) return;
 
-    const featuresList = entryPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const features = entryPackage.features.map(f => `<li>${f}</li>`).join('');
 
-    entryColumn.innerHTML = `
+    el.innerHTML = `
         <h6 class="entry-tag">${entryPackage.tag}</h6>
         <div class="coaching-card">
             <div>
-                <h4 class="inter-heading-bold">Entry
-                ${entryPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${entryPackage.priceOff}</span>` : ''}
+                <h4 class="inter-heading-bold">
+                    Entry
+                    ${getDiscountBadge(entryPackage.discount)}
                 </h4>
-                ${generatePriceHTML(entryPackage.price, entryPackage.discountedPrice, entryPackage.installmentPlan, entryPackage.upfrontPayment, entryPackage.lastSlot)}
+
+                ${generatePriceHTML(
+                    entryPackage.price,
+                    entryPackage.discount,
+                    entryPackage.installmentPlan,
+                    entryPackage.upfrontPayment
+                )}
             </div>
-            <ul class="inter-body-medium">
-                ${featuresList}
-            </ul>
+
+            <ul class="inter-body-medium">${features}</ul>
+
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${entryPackage.buttonLabel}</button>
@@ -49,25 +66,34 @@ function populateCoachingEntry() {
     `;
 }
 
-// Function to populate the basic package
+// ===============================
+// BASIC PACKAGE
+// ===============================
 function populateCoachingBasic() {
-    const basicColumn = document.getElementById('coaching-basic');
-    if (!basicColumn) return;
+    const el = document.getElementById('coaching-basic');
+    if (!el) return;
 
-    const featuresList = basicPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const features = basicPackage.features.map(f => `<li>${f}</li>`).join('');
 
-    basicColumn.innerHTML = `
+    el.innerHTML = `
         <h6 class="tag basic-tag">${basicPackage.tag}</h6>
         <div class="coaching-card coaching-card--basic">
             <div>
-                <h4 class="inter-heading-bold">Basic
-                ${basicPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${basicPackage.priceOff}</span>` : ''}
+                <h4 class="inter-heading-bold">
+                    Basic
+                    ${getDiscountBadge(basicPackage.discount)}
                 </h4>
-                ${generatePriceHTML(basicPackage.price, basicPackage.discountedPrice, basicPackage.installmentPlan, basicPackage.upfrontPayment, basicPackage.lastSlot)}
+
+                ${generatePriceHTML(
+                    basicPackage.price,
+                    basicPackage.discount,
+                    basicPackage.installmentPlan,
+                    basicPackage.upfrontPayment
+                )}
             </div>
-            <ul class="inter-body-medium">
-                ${featuresList}
-            </ul>
+
+            <ul class="inter-body-medium">${features}</ul>
+
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${basicPackage.buttonLabel}</button>
@@ -77,25 +103,34 @@ function populateCoachingBasic() {
     `;
 }
 
-// Function to populate the pro package
+// ===============================
+// PRO PACKAGE
+// ===============================
 function populateCoachingPro() {
-    const proColumn = document.getElementById('coaching-pro');
-    if (!proColumn) return;
+    const el = document.getElementById('coaching-pro');
+    if (!el) return;
 
-    const featuresList = proPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const features = proPackage.features.map(f => `<li>${f}</li>`).join('');
 
-    proColumn.innerHTML = `
+    el.innerHTML = `
         <h6 class="tag pro-tag">${proPackage.tag}</h6>
         <div class="coaching-card coaching-card--pro">
             <div>
-                <h4 class="inter-heading-bold">Pro 
-                ${proPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${proPackage.priceOff}</span>` : ''}
+                <h4 class="inter-heading-bold">
+                    Pro
+                    ${getDiscountBadge(proPackage.discount)}
                 </h4>
-                ${generatePriceHTML(proPackage.price, proPackage.discountedPrice, proPackage.installmentPlan, proPackage.upfrontPayment, proPackage.lastSlot)}
+
+                ${generatePriceHTML(
+                    proPackage.price,
+                    proPackage.discount,
+                    proPackage.installmentPlan,
+                    proPackage.upfrontPayment
+                )}
             </div>
-            <ul class="inter-body-medium">
-                ${featuresList}
-            </ul>
+
+            <ul class="inter-body-medium">${features}</ul>
+
             <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${proPackage.buttonLabel}</button>
@@ -105,27 +140,36 @@ function populateCoachingPro() {
     `;
 }
 
-// Function to populate the immortal package
+// ===============================
+// IMMORTAL PACKAGE
+// ===============================
 function populateCoachingImmortal() {
-    const immortalColumn = document.getElementById('coaching-immortal');
-    if (!immortalColumn) return;
+    const el = document.getElementById('coaching-immortal');
+    if (!el) return;
 
-    const featuresList = immortalPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const features = immortalPackage.features.map(f => `<li>${f}</li>`).join('');
 
-    immortalColumn.innerHTML = `
-        <img src="images/icons/heroicons_fire-20-solid.svg" alt="Teach Icon" style="position: absolute; top: -30px; left: -15px; width: 60px; height: auto;">
+    el.innerHTML = `
+        <img src="images/icons/heroicons_fire-20-solid.svg" style="position:absolute;top:-30px;left:-15px;width:60px;">
         <h6 class="tag immortal-tag">${immortalPackage.tag}</h6>
         <div class="coaching-card immortal-card">
             <div>
-                <h4 class="inter-heading-bold">Immortal
-                ${immortalPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${immortalPackage.priceOff}</span>` : ''}
+                <h4 class="inter-heading-bold">
+                    Immortal
+                    ${getDiscountBadge(immortalPackage.discount)}
                 </h4>
-                ${generatePriceHTML(immortalPackage.price, immortalPackage.discountedPrice, immortalPackage.installmentPlan, immortalPackage.upfrontPayment, immortalPackage.lastSlot)}
+
+                ${generatePriceHTML(
+                    immortalPackage.price,
+                    immortalPackage.discount,
+                    immortalPackage.installmentPlan,
+                    immortalPackage.upfrontPayment
+                )}
             </div>
-            <ul class="inter-body-medium">
-                ${featuresList}
-            </ul>
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
+
+            <ul class="inter-body-medium">${features}</ul>
+
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${immortalPackage.buttonLabel}</button>
                 </div>
@@ -134,25 +178,35 @@ function populateCoachingImmortal() {
     `;
 }
 
+// ===============================
+// TEN K PACKAGE
+// ===============================
 function populateCoachingTenK() {
-    const tenKColumn = document.getElementById('coaching-ten-k');
-    if (!tenKColumn) return;
+    const el = document.getElementById('coaching-ten-k');
+    if (!el) return;
 
-    const featuresList = tenKPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const features = tenKPackage.features.map(f => `<li>${f}</li>`).join('');
 
-    tenKColumn.innerHTML = `
+    el.innerHTML = `
         <h6 class="tag immortal-plus-tag">${tenKPackage.tag}</h6>
         <div class="coaching-card immortal-plus-card">
             <div>
-                <h4 class="inter-heading-bold">Beyond Immortal
-                ${tenKPackage.priceOff ? `<span class="badge bg-danger ms-2">SAVE ${tenKPackage.priceOff}</span>` : ''}
+                <h4 class="inter-heading-bold">
+                    Beyond Immortal
+                    ${getDiscountBadge(tenKPackage.discount)}
                 </h4>
-                ${generatePriceHTML(tenKPackage.price, tenKPackage.discountedPrice, tenKPackage.installmentPlan, tenKPackage.upfrontPayment, tenKPackage.lastSlot)}
+
+                ${generatePriceHTML(
+                    tenKPackage.price,
+                    tenKPackage.discount,
+                    tenKPackage.installmentPlan,
+                    tenKPackage.upfrontPayment
+                )}
             </div>
-            <ul class="inter-body-medium">
-                ${featuresList}
-            </ul>
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
+
+            <ul class="inter-body-medium">${features}</ul>
+
+            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${tenKPackage.buttonLabel}</button>
                 </div>
@@ -161,104 +215,15 @@ function populateCoachingTenK() {
     `;
 }
 
-function populateCoachingImmortalPlus() {
-    const immortalColumn = document.getElementById('coaching-immortal-plus');
-    if (!immortalColumn) return;
-
-    const featuresList = plusPackage.features.map(feature => `<li>${feature}</li>`).join('');
-    const requirementsList = plusPackage.requirements.map(requirement => `<li>${requirement}</li>`).join('');
-
-    immortalColumn.innerHTML = `
-        <h6 class="tag immortal-plus-tag">${plusPackage.tag}</h6>
-        <div class="coaching-card immortal-plus-card">
-            <div>
-                <h4 class="inter-heading-bold">
-                    Immortal Plus
-                    ${plusPackage.priceOff ?
-            `<span class="badge bg-danger ms-2">SAVE ${plusPackage.priceOff}</span>`
-            : ''}
-                </h4>
-                ${generatePriceHTML(plusPackage.price, plusPackage.discountedPrice, plusPackage.installmentPlan, plusPackage.upfrontPayment, plusPackage.lastSlot)}
-            </div>
-
-            <ul class="inter-body-medium">
-                ${featuresList}
-                <div class="procedure">
-                <!-- Collapsible button with info icon -->
-                <button class="btn btn-link collapsible" data-bs-toggle="collapse" data-bs-target="#requirements" aria-expanded="false" aria-controls="requirements">
-                    <i class="fas fa-info-circle"></i> Requirements
-                </button>
-                <ul id="requirements" class="collapse">
-                    ${requirementsList}
-                </ul>
-            </div>
-            </ul>
-
-            
-
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-                <div class="coaching-card__button-container">
-                    <button class="btn-custom">${plusPackage.buttonLabel}</button>
-                </div>
-            </a>
-        </div>
-    `;
-}
-
-// Function to populate the mini packages
-function populateCoachingMini() {
-    const miniColumn = document.getElementById('coaching-mini-basic');
-    if (!miniColumn) return;
-
-    const basicFeaturesList = miniPackage.basicFeatures.map(feature => `<li>${feature}</li>`).join('');
-    const proFeaturesList = miniPackage.proFeatures.map(feature => `<li>${feature}</li>`).join('');
-
-    miniColumn.innerHTML = `
-        <h6 class="entry-tag">${miniPackage.tag}</h6>
-        <div class="coaching-card">
-            <div>
-                <h4 class="inter-heading-bold">Basic</h4>
-                <div class="coaching-card__price space-grotesk-notice">
-                    <div class="mb-3">
-                        ${miniPackage.basicPrice}
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <ul class="inter-body-medium">
-                        ${basicFeaturesList}
-                    </ul>
-                </div>
-                <h4 class="inter-heading-bold">Pro</h4>
-                <div class="coaching-card__price space-grotesk-notice">
-                    <div class="mb-3">
-                        ${miniPackage.proPrice}
-                    </div>
-                </div>
-                <div class="mb-4">
-                    <ul class="inter-body-medium">
-                        ${proFeaturesList}
-                    </ul>
-                </div>
-            </div>
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-                <div class="coaching-card__button-container">
-                    <button class="btn-custom">${miniPackage.buttonLabel}</button>
-                </div>
-            </a>
-        </div>
-    `;
-}
-
-// Load all packages
+// ===============================
+// LOAD ALL
+// ===============================
 function loadCoachingPackages() {
-    // populateCoachingMini();
     populateCoachingEntry();
     populateCoachingBasic();
     populateCoachingPro();
     populateCoachingImmortal();
     populateCoachingTenK();
-    // populateCoachingImmortalPlus();
 }
 
 document.addEventListener('DOMContentLoaded', loadCoachingPackages);
-

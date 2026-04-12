@@ -97,11 +97,9 @@ const proPackage = {
 };
 
 const immortalPackage = {
-    price: '$XXXX',
-    // discountedPrice: '$2300',
-    // priceOff: '$500',
+    price: '$2800',
+    discount: 500,
    
-     
    features: [
         'Unlimited 1 Hour Sessions', 
         'Immortal Guarantee' , '1x Analysis Tutorial',
@@ -115,9 +113,9 @@ const immortalPackage = {
 };
 
 const tenKPackage = {
-    price: 'Enter MMR',
-//    discountedPrice: '$4800',
-//     priceOff: '$500',
+    price: '$5300',
+    discount:500,
+    
     features: [
         'Unlimited 1 Hour Sessions', 
         '10K MMR Guarantee', '1x Analysis Tutorial',
