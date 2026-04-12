@@ -199,6 +199,7 @@ function handleMMRChange(value) {
     populateCoachingImmortal();
     populateCoachingTenK();
     updateButtonStates(mmr);
+    updateFormLinks(mmr);
 }
 
 function setLinkDisabled(id, disabled, message) {
@@ -238,6 +239,38 @@ function updateButtonStates(mmr) {
     // TENK MODE
     setLinkDisabled("avail-immortal", true, "Minimum MMR Acceptable is Divine <5620");
     setLinkDisabled("avail-ten-k", false, "Eligible for Beyond Immortal Coaching");
+}
+
+function updateFormLinks(mmr) {
+    const immortalLink = document.getElementById("avail-immortal");
+    const tenKLink = document.getElementById("avail-ten-k");
+
+    if (!immortalLink || !tenKLink) return;
+
+    const { immortal, tenK, mode } = getCurrentPrices(mmr);
+
+    const finalImmortal = immortal
+        ? immortal - toNumber(immortalPackage.discount)
+        : 0;
+
+    const finalTenK = tenK
+        ? tenK - toNumber(tenKPackage.discount)
+        : 0;
+
+    // Reset state
+    if (!mmr || isNaN(mmr)) {
+        immortalLink.href = "#";
+        tenKLink.href = "#";
+        return;
+    }
+
+    if (mode === "immortal") {
+        immortalLink.href = IMMORTAL_FORM_URL + finalImmortal;
+        tenKLink.href = "#";
+    } else {
+        tenKLink.href = TENK_FORM_URL + finalTenK;
+        immortalLink.href = "#";
+    }
 }
 
 function renderPackages() {

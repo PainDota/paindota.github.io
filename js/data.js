@@ -1,6 +1,10 @@
 //video URL
 const vidURL = "https://www.youtube.com/embed/wpXiWehN_E0?si=xa_UggrgFu0skDKQ";
 
+//Form URLs
+const IMMORTAL_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd5FBovMV2JSvDNEII7j1rMH2Z4pN8OT4HbQAzdpRT6BO78_g/viewform?usp=pp_url&entry.1913976198=";
+const TENK_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSePPS_DAD5CJIrfKxLAQBRO86UrmACzB9vtonxmGBYt5wBlBw/viewform?usp=pp_url&entry.2052071461=";
+
 // stat Data
 const statsValues = {
     mmr: '11K',
