@@ -185,7 +185,7 @@ ul li span {
 .input-group-prepend p{
     margin: 5px;
     color: white;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.1rem;
 }
 
@@ -226,8 +226,4 @@ ul li span {
       font-size: 0.72rem;
       line-height: 1.2;
     }
-  }
-
-  .top-ad {
-    display: flex !important;
   }
