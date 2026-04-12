@@ -2,16 +2,6 @@ function toNumber(value) {
     return parseFloat(String(value).replace(/[^0-9.]/g, "")) || 0;
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const mmrInput = document.getElementById("mmrInput");
-    if (!mmrInput) return;
-
-    mmrInput.addEventListener("input", function () {
-        console.log("[MMR INPUT]", this.value);
-        handleMMRChange(this.value);
-    });
-});
-
 function interpolate(x, x1, y1, x2, y2) {
     const result = y1 + (y2 - y1) * ((x - x1) / (x2 - x1));
     console.log(`[INTERPOLATE] x=${x}`, { x1, y1, x2, y2, result });
@@ -170,41 +160,100 @@ function getCurrentPrices(mmr) {
 function handleMMRChange(value) {
     const mmr = parseInt(value, 10);
 
-    console.log("[HANDLE MMR]", { raw: value, parsed: mmr });
-
     if (value.trim() === "" || isNaN(mmr)) {
-        console.log("[RESET MODE]");
-
         mutatedImmortalPackage = null;
         mutatedTenKPackage = null;
 
-        renderPackages();
+        populateCoachingImmortal();
+        populateCoachingTenK();
+        updateButtonStates(mmr);
         return;
     }
 
-    const { immortal, tenK, mode } = getCurrentPrices(mmr);
-
-    console.log("[MODE]", mode);
-    console.log("[PRICES]", { immortal, tenK });
+    const { immortal, tenK } = getCurrentPrices(mmr);
 
     if (mmr < 5620) {
         mutatedImmortalPackage = {
             ...immortalPackage,
-            price: `$${immortal}`
+            price: `$${immortal}`,
+            buttonLabel: "Avail Immortal"
         };
-        mutatedTenKPackage = null;
+
+        mutatedTenKPackage = {
+            ...tenKPackage,
+            buttonLabel: "Requires 5620+ MMR"
+        };
     } else {
         mutatedTenKPackage = {
             ...tenKPackage,
-            price: `$${tenK}`
+            price: `$${tenK}`,
+            buttonLabel: "Avail Beyond Immortal"
         };
-        mutatedImmortalPackage = null;
+
+        mutatedImmortalPackage = {
+            ...immortalPackage,
+            buttonLabel: "Immortals not Eligible"
+        };
     }
 
-    renderPackages();
+    populateCoachingImmortal();
+    populateCoachingTenK();
+    updateButtonStates(mmr);
+}
+
+function setLinkDisabled(id, disabled, message) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    if (disabled) {
+        el.style.pointerEvents = "none";
+        el.style.opacity = "0.5";
+        el.title = message;
+    } else {
+        el.style.pointerEvents = "auto";
+        el.style.opacity = "1";
+        el.title = "";
+    }
+}
+
+function updateButtonStates(mmr) {
+    const immortalBtn = document.getElementById("avail-immortal");
+    const tenKBtn = document.getElementById("avail-ten-k");
+
+    if (!immortalBtn || !tenKBtn) return;
+
+    if (!mmr || isNaN(mmr) || mmr <= 0) {
+        setLinkDisabled("avail-immortal", true, "Enter MMR to unlock");
+        setLinkDisabled("avail-ten-k", true, "Enter MMR to unlock");
+        return;
+    }
+
+    // IMMORTAL MODE
+    if (mmr <= 5620) {
+        setLinkDisabled("avail-immortal", false, "Eligible for Immortal Coaching");
+        setLinkDisabled("avail-ten-k", true, "Minimum MMR Required is Immortal 5620");
+        return;
+    }
+
+    // TENK MODE
+    setLinkDisabled("avail-immortal", true, "Minimum MMR Acceptable is Divine <5620");
+    setLinkDisabled("avail-ten-k", false, "Eligible for Beyond Immortal Coaching");
 }
 
 function renderPackages() {
     populateCoachingImmortal();
     populateCoachingTenK();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const mmrInput = document.getElementById("mmrInput");
+
+    if (!mmrInput) return;
+
+    // FORCE INITIAL LOCK STATE
+    updateButtonStates(0);
+
+    mmrInput.addEventListener("input", function () {
+        handleMMRChange(this.value);
+    });
+});

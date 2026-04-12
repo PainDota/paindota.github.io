@@ -177,11 +177,17 @@ function populateCoachingImmortal() {
 
             <ul class="inter-body-medium">${features}</ul>
 
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-                <div class="coaching-card__button-container">
-                    <button class="btn-custom">${pkg.buttonLabel}</button>
-                </div>
-            </a>
+            <a id="avail-immortal"
+                href="https://forms.gle/hvKt8N4WvEE1pvF27"
+                target="_blank"
+                class="text-decoration-none">
+
+            <div class="coaching-card__button-container">
+                <button class="btn-custom">
+                ${pkg.buttonLabel}
+                </button>
+            </div>
+</a>
         </div>
     `;
 }
@@ -216,11 +222,17 @@ function populateCoachingTenK() {
 
             <ul class="inter-body-medium">${features}</ul>
 
-            <a href="https://forms.gle/hvKt8N4WvEE1pvF27" target="_blank" class="text-decoration-none">
-                <div class="coaching-card__button-container">
-                    <button class="btn-custom">${pkg.buttonLabel}</button>
-                </div>
-            </a>
+            <a id="avail-ten-k"
+                href="https://forms.gle/hvKt8N4WvEE1pvF27"
+                target="_blank"
+                class="text-decoration-none">
+
+            <div class="coaching-card__button-container">
+                <button class="btn-custom">
+                    ${pkg.buttonLabel}
+                </button>
+            </div>
+</a>
         </div>
     `;
 }

@@ -105,7 +105,7 @@ const immortalPackage = {
         'Immortal Guarantee' , '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '3x Recorded Replay Reviews'
     ],
-    buttonLabel: 'Avail Immortal',
+    buttonLabel: 'Enter MMR to unlock',
     tag: 'Unlimited Coaching Till Immortal',
     installmentPlan: true,
     upfrontPayment: true,
@@ -123,7 +123,7 @@ const tenKPackage = {
         '10K MMR Guarantee', '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '3x Recorded Replay Reviews'
     ],
-    buttonLabel: 'Avail Beyond Immortal',
+    buttonLabel: 'Enter MMR to unlock',
     tag: 'Unlimited Coaching until 10K',
     installmentPlan: true,
     upfrontPayment: true,
