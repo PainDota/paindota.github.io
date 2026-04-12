@@ -197,7 +197,7 @@ ul li span {
     font-weight: 500;
 }
 
-.top-ad {
+.site-topbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -206,7 +206,7 @@ ul li span {
   }
   
   /* compact height */
-  .top-ad {
+  .site-topbar {
     padding-top: 2px;
     padding-bottom: 2px;
   }
@@ -222,7 +222,7 @@ ul li span {
       padding-top: 46px;
     }
   
-    .top-ad .small {
+    .site-topbar .small {
       font-size: 0.72rem;
       line-height: 1.2;
     }
