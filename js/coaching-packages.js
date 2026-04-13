@@ -3,7 +3,7 @@
 // ===============================
 function generatePriceHTML(price, discount = 0, installmentPlan, upfrontPayment, lastSlot) {
     const installmentText = installmentPlan ? `<span class="badge bg-warning ms-2">Installments Available</span>` : '';
-    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2">Additional $300 Off on Upfront Payment</span>` : '';
+    const upfrontText = upfrontPayment ? `<span class="badge bg-primary ms-2 text-wrap m-1">Additional $300 Off on Upfront Payment</span>` : '';
     const lastSlotText = lastSlot ? `<span class="badge bg-danger ms-2 hero-animate">Last Slot Available</span>` : '';
 
     const numericPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
