@@ -13,7 +13,7 @@ function openImage(src) {
 window.openImage = openImage;
 
 let testimonialsList = [];
-let currentIndex = 0; // 👉 PAGE index now
+let currentIndex = 0; // PAGE index
 let cardsPerView = 1;
 
 /* =========================
@@ -24,7 +24,7 @@ function getCardsPerView() {
 }
 
 /* =========================
-   RENDER TESTIMONIALS (FIXED PAGINATION)
+   RENDER TESTIMONIALS (PAGINATED)
    ========================= */
 function renderTestimonials() {
     const container = document.getElementById("testimonialContainer");
@@ -53,7 +53,8 @@ function renderTestimonials() {
                     <div class="d-flex align-items-center gap-2">
                         <img src="images/reviews/pfp/${t.pfp}" class="pfp">
 
-                        <div>
+                        <!-- LEFT ALIGNED NAME + ROLES -->
+                        <div class="text-start">
                             <div class="name-text">${t.username}</div>
                             <div class="text-accent sub-text">
                                 ${t.roles.map(r => `
@@ -131,7 +132,7 @@ function renderTestimonials() {
 }
 
 /* =========================
-   PAGINATION CONTROLS (FIXED)
+   PAGINATION CONTROLS
    ========================= */
 function nextTestimonial() {
     const totalPages = Math.ceil(testimonialsList.length / cardsPerView);
@@ -153,7 +154,7 @@ function capitalize(str) {
 }
 
 /* =========================
-   RESIZE HANDLING (SAFE)
+   RESIZE HANDLING
    ========================= */
 let resizeTimeout;
 
@@ -165,7 +166,7 @@ window.addEventListener("resize", () => {
 
         if (newVal !== cardsPerView) {
             cardsPerView = newVal;
-            currentIndex = 0; // reset page
+            currentIndex = 0;
             renderTestimonials();
         }
     }, 150);
