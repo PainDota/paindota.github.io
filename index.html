@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/coaching-planning.css">
     <link rel="stylesheet" href="css/testimonial.css">
+    <link rel="stylesheet" href="css/new-testimonials.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/card.css">
     <link rel="stylesheet" href="css/comparison-grid.css">
@@ -40,6 +41,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+
     <script src="js/navbar.js"></script>
 
     <script src="js/data.js"></script>
@@ -48,6 +50,7 @@
     <script src="js/alert.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/testimonial.js"></script>
+    <script src="js/new-testimonials.js" defer></script>
     <script src="js/coaching-packages.js"></script>
     <script src="js/comparison-fill.js"></script>
     <script src="js/training-plans.js"></script>
@@ -62,12 +65,13 @@
     <!-- Alert Box Section -->
     <section class="bg-primary text-white site-topbar py-1">
         <div class="d-flex justify-content-center align-items-center text-center px-2">
-          
-          <div class="fw-semibold small">
-            ⚡ WHAT'S NEW! <a href="#coaching-packages-section" class="text-dark fw-semibold">Calculate your Custom Prices</a> and get $500 Discount on Immortal and Beyond Immortal Packages
-          </div>  
+
+            <div class="fw-semibold small">
+                ⚡ WHAT'S NEW! <a href="#coaching-packages-section" class="text-dark fw-semibold">Calculate your Custom
+                    Prices</a> and get $500 Discount on Immortal and Beyond Immortal Packages
+            </div>
         </div>
-      </section>
+    </section>
 
     <section id="alert-section">
         <div id="dynamicAlert" class="alert alert-dismissible fade show sale-alert" role="alert" style="display: none;">
@@ -77,7 +81,7 @@
         </div>
     </section>
 
-    
+
 
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
@@ -228,7 +232,7 @@
     </section>
 
     <!-- testimonial section -->
-    <section id="testimonial-section">
+    <!-- <section id="testimonial-section">
         <div class="container">
             <div class="row">
                 <h1 class="space-grotesk-notice"><span>Testimonials</span></h1>
@@ -246,6 +250,44 @@
                     <button class="carousel-button" type="button" data-bs-target="#carousel" data-bs-slide="next">
                         <i class="fas fa-chevron-circle-right" aria-hidden="true"></i>
                     </button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- testimonial section -->
+    <section id="testimonial-section">
+        <div class="container">
+            <div class="row">
+                <h1 class="space-grotesk-notice"><span>Testimonials</span></h1>
+                <p class="montserrat-body">Game-changing testimonials — hear what other players have to say about their
+                    Dota 2 transformation!
+                </p>
+            </div>
+
+            <div id="testimonialContainer" class="row g-3 justify-content-center align-items-stretch text-black">
+            </div>
+
+            <!-- CONTROLS -->
+            <div class="carousel-buttons mt-1 mt-md-2 mt-lg-3">
+                <button class="carousel-button" type="button" onclick="prevTestimonial()">
+                    <i class="fas fa-chevron-circle-left"></i>
+                </button>
+
+                <button class="carousel-button" type="button" onclick="nextTestimonial()">
+                    <i class="fas fa-chevron-circle-right"></i>
+                </button>
+            </div>
+
+            <div class="modal fade" id="imageModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content bg-dark border-0">
+
+                        <div class="modal-body text-center p-2">
+                            <img id="modalImage" class="img-fluid rounded">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -361,16 +403,19 @@
                             class="text-decoration-none">
                             <button class="btn-custom roboto-regular">
                                 <div class="btn-custom-icon">
-                                    <img src="images\icons\fluent_form-multiple-collection-32-filled.svg" alt="Discord Icon">
+                                    <img src="images\icons\fluent_form-multiple-collection-32-filled.svg"
+                                        alt="Discord Icon">
                                 </div>
                                 Not Sure? Create a Custom Package
                             </button>
                         </a>
                     <div class="input-group mb-3 input-mmr ">
                         <div class="input-group-prepend">
-                            <p class="montserrat-body">Enter your MMR to calculate custom prices for <span>Immortal</span> and
-                                <span>Beyond Immortal</span> Packages:</p>
-                          </div>
+                            <p class="montserrat-body">Enter your MMR to calculate custom prices for
+                                <span>Immortal</span> and
+                                <span>Beyond Immortal</span> Packages:
+                            </p>
+                        </div>
                         <input id="mmrInput" type="text" class="form-control inter-body-regular" placeholder="xxxx"
                             aria-label="Enter MMR" aria-describedby="basic-addon1">
                     </div>

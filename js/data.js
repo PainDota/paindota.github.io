@@ -380,7 +380,7 @@ const testimonials = [
         title: "romel",
         subtitle: "4200 to 6100 mmr",
         description:
-            "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to mid game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100"
+            "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to midlane game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100"
     },
     {
         img: "images/badges/ranks/immortal.svg",
@@ -462,8 +462,9 @@ const testimonials = [
     }
 ]
 
-const newTestimonials = [
-    {
+//roles: ["hard-support","support","carry","midlane","offlane"]
+window.newTestimonials = [
+     {
         "pfp": "1.png",
         "username": "nightcrawler8110",
         "roles": ["carry"],
@@ -471,9 +472,9 @@ const newTestimonials = [
         "starting_medal": "ancient",
         "ending_mmr": 5620,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "4 Months",
-        "review": "I went from Ancient 1 to Immortal in about <b>4 months</b>. What changed for me was actually <b>understanding the game instead of autopiloting</b>. Every session gave me <b>clear things to fix</b>, and I could see it working in my games.",
+        "review": "I started coaching with Pain- when I was Ancient 1 and it took about 4 months after that to reach Immortal. Having this coaching experience really improved my gameplay and changed the way I approach the game. He taught me a solid foundation for playing carry and actually understanding the game, not just copying builds or mindlessly farming. The principles he teaches have been useful in every bracket I played in. I originally found him through his YouTube videos and analysis and had a hunch he was probably the best coach out there. After working with him, that feeling made even more sense. His methods are very effective and actionable, and he’s extremely knowledgable about the game. You always leave sessions with clear things to work on instead of vague advice. Overall, easily the best decision I made for improving at Dota.",
 
         "screenshot": "1.jpeg"
       },
@@ -485,7 +486,7 @@ const newTestimonials = [
         "starting_medal": "ancient",
         "ending_mmr": 5620,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "2.5 Months",
         "review": "I gained around <b>1500+ MMR</b> and hit Immortal in under <b>350 games</b>. It was very <b>straight to the point—no fluff</b>, just what actually works. I finally feel like I <b>understand how Dota is supposed to be played</b>.",
         "screenshot": "2.jpeg"
@@ -498,7 +499,7 @@ const newTestimonials = [
         "starting_medal": "legend",
         "ending_mmr": 5620,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "8 Months",
         "review": "I climbed from Legend to Immortal over time with coaching. We focused a lot on <b>my own replays</b> and fixing <b>real mistakes</b>. That structure made improving feel <b>way more consistent</b> for me.",
         "screenshot": "3.jpeg"
@@ -511,7 +512,7 @@ const newTestimonials = [
         "starting_medal": "crusader",
         "ending_mmr": 3000,
         "ending_medal": "legend",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3k",
         "time_taken": "4 Weeks",
         "review": "I was stuck for a long time, but <b>ranked up 4 times in about a month</b>. It was mostly fixing <b>simple things I didn’t even realize</b> I was doing wrong. Stuff like that sounds basic, but it <b>genuinely wins games</b>.",
         "screenshot": "4.jpeg"
@@ -524,7 +525,7 @@ const newTestimonials = [
         "starting_medal": "ancient",
         "ending_mmr": 6100,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "6.1k",
         "time_taken": "3 Months",
         "review": "I went from around <b>4200 to 6100 MMR</b> after applying what I learned. Fixing things like <b>bad pushes and timing mistakes</b> made a huge difference. My <b>winrate improved almost immediately</b> after that.",
         "screenshot": "5.jpeg"
@@ -538,7 +539,7 @@ const newTestimonials = [
         "starting_medal": "archon",
         "ending_mmr": 4700,
         "ending_medal": "divine",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "4.7k",
         "time_taken": "3 Months",
         "review": "I was stuck for years, then climbed from Archon to Divine in about <b>3 months</b>. The biggest change was how much my <b>fundamentals improved, especially laning</b>. I also liked that we actually <b>discussed ideas instead of just being told I’m wrong</b>.",
         "screenshot": "6.jpeg"
@@ -552,7 +553,7 @@ const newTestimonials = [
         "starting_medal": "crusader",
         "ending_mmr": 3510,
         "ending_medal": "legend",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3.5k",
         "time_taken": "3.5 Months",
         "review": "I climbed from Crusader 3 to Legend 3 in a few months with around <b>70% winrate</b>. Sessions were very <b>direct—what I did wrong and what I did right</b>. If you actually apply it in your games, you <b>improve fast</b>.",
         "screenshot": "7.jpeg"
@@ -565,7 +566,7 @@ const newTestimonials = [
         "starting_medal": "archon",
         "ending_mmr": 3900,
         "ending_medal": "ancient",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3.9k",
         "time_taken": "2.5 Months",
         "review": "I went from low Archon to Ancient in about <b>200 games</b>. It only took a few sessions to see <b>what I was doing wrong</b>. Once I focused on those things, <b>everything started clicking</b>.",
         "screenshot": "8.jpeg"
@@ -578,7 +579,7 @@ const newTestimonials = [
         "starting_medal": "legend",
         "ending_mmr": 4200,
         "ending_medal": "ancient",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "4.2k",
         "time_taken": "2 Weeks",
         "review": "Only had 2 sessions with Pain- so far and already gained 700 plus mmr in just half a month. Very insightful coach, makes it very clear how to win games. Would highly recommend 💯",
         "screenshot": "9.jpeg"
@@ -591,7 +592,7 @@ const newTestimonials = [
         "starting_medal": "crusader",
         "ending_mmr": 3500,
         "ending_medal": "legend",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3.5k",
         "time_taken": "3 Months",
         "review": "I climbed from Crusader 3 to Legend 3 in a couple of months. At one point I had to <b>slow down and actually apply what I learned</b>. Once it clicked, I started <b>improving again really quickly</b>.",       
         "screenshot": "10.jpeg"
