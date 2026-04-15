@@ -476,7 +476,7 @@ window.newTestimonials = [
         "time_taken": "4 Months",
         "review": "I went from Ancient 1 to Immortal in about <b>4 months</b>. What changed for me was actually <b>understanding the game instead of autopiloting</b>. Every session gave me <b>clear things to fix</b>, and I could see it working in my games.",
 
-        "screenshot": "1.jpeg"
+        "screenshot": "1.png"
       },
       {
         "pfp": "2.png",
@@ -489,7 +489,7 @@ window.newTestimonials = [
         "current MMR": "5.6k",
         "time_taken": "2.5 Months",
         "review": "I gained around <b>1500+ MMR</b> and hit Immortal in under <b>350 games</b>. It was very <b>straight to the point—no fluff</b>, just what actually works. I finally feel like I <b>understand how Dota is supposed to be played</b>.",
-        "screenshot": "2.jpeg"
+        "screenshot": "2.png"
       } ,
       {
         "pfp": "3.png",
@@ -502,7 +502,7 @@ window.newTestimonials = [
         "current MMR": "5.6k",
         "time_taken": "8 Months",
         "review": "I climbed from Legend to Immortal over time with coaching. We focused a lot on <b>my own replays</b> and fixing <b>real mistakes</b>. That structure made improving feel <b>way more consistent</b> for me.",
-        "screenshot": "3.jpeg"
+        "screenshot": "3.png"
       },
       {
         "pfp": "4.png",
@@ -515,7 +515,7 @@ window.newTestimonials = [
         "current MMR": "3k",
         "time_taken": "4 Weeks",
         "review": "I was stuck for a long time, but <b>ranked up 4 times in about a month</b>. It was mostly fixing <b>simple things I didn’t even realize</b> I was doing wrong. Stuff like that sounds basic, but it <b>genuinely wins games</b>.",
-        "screenshot": "4.jpeg"
+        "screenshot": "4.png"
     },
       {
         "pfp": "5.png",
@@ -527,8 +527,8 @@ window.newTestimonials = [
         "ending_medal": "immortal",
         "current MMR": "6.1k",
         "time_taken": "3 Months",
-        "review": "I went from around <b>4200 to 6100 MMR</b> after applying what I learned. Fixing things like <b>bad pushes and timing mistakes</b> made a huge difference. My <b>winrate improved almost immediately</b> after that.",
-        "screenshot": "5.jpeg"
+        "review": "I went from around <b>4200 to 4700 MMR</b> in 2 weeks after applying what I learned. Fixing things like <b>bad pushes and timing mistakes</b> made a huge difference. My <b>winrate improved almost immediately</b> after that. Overall got till 6k. ",
+        "screenshot": "5.png"
       },
 
       {
@@ -542,7 +542,7 @@ window.newTestimonials = [
         "current MMR": "4.7k",
         "time_taken": "3 Months",
         "review": "I was stuck for years, then climbed from Archon to Divine in about <b>3 months</b>. The biggest change was how much my <b>fundamentals improved, especially laning</b>. I also liked that we actually <b>discussed ideas instead of just being told I’m wrong</b>.",
-        "screenshot": "6.jpeg"
+        "screenshot": "6.png"
       },
 
       {
@@ -556,7 +556,7 @@ window.newTestimonials = [
         "current MMR": "3.5k",
         "time_taken": "3.5 Months",
         "review": "I climbed from Crusader 3 to Legend 3 in a few months with around <b>70% winrate</b>. Sessions were very <b>direct—what I did wrong and what I did right</b>. If you actually apply it in your games, you <b>improve fast</b>.",
-        "screenshot": "7.jpeg"
+        "screenshot": "7.png"
       },
       {
         "pfp": "8.png",
@@ -569,7 +569,7 @@ window.newTestimonials = [
         "current MMR": "3.9k",
         "time_taken": "2.5 Months",
         "review": "I went from low Archon to Ancient in about <b>200 games</b>. It only took a few sessions to see <b>what I was doing wrong</b>. Once I focused on those things, <b>everything started clicking</b>.",
-        "screenshot": "8.jpeg"
+        "screenshot": "8.png"
       },
       {
         "pfp": "9.png",
@@ -582,7 +582,7 @@ window.newTestimonials = [
         "current MMR": "4.2k",
         "time_taken": "2 Weeks",
         "review": "Only had 2 sessions with Pain- so far and already gained 700 plus mmr in just half a month. Very insightful coach, makes it very clear how to win games. Would highly recommend 💯",
-        "screenshot": "9.jpeg"
+        "screenshot": "9.png"
       },
       {
         "pfp": "10.png",
@@ -595,6 +595,6 @@ window.newTestimonials = [
         "current MMR": "3.5k",
         "time_taken": "3 Months",
         "review": "I climbed from Crusader 3 to Legend 3 in a couple of months. At one point I had to <b>slow down and actually apply what I learned</b>. Once it clicked, I started <b>improving again really quickly</b>.",       
-        "screenshot": "10.jpeg"
+        "screenshot": "10.png"
       },
 ]
