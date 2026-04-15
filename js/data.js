@@ -380,7 +380,7 @@ const testimonials = [
         title: "romel",
         subtitle: "4200 to 6100 mmr",
         description:
-            "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to mid game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100"
+            "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to midlane game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100"
     },
     {
         img: "images/badges/ranks/immortal.svg",
@@ -462,7 +462,8 @@ const testimonials = [
     }
 ]
 
-const newTestimonials = [
+//roles: ["hard-support","support","carry","midlane","offlane"]
+window.newTestimonials = [
      {
         "pfp": "1.png",
         "username": "nightcrawler8110",
@@ -471,7 +472,7 @@ const newTestimonials = [
         "starting_medal": "ancient",
         "ending_mmr": 5620,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "4 Months",
         "review": "I started coaching with Pain- when I was Ancient 1 and it took about 4 months after that to reach Immortal. Having this coaching experience really improved my gameplay and changed the way I approach the game. He taught me a solid foundation for playing carry and actually understanding the game, not just copying builds or mindlessly farming. The principles he teaches have been useful in every bracket I played in. I originally found him through his YouTube videos and analysis and had a hunch he was probably the best coach out there. After working with him, that feeling made even more sense. His methods are very effective and actionable, and he’s extremely knowledgable about the game. You always leave sessions with clear things to work on instead of vague advice. Overall, easily the best decision I made for improving at Dota.",
 
@@ -485,7 +486,7 @@ const newTestimonials = [
         "starting_medal": "ancient",
         "ending_mmr": 5620,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "2.5 Months",
         "review": "I'll keep this short and sweet. I hit Immortal yesterday. I climbed all the way up from Ancient 1 and gained 1500+ MMR in just under 350 total games, and I really enjoyed the journey along the way. If you're serious about improvement, I would highly consider getting coaching from Pain. He'll teach you the things you actually need to do in order to climb. I finally feel like I understand how Dota should be played. Thank you Pain.",
         "screenshot": "2.jpeg"
@@ -498,7 +499,7 @@ const newTestimonials = [
         "starting_medal": "legend",
         "ending_mmr": 5620,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "8 Months",
         "review": "I just want to say thank you to Pain as he's one of the reasons why I reached Immortal! We have started since I was Legend IV or something, and we have been slowly making progress together by analyzing my games and seeing what works and what does not.If you are ever looking for a coach that can help you climb the ladder, Pain is your guy!Thanks!",
         "screenshot": "3.jpeg"
@@ -511,7 +512,7 @@ const newTestimonials = [
         "starting_medal": "crusader",
         "ending_mmr": 3000,
         "ending_medal": "legend",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3k",
         "time_taken": "4 Weeks",
         "review": "I've been playing dota since I started playing PC Games, I first calibrated as a herald when i started  playing ranked and battled my way all the way up to Archon over a few years however I got stuck. I took Pain on as a coach after watching one of his videos. You wouldn't think it but its simple shit that he says during coaching sessions like 'hit more creeps' that make you win games. DOTA's not complicated if you follow simple formulas to win is what I am learning during my coaching sessions. So if you want to level up and rank up I'd recommend Pain. I ranked up 4 times in about a month after taking him on as a coach if that gives you an idea of effectiveness. Only take on coaching sessions if you are coachable and willing to fix your bad habits and the MMR will come easily.10/10 ✅",
         "screenshot": "4.jpeg"
@@ -519,26 +520,26 @@ const newTestimonials = [
       {
         "pfp": "5.png",
         "username": "romelako",
-        "roles": ["mid"],
+        "roles": ["midlane"],
         "starting_mmr": 4200,
         "starting_medal": "ancient",
         "ending_mmr": 6100,
         "ending_medal": "immortal",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "5.6k",
         "time_taken": "3 Months",
-        "review": "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to mid game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100 MMR ",
+        "review": "Pain is an articulate, knowledgeable player that knows how to give just the right amount of feedback so that it is not overwhelming but also provides the biggest impact on your winrate. In our session, he taught me the importance of patience and playing around item timings and to respect the enemy so as not to throw. One of the mistakes I was making was rushing into tier 2 tower pushes with fortification, causing me to throw leads I gained in the early to midlane game. This alone has had a positive effect on my winrate. Over the last ~2 weeks I've gone from 4200 to 4700 mmr (Ancient to Divine) and I'm still continuing to climb with an excellent winrate. UPDATE: 6100 MMR ",
         "screenshot": "5.jpeg"
       },
 
       {
         "pfp": "6.png",
         "username": ".thegruffalo",
-        "roles": ["mid"],
+        "roles": ["midlane"],
         "starting_mmr": 2800,
         "starting_medal": "archon",
         "ending_mmr": 4700,
         "ending_medal": "divine",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "4.7k",
         "time_taken": "3 Months",
         "review": "I was hard stuck at legend for about 6 years. Since I've started coaching I climbed from a low of Archon 3 to Divine 1 in about 3 months and I'm easily playing the best dota of my life with no cheap cheese strats or single hero spamming.I had weekly replay sessions with Pain. He's very thoughtful and doesn't mind humouring me when I have a theory that is completely wrong. He'll test it out and convince me one way or another and win me round when most coaches will say 'no that's wrong do x'. He is an absolute beast at laning and doing some 1v1s with him really opened my eyes. I had a 75% lane winrate at Legend before coaching but he completely demolished me and taught me the importance of maintaining basics like Last hitting that everyone wants to ignore but are probably the most important thing. On top of that he's just a chilled guy, I like him and I hope he keeps doing well. His passion for dota is obvious as I see him online all the time watching replays and it's awesome talking to him about the meta and stuff. Hopefully I'll hit immortal one day soon and if I do he'll be a massive reason why. Cheers Pain, you're a good one!",
         "screenshot": "6.jpeg"
@@ -552,7 +553,7 @@ const newTestimonials = [
         "starting_medal": "crusader",
         "ending_mmr": 3510,
         "ending_medal": "legend",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3.5k",
         "time_taken": "3.5 Months",
         "review": "Pain is great. I was able to get from crusader 3 to legend 3 in a matter of months. It took me around 3-4 month and weekly coaching (aka replay analysis) with Pain. He points out my mistakes in my unsuccessful games and he points out the good things that I improved on. No micromanagement, just straight to the point and no bs. If you listen and apply, you will improve. He told me if you blame your team, then delete dota.  I listened. I deleted XD. But then came back, had another session with my boy Pain and got to legend 3. I maintain my winrate at around 70%, but dota is full of surprises, so I believe its very good. Last thing to say: I have been coached by other people and so far pain has been the best.",
         "screenshot": "7.jpeg"
@@ -560,12 +561,12 @@ const newTestimonials = [
       {
         "pfp": "8.png",
         "username": "pineapplescuddleduck",
-        "roles": ["mid"],
+        "roles": ["midlane"],
         "starting_mmr": 2600,
         "starting_medal": "archon",
         "ending_mmr": 3900,
         "ending_medal": "ancient",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3.9k",
         "time_taken": "2.5 Months",
         "review": "Recently I hit ancient. I started getting coaching when I was low archon, maybe archon 2. Within 5 coaching sessions and 200 games I managed to make it through all of archon and all of legend. He does a really good job at simplifying and honing in on what you need to improve. If you're able to apply his advice in game you will get better. Hopefully I can make it to divine next.",
         "screenshot": "8.jpeg"
@@ -578,7 +579,7 @@ const newTestimonials = [
         "starting_medal": "legend",
         "ending_mmr": 4200,
         "ending_medal": "ancient",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "4.2k",
         "time_taken": "2 Weeks",
         "review": "Only had 2 sessions with Pain- so far and already gained 700 plus mmr in just half a month. Very insightful coach, makes it very clear how to win games. Would highly recommend 💯",
         "screenshot": "9.jpeg"
@@ -591,7 +592,7 @@ const newTestimonials = [
         "starting_medal": "crusader",
         "ending_mmr": 3500,
         "ending_medal": "legend",
-        "mmr_gained": ending_mmr - starting_mmr,
+        "current MMR": "3.5k",
         "time_taken": "3 Months",
         "review": "Went from Crusader 3 {September 19. 2023} to legend 3 {November 19, 2023} in the span of weeks. Took Private lessons and group sessions all together. Had to slow down private lessons cause I wasn't improving much and we kept going over the same mistakes, I wanted to take time to improve what I learned and was hard stuck archon 5 until everything clicked, now I'm back to improving again. I would recommend pain if you're wanting to improve. Take you're time and let things set in before ordering again. 10/10 would recommend. I'll leave updates every time I move up a rank.",
         "screenshot": "10.jpeg"
