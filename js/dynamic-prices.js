@@ -30,7 +30,7 @@ function calculateImmortalPrice(mmr, immortalPackage) {
     ];
 
     if (mmr < 3000) {
-        let price = basePrice + 0.5 * (3000 - mmr);
+        let price = basePrice + 0.6 * (3000 - mmr);
         price = Math.max(price, 0);
 
         console.log("[IMMORTAL] <3000 branch price:", price);
