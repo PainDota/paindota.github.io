@@ -173,3 +173,15 @@ body {
 #testimonialContainer > div {
     display: flex;
 }
+
+.modal-header {
+    z-index: 10;
+}
+.modal-dialog {
+    width: auto;
+    max-width: 95vw; /* prevents overflow on small screens */
+}
+
+.modal-content {
+    display: inline-block;
+}
