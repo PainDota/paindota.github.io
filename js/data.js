@@ -474,7 +474,7 @@ window.newTestimonials = [
         "ending_medal": "immortal",
         "current MMR": "5.6k",
         "time_taken": "4 Months",
-        "review": "I started coaching with Pain- when I was Ancient 1 and it took about 4 months after that to reach Immortal. Having this coaching experience really improved my gameplay and changed the way I approach the game. He taught me a solid foundation for playing carry and actually understanding the game, not just copying builds or mindlessly farming. The principles he teaches have been useful in every bracket I played in. I originally found him through his YouTube videos and analysis and had a hunch he was probably the best coach out there. After working with him, that feeling made even more sense. His methods are very effective and actionable, and he’s extremely knowledgable about the game. You always leave sessions with clear things to work on instead of vague advice. Overall, easily the best decision I made for improving at Dota.",
+        "review": "I went from Ancient 1 to Immortal in about <b>4 months</b>. What changed for me was actually <b>understanding the game instead of autopiloting</b>. Every session gave me <b>clear things to fix</b>, and I could see it working in my games.",
 
         "screenshot": "1.jpeg"
       },
