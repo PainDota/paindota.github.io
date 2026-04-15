@@ -520,7 +520,7 @@ window.newTestimonials = [
       {
         "pfp": "5.png",
         "username": "romelako",
-        "roles": ["mid"],
+        "roles": ["midlane"],
         "starting_mmr": 4200,
         "starting_medal": "ancient",
         "ending_mmr": 6100,
@@ -534,7 +534,7 @@ window.newTestimonials = [
       {
         "pfp": "6.png",
         "username": ".thegruffalo",
-        "roles": ["mid"],
+        "roles": ["midlane"],
         "starting_mmr": 2800,
         "starting_medal": "archon",
         "ending_mmr": 4700,
@@ -561,7 +561,7 @@ window.newTestimonials = [
       {
         "pfp": "8.png",
         "username": "pineapplescuddleduck",
-        "roles": ["mid"],
+        "roles": ["midlane"],
         "starting_mmr": 2600,
         "starting_medal": "archon",
         "ending_mmr": 3900,
