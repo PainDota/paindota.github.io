@@ -13,25 +13,34 @@ function openImage(src) {
 window.openImage = openImage;
 
 let testimonialsList = [];
-let currentIndex = 0;
+let currentIndex = 0; // 👉 PAGE index now
 let cardsPerView = 1;
 
+/* =========================
+   RESPONSIVE CARDS
+   ========================= */
 function getCardsPerView() {
     return window.innerWidth >= 992 ? 2 : 1;
 }
 
+/* =========================
+   RENDER TESTIMONIALS (FIXED PAGINATION)
+   ========================= */
 function renderTestimonials() {
     const container = document.getElementById("testimonialContainer");
     if (!container || !testimonialsList.length) return;
 
     const newCardsPerView = getCardsPerView();
+    const startIndex = currentIndex * newCardsPerView;
 
     let html = "";
 
     for (let i = 0; i < newCardsPerView; i++) {
-        const index = (currentIndex + i) % testimonialsList.length;
-        const t = testimonialsList[index];
+        const index = startIndex + i;
 
+        if (index >= testimonialsList.length) break;
+
+        const t = testimonialsList[index];
         const mmrGain = t.ending_mmr - t.starting_mmr;
 
         html += `
@@ -121,24 +130,30 @@ function renderTestimonials() {
     cardsPerView = newCardsPerView;
 }
 
+/* =========================
+   PAGINATION CONTROLS (FIXED)
+   ========================= */
 function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % testimonialsList.length;
+    const totalPages = Math.ceil(testimonialsList.length / cardsPerView);
+    currentIndex = (currentIndex + 1) % totalPages;
     renderTestimonials();
 }
 
 function prevTestimonial() {
-    currentIndex =
-        (currentIndex - 1 + testimonialsList.length) %
-        testimonialsList.length;
+    const totalPages = Math.ceil(testimonialsList.length / cardsPerView);
+    currentIndex = (currentIndex - 1 + totalPages) % totalPages;
     renderTestimonials();
 }
 
+/* =========================
+   UTILITY
+   ========================= */
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 /* =========================
-   🔥 FIXED RESIZE (safe + no mobile jump)
+   RESIZE HANDLING (SAFE)
    ========================= */
 let resizeTimeout;
 
@@ -149,6 +164,8 @@ window.addEventListener("resize", () => {
         const newVal = getCardsPerView();
 
         if (newVal !== cardsPerView) {
+            cardsPerView = newVal;
+            currentIndex = 0; // reset page
             renderTestimonials();
         }
     }, 150);
@@ -160,5 +177,6 @@ window.addEventListener("resize", () => {
 document.addEventListener("DOMContentLoaded", () => {
     testimonialsList = window.newTestimonials || [];
     cardsPerView = getCardsPerView();
+    currentIndex = 0;
     renderTestimonials();
 });
