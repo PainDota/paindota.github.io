@@ -6,6 +6,9 @@ function openImage(src) {
 
     imgEl.src = src;
 
+    // reset zoom on open
+    imgEl.classList.remove("zoomed");
+
     const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
     modal.show();
 }
@@ -180,4 +183,14 @@ document.addEventListener("DOMContentLoaded", () => {
     cardsPerView = getCardsPerView();
     currentIndex = 0;
     renderTestimonials();
+});
+
+// zoom toggle
+document.addEventListener("click", function (e) {
+    const img = document.getElementById("modalImage");
+    if (!img) return;
+
+    if (e.target === img) {
+        img.classList.toggle("zoomed");
+    }
 });
