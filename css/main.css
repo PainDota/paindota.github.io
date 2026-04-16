@@ -144,6 +144,7 @@ span {
     #testimonial-section .container,
     #faq-section .container,
     #info-section .container,
+    #success-section .container,
     #comparison-grid .container {
         padding: 1rem;
     }
@@ -160,6 +161,7 @@ span {
     #testimonial-section h1,
     #faq-section h1,
     #info-section h1,
+    #success-section h1,
     #footer h1 {
         font-size: 1.4rem;
     }
@@ -171,6 +173,7 @@ span {
     #testimonial-section h2,
     #faq-section h2,
     #info-section h2,
+    #success-section h2,
     #footer h2 {
         font-size: 1.2rem;
     }
@@ -182,6 +185,7 @@ span {
     #testimonial-section h3,
     #faq-section h3,
     #info-section h3,
+    #success-section h3,
     #footer h3 {
         font-size: 1.2rem;
     }
@@ -193,6 +197,7 @@ span {
     #testimonial-section p,
     #buyer-protection p,
     #info-section p,
+    #success-section p,
     #faq-section p {
         font-size: 0.85rem;
     }
@@ -203,6 +208,7 @@ span {
     #training-plans-section li,
     #testimonial-section li,
     #info-section li,
+    #success-section p,
     #faq-section li {
         font-size: 0.8rem;
     }
