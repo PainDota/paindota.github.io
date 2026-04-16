@@ -16,9 +16,10 @@ successStories.slice(0, previewLimit).forEach((img) => {
         <div class="preview-wrapper position-relative">
 
             <img 
-                src="images/reviews/ss/${img}"
+                src="images/reviews/sss/${img}"
                 class="preview-img-2"
-                onclick="openImage('images/reviews/ss/${img}')"
+                loading="lazy"
+                onclick="openImage('images/reviews/sss/${img}')"
             >
 
             <img 
@@ -45,9 +46,10 @@ successStories.forEach((img) => {
         <div class="preview-wrapper position-relative">
 
             <img 
-                src="images/reviews/ss/${img}"
+                src="images/reviews/sss/${img}"
                 class="preview-img-2"
-                onclick="openImage('images/reviews/ss/${img}')"
+                loading="lazy"
+                onclick="openImage('images/reviews/sss/${img}')"
             >
 
             <img 

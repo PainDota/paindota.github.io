@@ -118,6 +118,7 @@ function renderTestimonials() {
                     <div class="preview-wrapper">
                         <img src="images/reviews/ss/${t.screenshot}"
                              class="preview-img"
+                             loading="lazy"
                              onclick="openImage(this.src)">
                         <img src="images/icons/uil_focus.svg" class="zoom-overlay">
                     </div>
