@@ -1,34 +1,72 @@
-function openImage(src) {
-    const imgEl = document.getElementById("modalImage");
-    const modalEl = document.getElementById("imageModal");
+/* =========================
+   GLOBAL IMAGE MODAL HANDLING
+========================= */
 
-    if (!imgEl || !modalEl) return;
+const imageModalEl = document.getElementById("imageModal");
+const galleryModalEl = document.getElementById("galleryModal");
+
+const imageModal = bootstrap.Modal.getOrCreateInstance(imageModalEl);
+const galleryModalInstance = () =>
+    bootstrap.Modal.getOrCreateInstance(galleryModalEl);
+
+// Track if we came from gallery
+let openedFromGallery = false;
+
+window.openImage = function (src) {
+    const imgEl = document.getElementById("modalImage");
+    if (!imgEl || !imageModalEl) return;
 
     imgEl.src = src;
-
-    // reset zoom on open
     imgEl.classList.remove("zoomed");
 
-    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
-    modal.show();
-}
+    const galleryModal = bootstrap.Modal.getInstance(galleryModalEl);
 
-window.openImage = openImage;
+    if (galleryModal) {
+        openedFromGallery = true;
+
+        galleryModal.hide();
+
+        galleryModalEl.addEventListener(
+            "hidden.bs.modal",
+            () => {
+                imageModal.show();
+            },
+            { once: true }
+        );
+    } else {
+        openedFromGallery = false;
+        imageModal.show();
+    }
+};
+
+// reopen gallery AFTER image modal closes
+imageModalEl.addEventListener("hidden.bs.modal", () => {
+    if (openedFromGallery) {
+        setTimeout(() => {
+            galleryModalInstance().show();
+        }, 150); // smooth transition
+    }
+});
+
+
+/* =========================
+   TESTIMONIAL SYSTEM
+========================= */
 
 let testimonialsList = [];
-let currentIndex = 0; // PAGE index
+let currentIndex = 0;
 let cardsPerView = 1;
 
 /* =========================
    RESPONSIVE CARDS
-   ========================= */
+========================= */
 function getCardsPerView() {
     return window.innerWidth >= 992 ? 2 : 1;
 }
 
 /* =========================
-   RENDER TESTIMONIALS (PAGINATED)
-   ========================= */
+   RENDER TESTIMONIALS
+========================= */
 function renderTestimonials() {
     const container = document.getElementById("testimonialContainer");
     if (!container || !testimonialsList.length) return;
@@ -40,7 +78,6 @@ function renderTestimonials() {
 
     for (let i = 0; i < newCardsPerView; i++) {
         const index = startIndex + i;
-
         if (index >= testimonialsList.length) break;
 
         const t = testimonialsList[index];
@@ -56,7 +93,6 @@ function renderTestimonials() {
                     <div class="d-flex align-items-center gap-2">
                         <img src="images/reviews/pfp/${t.pfp}" class="pfp">
 
-                        <!-- LEFT ALIGNED NAME + ROLES -->
                         <div class="text-start">
                             <div class="name-text">${t.username}</div>
                             <div class="text-accent sub-text">
@@ -131,13 +167,13 @@ function renderTestimonials() {
     }
 
     container.innerHTML = html;
-
     cardsPerView = newCardsPerView;
 }
 
+
 /* =========================
-   PAGINATION CONTROLS
-   ========================= */
+   PAGINATION
+========================= */
 function nextTestimonial() {
     const totalPages = Math.ceil(testimonialsList.length / cardsPerView);
     currentIndex = (currentIndex + 1) % totalPages;
@@ -150,16 +186,18 @@ function prevTestimonial() {
     renderTestimonials();
 }
 
+
 /* =========================
    UTILITY
-   ========================= */
+========================= */
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+
 /* =========================
    RESIZE HANDLING
-   ========================= */
+========================= */
 let resizeTimeout;
 
 window.addEventListener("resize", () => {
@@ -176,9 +214,10 @@ window.addEventListener("resize", () => {
     }, 150);
 });
 
+
 /* =========================
    INIT
-   ========================= */
+========================= */
 document.addEventListener("DOMContentLoaded", () => {
     testimonialsList = window.newTestimonials || [];
     cardsPerView = getCardsPerView();
@@ -186,7 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
     renderTestimonials();
 });
 
-// zoom toggle
+
+/* =========================
+   IMAGE ZOOM TOGGLE
+========================= */
 document.addEventListener("click", function (e) {
     const img = document.getElementById("modalImage");
     if (!img) return;
