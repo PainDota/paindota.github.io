@@ -349,8 +349,8 @@
                 </div>
             </div>
             <!-- IMAGE VIEWER MODAL -->
-            <div class="modal fade" id="imageModal" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered">
+            <div class="modal fade" id="galleryImageModal" tabindex="-1" data-bs-backdrop="true" data-bs-focus="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
                     <div class="modal-content bg-black border-0">
 
                         <div class="modal-header border-0">
@@ -358,7 +358,21 @@
                         </div>
 
                         <div class="modal-body text-center">
-                            <img id="modalImage" class="img-fluid object-fit-contain">
+
+                            <!-- MAIN IMAGE -->
+                            <div class="position-relative d-flex justify-content-center align-items-center">
+
+                                <button class="nav-arrow left" onclick="showPrevImage()">&#10094;</button>
+
+                                <img id="modalGalleryImage" class="main-image">
+
+                                <button class="nav-arrow right" onclick="showNextImage()">&#10095;</button>
+
+                            </div>
+
+                            <!-- THUMBNAILS -->
+                            <div id="thumbnailStrip" class="thumbnail-strip mt-3"></div>
+
                         </div>
 
                     </div>
@@ -534,25 +548,25 @@
             </div>
 
             <div class="row d-block d-lg-none mb-3"></div>
-                <div class="col">
-                    <select id="plan-selector" class="form-select">
-                        <option value="coaching-card--entry" selected>Entry</option>
-                        <option value="coaching-card--basic">Basic</option>
-                        <option value="coaching-card--pro">Pro</option>
-                        <option value="coaching-card--immortal">Immortal</option>
-                        <option value="coaching-card--beyond-immortal">Beyond Immortal</option>
-                    </select>
-                </div>
+            <div class="col">
+                <select id="plan-selector" class="form-select">
+                    <option value="coaching-card--entry" selected>Entry</option>
+                    <option value="coaching-card--basic">Basic</option>
+                    <option value="coaching-card--pro">Pro</option>
+                    <option value="coaching-card--immortal">Immortal</option>
+                    <option value="coaching-card--beyond-immortal">Beyond Immortal</option>
+                </select>
             </div>
+        </div>
 
-            <!-- Comparison Grid -->
-            <div class="comparison-grid p-5 mt-3 mb-3 inter-body-medium">
-                <!-- Header Row (Dynamically generated) -->
-                <div class="row d-flex justify-content-between text-center" id="header-row"></div>
+        <!-- Comparison Grid -->
+        <div class="comparison-grid p-5 mt-3 mb-3 inter-body-medium">
+            <!-- Header Row (Dynamically generated) -->
+            <div class="row d-flex justify-content-between text-center" id="header-row"></div>
 
-                <!-- Feature Rows (Dynamically generated) -->
-                <div id="feature-rows"></div>
-            </div>
+            <!-- Feature Rows (Dynamically generated) -->
+            <div id="feature-rows"></div>
+        </div>
         </div>
     </section>
 

@@ -1,3 +1,18 @@
+function forceResetModals() {
+    document.querySelectorAll(".modal.show").forEach(m => {
+        bootstrap.Modal.getInstance(m)?.hide();
+    });
+
+    document.querySelectorAll(".modal-backdrop").forEach(b => b.remove());
+
+    document.body.classList.remove("modal-open");
+}
+
+document.addEventListener("hidden.bs.modal", () => {
+    document.querySelectorAll(".modal-backdrop").forEach(b => b.remove());
+    document.body.classList.remove("modal-open");
+});
+
 /* =========================
    GLOBAL IMAGE MODAL HANDLING
 ========================= */
@@ -13,30 +28,22 @@ const galleryModalInstance = () =>
 let openedFromGallery = false;
 
 window.openImage = function (src) {
+
+    // 🔥 IMPORTANT RESET
+    forceResetModals();
+
     const imgEl = document.getElementById("modalImage");
-    if (!imgEl || !imageModalEl) return;
+    if (!imgEl) return;
 
     imgEl.src = src;
     imgEl.classList.remove("zoomed");
 
-    const galleryModal = bootstrap.Modal.getInstance(galleryModalEl);
-
-    if (galleryModal) {
-        openedFromGallery = true;
-
-        galleryModal.hide();
-
-        galleryModalEl.addEventListener(
-            "hidden.bs.modal",
-            () => {
-                imageModal.show();
-            },
-            { once: true }
+    setTimeout(() => {
+        const modal = bootstrap.Modal.getOrCreateInstance(
+            document.getElementById("imageModal")
         );
-    } else {
-        openedFromGallery = false;
-        imageModal.show();
-    }
+        modal.show();
+    }, 50);
 };
 
 // reopen gallery AFTER image modal closes
