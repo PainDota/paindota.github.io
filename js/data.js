@@ -478,19 +478,7 @@ window.newTestimonials = [
 
         "screenshot": "1.png"
       },
-      {
-        "pfp": "2.png",
-        "username": "mantazer",
-        "roles": ["carry"],
-        "starting_mmr": 3850,
-        "starting_medal": "ancient",
-        "ending_mmr": 5620,
-        "ending_medal": "immortal",
-        "current MMR": "5.6k",
-        "time_taken": "2.5 Months",
-        "review": "I gained around <b>1500+ MMR</b> and hit Immortal in under <b>350 games</b>. It was very <b>straight to the point—no fluff</b>, just what actually works. I finally feel like I <b>understand how Dota is supposed to be played</b>.",
-        "screenshot": "2.png"
-      } ,
+      
       {
         "pfp": "3.png",
         "username": "protossq",
@@ -504,6 +492,19 @@ window.newTestimonials = [
         "review": "I climbed from Legend to Immortal over time with coaching. We focused a lot on <b>my own replays</b> and fixing <b>real mistakes</b>. That structure made improving feel <b>way more consistent</b> for me.",
         "screenshot": "3.png"
       },
+      {
+        "pfp": "2.png",
+        "username": "mantazer",
+        "roles": ["carry"],
+        "starting_mmr": 3850,
+        "starting_medal": "ancient",
+        "ending_mmr": 5620,
+        "ending_medal": "immortal",
+        "current MMR": "5.6k",
+        "time_taken": "2.5 Months",
+        "review": "I gained around <b>1500+ MMR</b> and hit Immortal in under <b>350 games</b>. It was very <b>straight to the point—no fluff</b>, just what actually works. I finally feel like I <b>understand how Dota is supposed to be played</b>.",
+        "screenshot": "2.png"
+      } ,
       {
         "pfp": "4.png",
         "username": "dovareme",
