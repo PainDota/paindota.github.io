@@ -47,16 +47,29 @@
 .btn-space-bw {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: flex-start;
+    gap: 16px;
 }
 
+.btn-custom {
+    flex: 1 1 calc(33.33% - 16px); /* 3 per row */
+    max-width: 350px;
+}
 
-@media (max-width: 500px) {
+.btn-space-bw {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
     .btn-space-bw {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
+    .btn-custom {
+        width: 100%;
+        max-width: 280px;
+    }
 }
