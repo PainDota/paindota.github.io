@@ -10,7 +10,7 @@ function generateStaticPriceHTML(
         : '';
 
     const upfrontText = upfrontPayment
-        ? `<span class="badge bg-primary ms-2">Get $300 Off on Upfront Applied</span>`
+        ? `<span class="badge bg-primary ms-2">Get $300 Off on Upfront Payment</span>`
         : '';
 
     const lastSlotText = lastSlot
