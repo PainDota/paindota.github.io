@@ -37,6 +37,10 @@
     min-height: 500px;
 }
 
+.btn-yellow {
+    background-color: #F5A623;
+}
+
 @media (max-width: 992px) {
     #hero-section.coaching,
     #hero-section.training {
