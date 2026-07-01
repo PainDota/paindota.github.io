@@ -115,7 +115,7 @@ const immortalPackage = {
     tag: 'Unlimited Coaching Till Immortal',
     installmentPlan: true,
     upfrontPayment: true,
-    lastSlot: true
+    lastSlot: false
 };
 
 let mutatedImmortalPackage = null;
@@ -134,7 +134,7 @@ const tenKPackage = {
     tag: 'Unlimited Coaching until 10K',
     installmentPlan: true,
     upfrontPayment: true,
-    lastSlot: true
+    lastSlot: false
 };
 
 let mutatedTenKPackage = null;
