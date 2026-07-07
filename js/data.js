@@ -103,8 +103,8 @@ const proPackage = {
 const immortalPackage = {
     price: '$2800',
     // discount: 500,
-      //discountedPrice: '$2300',
-       //priceOff: '$500',
+      discountedPrice: '$2300',
+    priceOff: '$500',
 
    features: [
         'Unlimited 1 Hour Sessions', 
@@ -115,15 +115,15 @@ const immortalPackage = {
     tag: 'Unlimited Coaching Till Immortal',
     installmentPlan: true,
     upfrontPayment: true,
-    lastSlot: false
+    lastSlot: true
 };
 
 let mutatedImmortalPackage = null;
 
 const tenKPackage = {
     price: '$5300',
-    // discount:500,
-   // discountedPrice: '$4800',
+     discount:500,
+    discountedPrice: '$4800',
     //   priceOff: '$500',
     features: [
         'Unlimited 1 Hour Sessions', 
@@ -134,7 +134,7 @@ const tenKPackage = {
     tag: 'Unlimited Coaching until 10K',
     installmentPlan: true,
     upfrontPayment: true,
-    lastSlot: false
+    lastSlot: true
 };
 
 let mutatedTenKPackage = null;
