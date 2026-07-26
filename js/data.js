@@ -626,8 +626,6 @@ const successStories = ["1.png",
                         "21.png",
                         "22.png",
                         "23.png",
-                        "24.png",
-                        "25.png",
-                        "26.png",
+                        
                         
 ] 
