@@ -7,7 +7,7 @@ const TENK_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSePPS_DAD5CJIrfK
 
 // stat Data
 const statsValues = {
-    mmr: '11K',
+    mmr: '8K',
     students: '600+',
     coachingHrs: '3000+',
     views: '4M+'
@@ -103,8 +103,8 @@ const proPackage = {
 const immortalPackage = {
     price: '$2800',
     // discount: 500,
-      discountedPrice: '$2300',
-    priceOff: '$500',
+      //discountedPrice: '$2300',
+    //priceOff: '$500',
 
    features: [
         'Unlimited 1 Hour Sessions', 
@@ -123,8 +123,8 @@ let mutatedImmortalPackage = null;
 const tenKPackage = {
     price: '$5300',
      discount:500,
-    discountedPrice: '$4800',
-      priceOff: '$500',
+    //discountedPrice: '$4800',
+     // priceOff: '$500',
     features: [
         'Unlimited 1 Hour Sessions', 
         '10K MMR Guarantee', '1x Analysis Tutorial',
