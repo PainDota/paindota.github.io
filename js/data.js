@@ -127,11 +127,11 @@ const tenKPackage = {
       priceOff: '$500',
     features: [
         'Unlimited 1 Hour Sessions', 
-        '10K MMR Guarantee', '1x Analysis Tutorial',
+        'Leaderboard Guarantee', '1x Analysis Tutorial',
         '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '3x Recorded Replay Reviews'
     ],
     buttonLabel: 'Enter MMR to Unlock',
-    tag: 'Unlimited Coaching until 10K',
+    tag: 'Unlimited Coaching until Leaderboards',
     installmentPlan: true,
     upfrontPayment: true,
     lastSlot: true
