@@ -317,47 +317,57 @@ const accordionData = [
     {
         id: 'collapseOne',
         title: 'What is the Immortal Package?',
-        content: 'Immortal Package offers an unlimited amount of coaching sessions till you reach Immortal Rank. With a one-time investment, you will reach Immortal Rank which is an enormous feat.'
+        content: 'Immortal Package offers an unlimited amount of coaching sessions till you reach Immortal Rank. With a one-time investment, you will reach Immortal Rank.'
     },
     {
         id: 'collapseTwo',
+        title: 'What is the Beyond Immortal Package?',
+        content: 'The Beyond Immortal Package offers an unlimited amount of coaching sessions till you reach EU Leaderboards, approximately around 6900 MMR.'
+    },
+    {
+        id: 'collapseThree',
+        title: 'What is the difference between a session and recorded replay review?',
+        content: 'A live replay review is conducted on a call with your coach, allowing you to ask questions and receive feedback in real time. A recorded replay review is conducted off-call. Your coach independently analyzes your gameplay, records a detailed breakdown of.'
+    },
+    {
+        id: 'collapseFour',
         title: 'How do I sign up for coaching sessions?',
         content: 'Click on the "Avail" button for your desired package, and you will be redirected to Discord, where you can directly message me to reserve your slot.'
     },
     {
-        id: 'collapseThree',
-        title: 'Do you offer Installment Plans?',
-        content: 'Yes, installment plans are available exclusively for the Immortal Package. Payments can be completed over three months. For more details, please refer to the form provided.'
-    },
-    {
-        id: 'collapseFour',
-        title: 'Which payment methods are accepted?',
-        content: "Currently, I accept mainly Wise, Crypto & Paypal. Setting up Wise is straightforward, and if you encounter any issues, I can personally guide you through the process. If these options don’t work for you, please discuss alternatives with me through Discord."
-    },
-    {
         id: 'collapseFive',
+        title: 'Do you offer Installment Plans?',
+        content: 'Yes, installment plans are available exclusively for the Immortal and Beyond Immortal Package. For more details, Click on Avail Immortal/Beyond Immortal and refer to the form provided.'
+    },
+    {
+        id: 'collapseSix',
+        title: 'Which payment methods are accepted?',
+        content: "Payment Methods used are PayPal, Crypto and Bank Transfer (ACH/Wire/USD/GBP/EURO) as of now. If these options don’t work for you, please discuss alternatives with me through Discord."
+    },
+    {
+        id: 'collapseSeven',
         title: 'Can I switch to a different coaching package after signing up?',
         content: 'The availability of upgrading depends on your current package, the number of sessions utilized, and slot availability in the package you wish to upgrade to.'
     },
     {
-        id: 'collapseSix',
+        id: 'collapseEight',
         title: 'What happens if I need to reschedule a session?',
         content: "While I don’t have an issue with rescheduling, it can only be accommodated once. Subsequent rescheduling will result in the loss of a session. This policy is in place to ensure that neither party\'s time is wasted."
     },
     {
-        id: 'collapseSeven',
+        id: 'collapseNine',
         title: 'How soon can I expect to see improvements in my gameplay?',
         content: "You should notice improvement almost instantly. Many of my students have experienced progress right after their first session."
     },
     {
-        id: 'collapseEight',
+        id: 'collapseTen',
         title: 'Will I receive personalized feedback on my performance?',
         content: "Yes, every player is different, and my coaching style is tailored to accommodate everyone's unique needs and preferences."
     },
     {
-        id: 'collapseNine',
+        id: 'collapseEleven',
         title: 'Is there an expiry date on the Coaching Packages?',
-        content: 'No, there is no expiry date. You can use the sessions from your Coaching Package at your own pace, with no time restrictions. Take as much time as you need to complete your sessions.'
+        content: 'No, there is no expiry date. You can use the sessions from your Coaching Package at your own pace, with no time restrictions.'
     }
 ];
 
