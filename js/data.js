@@ -201,7 +201,7 @@ const improvementCampPackage = {
 //comparison data
 const comparisonData= {
     //add Immortal Plus to header to make it show
-    "header": ["Feature","Entry", "Basic", "Pro", "Immortal", "Beyond Immortal"],
+    "header": ["Feature", "Basic", "Pro", "Immortal", "Beyond Immortal"],
     "rows": [
       {
         "feature": "# Lessons (1hr Sessions)",
