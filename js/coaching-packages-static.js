@@ -9,8 +9,14 @@ function generateStaticPriceHTML(
         ? `<span class="badge bg-warning ms-2">Installments Available</span>`
         : '';
 
-    const upfrontText = upfrontPayment
-        ? `<span class="badge bg-primary ms-2">Get $300 Off on Upfront Payment</span>`
+        const upfrontText = upfrontPayment
+        ? `<span class="badge bg-primary ms-2"
+                 data-bs-toggle="tooltip"
+                 data-bs-placement="top"
+                 data-bs-title="Pay the full amount upfront and get an extra $300 off the price, instead of paying in installments."
+                 style="cursor: help;">
+               Get $300 Off on Upfront Payment
+           </span>`
         : '';
 
     const lastSlotText = lastSlot
@@ -326,6 +332,11 @@ function toggleSection() {
     section.classList.toggle("hidden", !isVisible);
 }
 
+function initTooltips() {
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+        bootstrap.Tooltip.getOrCreateInstance(el);
+    });
+}
 // Load all packages
 function loadCoachingPackages() {
     // populateCoachingMini();
@@ -336,6 +347,7 @@ function loadCoachingPackages() {
     populateStaticCoachingTenK();
     populateStaticCoachingMonthly();
     populateStaticDota2ImprovementCamp();
+    initTooltips();
     // populateCoachingImmortalPlus();
 }
 
