@@ -161,15 +161,16 @@ let mutatedTenKPackage = null;
 // };
 
 const monthlyPackage = {
-  tag: 'Monthly coaching',
-  title: 'Dota 2 Improvement Coaching',
+  tag: 'Single Sessions',
+  title: 'Entry',
   price: '$100',
   billingPeriod: '/ month',
-  badge: 'Cancel anytime · No long-term commitment',
+  badge: '',
   features: [
       '1 Live Replay Analysis',
       '1 Recorded Replay Review',
-      'Personalized Improvement Document'
+      'Personalized Improvement Document',
+      'Cancel anytime · No long-term commitment'
   ],
   footnote: 'One live session and one recorded review per billing month. No rollover of unused sessions.',
   buttonLabel: 'Avail Monthly',
@@ -178,6 +179,24 @@ const monthlyPackage = {
   lastSlot: false
 };
 
+const improvementCampPackage = {
+  tag: 'Group Coaching',
+  title: 'Dota 2 Improvement Camp',
+  price: '$65',
+  billingPeriod: '/ month',
+  features: [
+      '24 Live Group Replay Review Classes/month',
+      'Access to 3 high-MMR coaches (13K-15K MMR)',
+      'Personalized Improvement Tracking & Coaching Document',
+      'Private Discord community',
+      'Full Class Recordings & Learning Resources',
+      'Money-Back Guarantee if you don\'t improve!'
+  ],
+  buttonLabel: 'Join Camp',
+  installmentPlan: false,
+  upfrontPayment: false,
+  lastSlot: false
+};
 
 //comparison data
 const comparisonData= {

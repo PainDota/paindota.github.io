@@ -131,6 +131,22 @@
     margin: 0 auto;
 } */
 
+.dota-2-improvement-camp-card .coaching-card__price,
+.dota-2-improvement-camp-card ul li:before {
+    color: var(--teal-accent-color);
+}
+
+.dota-2-improvement-camp-tag {
+    background-color: var(--teal-accent-color);
+    color: white;
+}
+
+.dota-2-improvement-camp-card .btn-custom {
+    border: 1px solid var(--teal-accent-color);
+    background-color: var(--teal-accent-color);
+    color: white;
+}
+
 .monthly-card .coaching-card__price,
 .monthly-card ul li:before {
     color: var(--primary-accent-color);

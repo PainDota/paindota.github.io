@@ -183,8 +183,10 @@ function populateStaticCoachingMonthly() {
                 <h4 class="inter-heading-bold">${monthlyPackage.title}</h4>
                 <span class="badge bg-success hero-animate">New Plan</span>
                 <span class="badge bg-warning">${monthlyPackage.badge}</span>
-                ${generateStaticPriceHTML(monthlyPackage.price, undefined, monthlyPackage.installmentPlan, monthlyPackage.upfrontPayment, monthlyPackage.lastSlot)}
-                <small class="d-block">${monthlyPackage.billingPeriod}</small>
+                <div class="d-flex align-items-baseline gap-1">
+                    ${generateStaticPriceHTML(monthlyPackage.price, undefined, monthlyPackage.installmentPlan, monthlyPackage.upfrontPayment, monthlyPackage.lastSlot)}
+                    <small>${monthlyPackage.billingPeriod}</small>
+                </div>
             </div>
             <ul class="inter-body-medium">
                 ${featuresList}
@@ -193,6 +195,34 @@ function populateStaticCoachingMonthly() {
             <a href="https://whop.com/paindota/dota-2-monthly-coaching/" target="_blank" class="text-decoration-none">
                 <div class="coaching-card__button-container">
                     <button class="btn-custom">${monthlyPackage.buttonLabel}</button>
+                </div>
+            </a>
+        </div>
+    `;
+}
+
+function populateStaticDota2ImprovementCamp() {
+    const campColumn = document.getElementById('static-dota-2-improvement-camp');
+    if (!campColumn) return;
+
+    const featuresList = improvementCampPackage.features.map(feature => `<li>${feature}</li>`).join('');
+
+    campColumn.innerHTML = `
+        <h6 class="tag dota-2-improvement-camp-tag">${improvementCampPackage.tag}</h6>
+        <div class="coaching-card dota-2-improvement-camp-card">
+            <div>
+                <h4 class="inter-heading-bold">${improvementCampPackage.title}</h4>
+                <div class="d-flex align-items-baseline gap-1">
+                    ${generateStaticPriceHTML(improvementCampPackage.price, undefined, improvementCampPackage.installmentPlan, improvementCampPackage.upfrontPayment, improvementCampPackage.lastSlot)}
+                    <small>${improvementCampPackage.billingPeriod}</small>
+                </div>
+            </div>
+            <ul class="inter-body-medium">
+                ${featuresList}
+            </ul>
+            <a href="https://www.skool.com/d2improvementcamp" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${improvementCampPackage.buttonLabel}</button>
                 </div>
             </a>
         </div>
@@ -290,10 +320,10 @@ function populateStaticCoachingMini() {
 let isVisible = false;
 
 function toggleSection() {
-  const section = document.getElementById("mySection");
+    const section = document.getElementById("mySection");
 
-  isVisible = !isVisible;
-  section.classList.toggle("hidden", !isVisible);
+    isVisible = !isVisible;
+    section.classList.toggle("hidden", !isVisible);
 }
 
 // Load all packages
@@ -305,6 +335,7 @@ function loadCoachingPackages() {
     populateStaticCoachingImmortal();
     populateStaticCoachingTenK();
     populateStaticCoachingMonthly();
+    populateStaticDota2ImprovementCamp();
     // populateCoachingImmortalPlus();
 }
 
