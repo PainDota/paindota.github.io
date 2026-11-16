@@ -160,6 +160,25 @@ let mutatedTenKPackage = null;
 //     upfrontPayment: true
 // };
 
+const monthlyPackage = {
+  tag: 'Monthly coaching',
+  title: 'Dota 2 Improvement Coaching',
+  price: '$100',
+  billingPeriod: '/ month',
+  badge: 'Cancel anytime · No long-term commitment',
+  features: [
+      '1 Live Replay Analysis',
+      '1 Recorded Replay Review',
+      'Personalized Improvement Document'
+  ],
+  footnote: 'One live session and one recorded review per billing month. No rollover of unused sessions.',
+  buttonLabel: 'Avail Monthly',
+  installmentPlan: false,
+  upfrontPayment: false,
+  lastSlot: false
+};
+
+
 //comparison data
 const comparisonData= {
     //add Immortal Plus to header to make it show

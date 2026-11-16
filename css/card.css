@@ -131,6 +131,23 @@
     margin: 0 auto;
 } */
 
+.monthly-card .coaching-card__price,
+.monthly-card ul li:before {
+    color: var(--primary-accent-color);
+}
+
+.monthly-tag {
+    background-color: var(--primary-accent-color);
+    color: white;
+}
+
+.monthly-card .btn-custom {
+    border: 1px solid var(--primary-accent-color);
+    background-color: var(--primary-accent-color);
+    color: white;
+    /* max-width: 30%; */
+}
+
 .immortal-plus-card .coaching-card__price,
 .immortal-plus-card ul li:before {
     color: #4C3A86;

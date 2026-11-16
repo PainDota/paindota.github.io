@@ -170,6 +170,35 @@ function populateStaticCoachingTenK() {
     `;
 }
 
+function populateStaticCoachingMonthly() {
+    const monthlyColumn = document.getElementById('static-coaching-monthly');
+    if (!monthlyColumn) return;
+
+    const featuresList = monthlyPackage.features.map(feature => `<li>${feature}</li>`).join('');
+
+    monthlyColumn.innerHTML = `
+        <h6 class="tag monthly-tag">${monthlyPackage.tag}</h6>
+        <div class="coaching-card monthly-card">
+            <div>
+                <h4 class="inter-heading-bold">${monthlyPackage.title}</h4>
+                <span class="badge bg-success hero-animate">New Plan</span>
+                <span class="badge bg-warning">${monthlyPackage.badge}</span>
+                ${generateStaticPriceHTML(monthlyPackage.price, undefined, monthlyPackage.installmentPlan, monthlyPackage.upfrontPayment, monthlyPackage.lastSlot)}
+                <small class="d-block">${monthlyPackage.billingPeriod}</small>
+            </div>
+            <ul class="inter-body-medium">
+                ${featuresList}
+            </ul>
+            <small class="d-block mb-3">${monthlyPackage.footnote}</small>
+            <a href="https://whop.com/paindota/dota-2-monthly-coaching/" target="_blank" class="text-decoration-none">
+                <div class="coaching-card__button-container">
+                    <button class="btn-custom">${monthlyPackage.buttonLabel}</button>
+                </div>
+            </a>
+        </div>
+    `;
+}
+
 function populateStaticCoachingImmortalPlus() {
     const immortalColumn = document.getElementById('static-coaching-immortal-plus');
     if (!immortalColumn) return;
@@ -275,6 +304,7 @@ function loadCoachingPackages() {
     populateStaticCoachingPro();
     populateStaticCoachingImmortal();
     populateStaticCoachingTenK();
+    populateStaticCoachingMonthly();
     // populateCoachingImmortalPlus();
 }
 
