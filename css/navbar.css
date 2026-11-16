@@ -115,3 +115,7 @@
         font-weight: 500;
     }
 }
+
+.open-sans-body > li {
+    scroll-margin-top: 90px; /* your navbar height + a little space */
+}

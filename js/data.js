@@ -205,7 +205,7 @@ const comparisonData= {
     "rows": [
       {
         "feature": "# Lessons (1hr Sessions)",
-        "Entry": "4",
+        //"Entry": "4",
         "Basic": "6",
         "Pro": "10",
         "Immortal": "Unlimited till Immortal",
@@ -213,7 +213,7 @@ const comparisonData= {
       },
       {
         "feature": "Discord Messaging",
-        "Entry": "✔",
+        //"Entry": "✔",
         "Basic": "✔",
         "Pro": "✔",
         "Immortal": "✔",
@@ -222,7 +222,7 @@ const comparisonData= {
       },
       {
         "feature": "Patch + Meta Explanation",
-        "Entry": "✔",
+        //"Entry": "✔",
         "Basic": "✔",
         "Pro": "✔",
         "Immortal": "✔",
@@ -230,7 +230,7 @@ const comparisonData= {
       },
       {
         "feature": "VOD Review",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✔",
         "Pro": "✔",
         "Immortal": "✔",
@@ -238,7 +238,7 @@ const comparisonData= {
       },
       {
         "feature": "Match-up Guide",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✔",
         "Immortal": "✔",
@@ -246,7 +246,7 @@ const comparisonData= {
       },
       {
         "feature": "Analysis Tutorial",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✔",
         "Immortal": "✔",
@@ -254,7 +254,7 @@ const comparisonData= {
       },
       {
         "feature": "Pro Player Analysis Sessions",
-        "Entry": "0",
+        //"Entry": "0",
         "Basic": "0",
         "Pro": "0",
         "Immortal": "5",
@@ -262,7 +262,7 @@ const comparisonData= {
       },
       {
         "feature": "Personal Progress Checkup",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
@@ -270,7 +270,7 @@ const comparisonData= {
       },
       {
         "feature": "Immortal Guarantee",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
@@ -278,7 +278,7 @@ const comparisonData= {
       },
       {
         "feature": "10K MMR Guarantee",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✘",
@@ -286,7 +286,7 @@ const comparisonData= {
       },
       {
         "feature": "Installment Plans",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
@@ -294,7 +294,7 @@ const comparisonData= {
       },
       {
         "feature": "Upfront Payment Discount -$300 Applied",
-        "Entry": "✘",
+        //"Entry": "✘",
         "Basic": "✘",
         "Pro": "✘",
         "Immortal": "✔",
