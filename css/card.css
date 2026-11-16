@@ -131,6 +131,25 @@
     margin: 0 auto;
 } */
 
+/* Feature links inside coaching cards */
+.coaching-card ul li a.feature-link,
+.coaching-card ul li a.feature-link:visited,
+.coaching-card ul li a.feature-link:active {
+    color: #000 !important;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    transform-origin: left center;
+}
+
+.coaching-card ul li a.feature-link:hover,
+.coaching-card ul li a.feature-link:focus-visible {
+    color: #000 !important;
+    transform: scale(1.06);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 .dota-2-improvement-camp-card .coaching-card__price,
 .dota-2-improvement-camp-card ul li:before {
     color: var(--teal-accent-color);

@@ -33,6 +33,7 @@ const alertConfig = {
 };
 
 let currentMMR = null;
+const EXCLUSIVES = '../html/coaching.html'; // change to your actual page path
 // for discount: discount = 500
 // coaching package Data
 const miniPackage = {
@@ -67,74 +68,75 @@ const entryPackage = {
 };
 
 const basicPackage = {
-    price: '$480',
-    
-    features: [
-        '6x 1 Hour Sessions',
-        'Discord Messaging',
-        'Patch + Meta Explanation',
-        '1x Recorded Replay Review'
-    ],
-    buttonLabel: 'Avail Basic',
-    tag: 'Best For Starting Out',
-    installmentPlan: false,
-    upfrontPayment: false,
-    lastSlot: false
+  price: '$480',
+  features: [
+      { text: '6x 1 Hour Sessions', href: EXCLUSIVES + '' },
+      { text: 'Discord Messaging', href: EXCLUSIVES + '#discord-messaging' },
+      { text: 'Patch + Meta Explanation', href: EXCLUSIVES + '#patch-meta-explanation' },
+      { text: '1x Recorded Replay Review', href: EXCLUSIVES + '#replay-guide' }
+  ],
+  buttonLabel: 'Avail Basic',
+  tag: 'Best For Starting Out',
+  installmentPlan: false,
+  upfrontPayment: false,
+  lastSlot: false
 };
 
 const proPackage = {
-    price: '$750',
-
-    features: [
-        '10x 1 Hour Sessions',
-        'Discord Messaging',
-        'Patch + Meta Explanation',
-        '1x Recorded Replay Review',
-        '1x Match-up Guide',
-        '1x Analysis Tutorial'
-    ],
-    buttonLabel: 'Avail Pro',
-    tag: 'Most Popular',
-    installmentPlan: false,
-    upfrontPayment: false,
-    lastSlot: false
+  price: '$750',
+  features: [
+      { text: '10x 1 Hour Sessions', href: EXCLUSIVES + '' },
+      { text: 'Discord Messaging', href: EXCLUSIVES + '#discord-messaging' },
+      { text: 'Patch + Meta Explanation', href: EXCLUSIVES + '#patch-meta-explanation' },
+      { text: '1x Recorded Replay Review', href: EXCLUSIVES + '#replay-guide' },
+      { text: '1x Match-up Guide', href: EXCLUSIVES + '#matchup-guide' },
+      { text: '1x Analysis Tutorial', href: EXCLUSIVES + '#analysis-tutorial' }
+  ],
+  buttonLabel: 'Avail Pro',
+  tag: 'Most Popular',
+  installmentPlan: false,
+  upfrontPayment: false,
+  lastSlot: false
 };
 
 const immortalPackage = {
-    price: '$2800',
-    
-     discountedPrice: '$2300',
-    priceOff: '$500',
-
-   features: [
-        'Unlimited 1 Hour Sessions', 
-        'Immortal Guarantee' , '1x Analysis Tutorial',
-        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '3x Recorded Replay Reviews'
-    ],
-    buttonLabel: 'Enter MMR to Unlock',
-    tag: 'Unlimited Coaching Till Immortal',
-    installmentPlan: true,
-    upfrontPayment: true,
-    lastSlot: true
+  price: '$2800',
+  discountedPrice: '$2300',
+  priceOff: '$500',
+  features: [
+      { text: 'Unlimited 1 Hour Sessions', href: EXCLUSIVES + '' },
+      { text: 'Immortal Guarantee', href: EXCLUSIVES + '#leaderboard-guarantee' },
+      { text: '1x Analysis Tutorial', href: EXCLUSIVES + '#analysis-tutorial' },
+      { text: '5x Pro Player Analysis Sessions', href: EXCLUSIVES + '#pro-player-analysis' },
+      { text: 'Personal Progress Checkup', href: EXCLUSIVES + '#personal-progress-checkup' },
+      { text: '3x Recorded Replay Reviews', href: EXCLUSIVES + '#replay-guide' }
+  ],
+  buttonLabel: 'Enter MMR to Unlock',
+  tag: 'Unlimited Coaching Till Immortal',
+  installmentPlan: true,
+  upfrontPayment: true,
+  lastSlot: true
 };
 
 let mutatedImmortalPackage = null;
 
 const tenKPackage = {
-    price: '$5300',
-    
-   discountedPrice: '$4800',
-      priceOff: '$500',
-    features: [
-        'Unlimited 1 Hour Sessions', 
-        'Leaderboard Guarantee', '1x Analysis Tutorial',
-        '5x Pro Player Analysis Sessions', 'Personal Progress Checkup', '3x Recorded Replay Reviews'
-    ],
-    buttonLabel: 'Enter MMR to Unlock',
-    tag: 'Unlimited Coaching until Leaderboards',
-    installmentPlan: true,
-    upfrontPayment: true,
-    lastSlot: true
+  price: '$5300',
+  discountedPrice: '$4800',
+  priceOff: '$500',
+  features: [
+      { text: 'Unlimited 1 Hour Sessions', href: EXCLUSIVES + '' },
+      { text: 'Leaderboard Guarantee', href: EXCLUSIVES + '#leaderboard-guarantee' },
+      { text: '1x Analysis Tutorial', href: EXCLUSIVES + '#analysis-tutorial' },
+      { text: '5x Pro Player Analysis Sessions', href: EXCLUSIVES + '#pro-player-analysis' },
+      { text: 'Personal Progress Checkup', href: EXCLUSIVES + '#personal-progress-checkup' },
+      { text: '3x Recorded Replay Reviews', href: EXCLUSIVES + '#replay-guide' }
+  ],
+  buttonLabel: 'Enter MMR to Unlock',
+  tag: 'Unlimited Coaching until Leaderboards',
+  installmentPlan: true,
+  upfrontPayment: true,
+  lastSlot: true
 };
 
 let mutatedTenKPackage = null;
@@ -162,15 +164,15 @@ let mutatedTenKPackage = null;
 
 const monthlyPackage = {
   tag: 'Single Sessions',
-  title: 'Entry',
   price: '$100',
+  title: 'Entry',
   billingPeriod: '/ month',
   badge: '',
   features: [
-      '1 Live Replay Analysis',
-      '1 Recorded Replay Review',
-      'Personalized Improvement Document',
-      'Cancel anytime · No long-term commitment'
+      { text: '1 Live Replay Analysis'},
+      { text: '1 Recorded Replay Review' },
+      { text: 'Personalized Improvement Document' },
+      { text: 'Cancel anytime · No long-term commitment' }
   ],
   footnote: 'One live session and one recorded review per billing month. No rollover of unused sessions.',
   buttonLabel: 'Avail Monthly',
@@ -185,12 +187,12 @@ const improvementCampPackage = {
   price: '$65',
   billingPeriod: '/ month',
   features: [
-      '24 Live Group Replay Review Classes/month',
-      'Access to 3 high-MMR coaches (13K-15K MMR)',
-      'Personalized Improvement Tracking & Coaching Document',
-      'Private Discord community',
-      'Full Class Recordings & Learning Resources',
-      'Money-Back Guarantee if you don\'t improve!'
+      { text: '24 Live Group Replay Review Classes/month'},
+      { text: 'Access to 3 high-MMR coaches (13K-15K MMR)'},
+      { text: 'Personalized Improvement Tracking & Coaching Document' },
+      { text: 'Private Discord community'},
+      { text: 'Full Class Recordings & Learning Resources'},
+      { text: 'Money-Back Guarantee if you don\'t improve!'}
   ],
   buttonLabel: 'Join Camp',
   installmentPlan: false,

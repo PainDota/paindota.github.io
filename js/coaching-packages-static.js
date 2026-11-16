@@ -36,6 +36,18 @@ function generateStaticPriceHTML(
     `;
 }
 
+function renderFeatureList(pkg) {
+    return pkg.features.map(feature => {
+        if (typeof feature === 'string' || !feature.href) {
+            return `<li>${typeof feature === 'string' ? feature : feature.text}</li>`;
+        }
+        return `
+            <li>
+                <a href="${feature.href}" target="_blank" rel="noopener noreferrer" class="feature-link">${feature.text}</a>
+            </li>`;
+    }).join('');
+}
+
 // Function to populate the entry package
 function populateStaticCoachingEntry() {
     const entryColumn = document.getElementById('static-coaching-entry');
@@ -69,7 +81,7 @@ function populateStaticCoachingBasic() {
     const basicColumn = document.getElementById('static-coaching-basic');
     if (!basicColumn) return;
 
-    const featuresList = basicPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(basicPackage);
 
     basicColumn.innerHTML = `
         <h6 class="tag basic-tag">${basicPackage.tag}</h6>
@@ -97,7 +109,7 @@ function populateStaticCoachingPro() {
     const proColumn = document.getElementById('static-coaching-pro');
     if (!proColumn) return;
 
-    const featuresList = proPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(proPackage);
 
     proColumn.innerHTML = `
         <h6 class="tag pro-tag">${proPackage.tag}</h6>
@@ -125,7 +137,7 @@ function populateStaticCoachingImmortal() {
     const immortalColumn = document.getElementById('static-coaching-immortal');
     if (!immortalColumn) return;
 
-    const featuresList = immortalPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(immortalPackage);
 
     immortalColumn.innerHTML = `
         <img src="images/icons/heroicons_fire-20-solid.svg" alt="Teach Icon" style="position: absolute; top: -30px; left: -15px; width: 60px; height: auto;">
@@ -153,7 +165,7 @@ function populateStaticCoachingTenK() {
     const tenKColumn = document.getElementById('static-coaching-ten-k');
     if (!tenKColumn) return;
 
-    const featuresList = tenKPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(tenKPackage);
 
     tenKColumn.innerHTML = `
         <h6 class="tag immortal-plus-tag">${tenKPackage.tag}</h6>
@@ -180,7 +192,7 @@ function populateStaticCoachingMonthly() {
     const monthlyColumn = document.getElementById('static-coaching-monthly');
     if (!monthlyColumn) return;
 
-    const featuresList = monthlyPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(monthlyPackage);
 
     monthlyColumn.innerHTML = `
         <h6 class="tag monthly-tag">${monthlyPackage.tag}</h6>
@@ -211,7 +223,7 @@ function populateStaticDota2ImprovementCamp() {
     const campColumn = document.getElementById('static-dota-2-improvement-camp');
     if (!campColumn) return;
 
-    const featuresList = improvementCampPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(improvementCampPackage);
 
     campColumn.innerHTML = `
         <h6 class="tag dota-2-improvement-camp-tag">${improvementCampPackage.tag}</h6>
