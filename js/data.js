@@ -367,7 +367,7 @@ const accordionData = [
     {
         id: 'collapseThree',
         title: 'What is the difference between a session and recorded replay review?',
-        content: 'A live replay review is conducted on a call with your coach, allowing you to ask questions and receive feedback in real time. A recorded replay review is conducted off-call. Your coach independently analyzes your gameplay, records a detailed breakdown of.'
+        content: "A session is a live replay review conducted on a call with your coach, allowing you to ask questions and receive feedback in real time. A recorded replay review is conducted off-call. Your coach independently analyzes your gameplay, records a detailed breakdown of your mistakes and areas for improvement, and sends it to you."
     },
     {
         id: 'collapseFour',
