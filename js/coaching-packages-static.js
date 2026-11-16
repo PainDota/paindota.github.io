@@ -36,6 +36,18 @@ function generateStaticPriceHTML(
     `;
 }
 
+function renderFeatureList(pkg) {
+    return pkg.features.map(feature => {
+        if (typeof feature === 'string' || !feature.href) {
+            return `<li>${typeof feature === 'string' ? feature : feature.text}</li>`;
+        }
+        return `
+            <li>
+                <a href="${feature.href}" target="_blank" rel="noopener noreferrer" class="feature-link">${feature.text}</a>
+            </li>`;
+    }).join('');
+}
+
 // Function to populate the entry package
 function populateStaticCoachingEntry() {
     const entryColumn = document.getElementById('static-coaching-entry');
@@ -180,7 +192,7 @@ function populateStaticCoachingMonthly() {
     const monthlyColumn = document.getElementById('static-coaching-monthly');
     if (!monthlyColumn) return;
 
-    const featuresList = monthlyPackage.features.map(feature => `<li>${feature}</li>`).join('');
+    const featuresList = renderFeatureList(monthlyPackage);
 
     monthlyColumn.innerHTML = `
         <h6 class="tag monthly-tag">${monthlyPackage.tag}</h6>

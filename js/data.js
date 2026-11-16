@@ -160,17 +160,19 @@ let mutatedTenKPackage = null;
 //     upfrontPayment: true
 // };
 
+const EXCLUSIVES = '../html/coaching.html'; // change to your actual page path
+
 const monthlyPackage = {
   tag: 'Single Sessions',
-  title: 'Entry',
   price: '$100',
+  title: 'Entry',
   billingPeriod: '/ month',
   badge: '',
   features: [
-      '1 Live Replay Analysis',
-      '1 Recorded Replay Review',
-      'Personalized Improvement Document',
-      'Cancel anytime · No long-term commitment'
+      { text: '1 Live Replay Analysis' },
+      { text: '1 Recorded Replay Review', href: EXCLUSIVES + '#replay-guide' },
+      { text: 'Personalized Improvement Document', href: EXCLUSIVES + '#progress-checkup' },
+      { text: 'Cancel anytime · No long-term commitment' }
   ],
   footnote: 'One live session and one recorded review per billing month. No rollover of unused sessions.',
   buttonLabel: 'Avail Monthly',
