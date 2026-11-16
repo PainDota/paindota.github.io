@@ -531,7 +531,45 @@ window.newTestimonials = [
 
         "screenshot": "1.png"
       },
-      
+      {
+        "pfp": "11.png",
+        "username": "jbakes17.",
+        "roles": ["carry","midlane","offlane"],
+        "starting_mmr": 3200,
+        "starting_medal": "legend",
+        "ending_mmr": 5620,
+        "ending_medal": "immortal",
+        "current MMR": "5.6k",
+        "time_taken": "15 Months",
+        "review": "I went from Legend 3 to Immortal in <b>1.5 years</b>. Pain helped me improve my <b>laning, itemization, and macro decision-making</b>, especially understanding when it's safe to farm aggressively. His <b>direct coaching style and pro-player replay analysis</b> helped me make real progress.",
+        "screenshot": "11.png"
+      },
+       {
+        "pfp": "12.png",
+        "username": "lamios.",
+        "roles": ["carry"],
+        "starting_mmr": 1950,
+        "starting_medal": "crusader",
+        "ending_mmr": 4650 ,
+        "ending_medal": "divine",
+        "current MMR": "4650",
+        "time_taken": "8 Months",
+        "review": "I climbed from <b>1950 to 4650 MMR</b> with an <b>80% winrate over the last month</b>. Pain helped me completely change how I approach farming, itemization, and teamfights, teaching me to <b>maximize my net worth and turn leads into wins</b>. He also helped me overcome tilt and develop a much better mindset towards improvement. What made the biggest difference was learning to <b>understand why I was losing instead of just blaming my teammates</b>.",   
+        "screenshot": "12.png"
+      },
+       {
+        "pfp": "5.png",
+        "username": "romelako",
+        "roles": ["midlane"],
+        "starting_mmr": 4200,
+        "starting_medal": "ancient",
+        "ending_mmr": 6100,
+        "ending_medal": "immortal",
+        "current MMR": "6.1k",
+        "time_taken": "3 Months",
+        "review": "I went from around <b>4200 to 4700 MMR</b> in 2 weeks after applying what I learned. Fixing things like <b>bad pushes and timing mistakes</b> made a huge difference. My <b>winrate improved almost immediately</b> after that. Overall got till 6k. ",
+        "screenshot": "5.png"
+      },
       {
         "pfp": "3.png",
         "username": "protossq",
@@ -571,21 +609,9 @@ window.newTestimonials = [
         "review": "I was stuck for a long time, but <b>ranked up 4 times in about a month</b>. It was mostly fixing <b>simple things I didn’t even realize</b> I was doing wrong. Stuff like that sounds basic, but it <b>genuinely wins games</b>.",
         "screenshot": "4.png"
     },
-      {
-        "pfp": "5.png",
-        "username": "romelako",
-        "roles": ["midlane"],
-        "starting_mmr": 4200,
-        "starting_medal": "ancient",
-        "ending_mmr": 6100,
-        "ending_medal": "immortal",
-        "current MMR": "6.1k",
-        "time_taken": "3 Months",
-        "review": "I went from around <b>4200 to 4700 MMR</b> in 2 weeks after applying what I learned. Fixing things like <b>bad pushes and timing mistakes</b> made a huge difference. My <b>winrate improved almost immediately</b> after that. Overall got till 6k. ",
-        "screenshot": "5.png"
-      },
+     
 
-      {
+    {
         "pfp": "6.png",
         "username": ".thegruffalo",
         "roles": ["midlane"],
