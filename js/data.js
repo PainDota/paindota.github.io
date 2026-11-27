@@ -382,7 +382,7 @@ const accordionData = [
     {
         id: 'collapseSix',
         title: 'Which payment methods are accepted?',
-        content: "Payment Methods used are PayPal, Crypto and Bank Transfer (ACH/Wire/USD/GBP/EURO) as of now. If these options don’t work for you, please discuss alternatives with me through Discord."
+        content: "Payment Methods used are PayPal, Card, Crypto and Bank Transfer (ACH/Wire/USD/GBP/EURO) as of now. If these options don’t work for you, please discuss alternatives with me through Discord."
     },
     {
         id: 'collapseSeven',
