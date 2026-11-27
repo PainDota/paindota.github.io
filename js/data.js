@@ -16,9 +16,9 @@ const statsValues = {
 //alert Data
 const alertConfig = {
     alert: {
-        title: "15% FLAT SALE + Upfront Discount!",
-        message: "Valid Only For The First Two Slots.",
-        visible: false,
+        title: "Black Friday Immortal Package DEAL!",
+        message: "Only 1 Slot Available!",
+        visible: true,
         theme: "alert-primary"
         // Other themes
         // alert-primary
@@ -101,8 +101,8 @@ const proPackage = {
 
 const immortalPackage = {
   price: '$2800',
-  discountedPrice: '$2300',
-  priceOff: '$500',
+  discountedPrice: '$1700',
+  priceOff: '$1100',
   features: [
       { text: 'Unlimited 1 Hour Sessions', href: EXCLUSIVES + '' },
       { text: 'Immortal Guarantee', href: EXCLUSIVES + '#leaderboard-guarantee' },
