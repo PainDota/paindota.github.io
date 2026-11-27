@@ -18,7 +18,7 @@ const alertConfig = {
     alert: {
         title: "Black Friday Immortal Package DEAL!",
         message: "Only 1 Slot Available!",
-        visible: true,
+        visible: false,
         theme: "alert-primary"
         // Other themes
         // alert-primary
